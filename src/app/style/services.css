@@ -1,0 +1,24 @@
+.container {
+  background-color: "smokeWhite";
+}
+.h {
+  display: flex;
+  justify-content: center;
+  font-size: large;
+}
+h2 {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+}
+p {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.title-container {
+  height: 60px; /* Adjust the height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,33 @@
+/* styles/ContactUs.module.css */
+
+.contact_container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.contact_item {
+  flex: 1;
+  text-align: center;
+  margin: 10px;
+}
+
+/* .contact_item {
+  display: flex;
+  align-items: center;
+} */
+
+.contact_item p {
+  margin: 0;
+}
+.icon {
+  color: rgb(255, 144, 0);
+}
+.icon:hover {
+  transform: scale(1.5);
+}
+
+@media (max-width: 768px) {
+  .contact_container {
+    grid-template-columns: 1fr;
+  }
+}

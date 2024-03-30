@@ -1,0 +1,76 @@
+/* styles/hero.module.css */
+.main_hero {
+  margin-top: -300px;
+  background-color: rgb(236, 221, 221);
+}
+.hero {
+  position: relative;
+  /* background-color: #3498db; */
+}
+
+.container {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  /* opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease; */
+}
+
+/* .loaded .container {
+  opacity: 1;
+  transform: translateY(0);
+} */
+
+.heading {
+  font-size: 2em;
+  color: orangered;
+}
+
+.para {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: whitesmoke;
+}
+
+.button {
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  font-size: 1em;
+  margin-right: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+}
+.button:hover {
+  background-color: wheat;
+  color: black;
+}
+
+/* Responsive styles for smaller screens */
+/* @media (max-width: 768px) {
+  .container {
+    position: relative;
+    transform: none;
+    top: auto;
+    left: auto;
+  }
+
+  .heading {
+    font-size: 1.5em;
+  }
+
+  .para {
+    font-size: 1em;
+    margin-bottom: 10px;
+  }
+
+  .button {
+    font-size: 0.8em;
+    padding: 8px 16px;
+    margin-right: 5px;
+  }
+} */
