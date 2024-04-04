@@ -16,6 +16,7 @@ export default function Home() {
     <div style={{ backgroundColor: "" }}>
       <Navbar />
       <Hero />
+      <br />
       <AboutUs />
       <br />
       <Services />

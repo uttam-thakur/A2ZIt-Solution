@@ -21,9 +21,13 @@
 }
 .icon {
   color: rgb(255, 144, 0);
+  font-size: 40px;
 }
 .icon:hover {
-  transform: scale(1.5);
+  transform: scale(1.4);
+}
+.divitem {
+  margin-top: 10px;
 }
 
 @media (max-width: 768px) {

@@ -7,6 +7,7 @@ import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
+import { Padding } from "@mui/icons-material";
 
 const ChooseUs = () => {
   const [expandedItem, setExpandedItem]: any = useState("");
@@ -21,36 +22,44 @@ const ChooseUs = () => {
 
   return (
     <>
-      <Typography variant="h5" gutterBottom style={{ marginLeft: "40%" }}>
+      <Typography
+        variant="h5"
+        gutterBottom
+        style={{ display: "flex", justifyContent: "center" }}
+      >
         WHY CHOOSE US
       </Typography>
-      <Card style={{ color: "red", backgroundColor: "whiteSmoke" }}>
+      <Card
+        style={{
+          color: "red",
+          backgroundColor: "white",
+          boxShadow: "none",
+        }}
+      >
         <Grid container>
           {/* Image on the right */}
           <Grid item xs={12} md={6}>
             <CardMedia
-              style={{ padding: "40px" }}
               component="img"
               alt="Image Alt Text"
               height="500"
-              image=" https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              image=" https://st4.depositphotos.com/1350793/27775/i/380/depositphotos_277754254-stock-photo-why-choose-us-with-businessman.jpg"
+              sx={{
+                padding: "40px",
+              }}
             />
           </Grid>
 
           {/* Description on the left */}
           <Grid item xs={12} md={6}>
             <CardContent>
-              {/* <Typography
-                variant="h4"
-                gutterBottom
-                style={{ marginLeft: "-25%" }}
-              >
-                WHY CHOOSE US
-              </Typography> */}
-
               <IconButton
                 onClick={() => toggleExpansion("rentalService")}
-                style={{ color: "black", marginLeft: "auto" }}
+                style={{
+                  color: "black",
+                  marginLeft: "auto",
+                  marginTop: "30px",
+                }}
               >
                 {expandedItem === "rentalService" ? (
                   <RemoveIcon />
@@ -74,6 +83,7 @@ const ChooseUs = () => {
                 >
                   <img
                     src="https://t4.ftcdn.net/jpg/02/06/84/39/360_F_206843915_5rPRsyBPBW2CSVwt3iO7NXt9Cy5M5HS0.jpg"
+                    // src="https://st4.depositphotos.com/1350793/27775/i/380/depositphotos_277754254-stock-photo-why-choose-us-with-businessman.jpg"
                     alt="laptop image"
                     height="150px"
                     width="200px"
@@ -94,12 +104,17 @@ const ChooseUs = () => {
                   </Typography>
                 </div>
               )}
-              <br></br>
+              <hr style={{ marginTop: "-10px" }}></hr>
+              {/* <br></br> */}
               <IconButton
-                onClick={() => toggleExpansion("salesService")}
-                style={{ color: "black", marginLeft: "auto", marginTop: 10 }}
+                onClick={() => toggleExpansion("maintenance")}
+                style={{
+                  color: "black",
+                  marginLeft: "auto",
+                  marginTop: "-30px",
+                }}
               >
-                {expandedItem === "salesService" ? <RemoveIcon /> : <AddIcon />}
+                {expandedItem === "maintenance" ? <RemoveIcon /> : <AddIcon />}
                 <p
                   style={{
                     marginTop: "15px",
@@ -111,7 +126,7 @@ const ChooseUs = () => {
                 </p>
               </IconButton>
 
-              {expandedItem === "salesService" && (
+              {expandedItem === "maintenance" && (
                 <div
                   style={{ display: "flex", width: "90%", marginLeft: "40px" }}
                 >
@@ -138,13 +153,18 @@ const ChooseUs = () => {
                   />
                 </div>
               )}
-              <br></br>
+              <hr style={{ marginTop: "-10px" }}></hr>
+              {/* <br></br> */}
 
               <IconButton
-                onClick={() => toggleExpansion("customBuild")}
-                style={{ color: "black", marginLeft: "auto", marginTop: 10 }}
+                onClick={() => toggleExpansion("accessories")}
+                style={{
+                  color: "black",
+                  marginLeft: "auto",
+                  marginTop: "-30px",
+                }}
               >
-                {expandedItem === "customBuild" ? <RemoveIcon /> : <AddIcon />}
+                {expandedItem === "accessories" ? <RemoveIcon /> : <AddIcon />}
                 <p
                   style={{
                     marginTop: "15px",
@@ -152,11 +172,11 @@ const ChooseUs = () => {
                     color: "grey",
                   }}
                 >
-                  ASSECERIES
+                  ACCESSORIES
                 </p>
               </IconButton>
 
-              {expandedItem === "customBuild" && (
+              {expandedItem === "accessories" && (
                 <div
                   style={{ display: "flex", width: "90%", marginLeft: "40px" }}
                 >

@@ -6,16 +6,12 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
-import "../style/services.css";
 import Link from "next/link"; // Import Link from next/link
+import "../style/services.css";
 
 const ServiceCard = ({ title, description, imageSrc, href }: any) => {
   const [isHovered, setIsHovered] = React.useState(false);
-  // const router = useRouter();
 
-  // const handleClick = () => {
-  //   router.push(href);
-  // };
   return (
     <Link href={href} style={{ textDecoration: "none" }}>
       <Card
@@ -28,7 +24,6 @@ const ServiceCard = ({ title, description, imageSrc, href }: any) => {
         }}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        // onClick={handleClick}
       >
         <CardActionArea>
           <CardMedia
@@ -95,7 +90,7 @@ const Services = () => {
     {
       title: "COMPUTER & ACCESSORIES",
       description:
-        "We sell PC, Mac, Laptops and accessories like- speakers, cables, battery backups, headsets, charger and many more.",
+        "We sell PC, Mac, Laptops and accessories like speakers, cables, battery backups, headsets, charger and many .",
       imageSrc:
         "https://www.shutterstock.com/image-vector/different-computer-gadgets-doodle-vector-260nw-645427756.jpg",
       href: "/comp&Acc",
@@ -130,6 +125,7 @@ const Services = () => {
         }}
       >
         {servicesData.map((service, index) => (
+          // Check if the route matches the service's href
           <ServiceCard key={index} {...service} />
         ))}
       </div>

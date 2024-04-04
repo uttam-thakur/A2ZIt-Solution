@@ -16,3 +16,16 @@
   margin-bottom: 0;
   background-color: #f7f7f7;
 }
+
+/* CSS */
+ul {
+  list-style-type: none; /* Remove default bullet points */
+}
+
+ul li::before {
+  content: "\2022"; /* Unicode character for a bullet point */
+  color: blue; /* Set the color of the bullet point */
+  display: inline-block;
+  width: 1em; /* Adjust the width of the bullet point as needed */
+  margin-left: -1em; /* Align the bullet point properly */
+}

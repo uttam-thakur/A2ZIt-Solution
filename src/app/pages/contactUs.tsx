@@ -21,14 +21,14 @@ const ContactUs = () => {
         <div className={styles.contact_item} style={{ marginTop: "50px" }}>
           <AdUnitsIcon className={styles.icon} />
 
-          <div>
+          <div className={styles.divitem}>
             <p>Mobile No:</p>
             <p>8670288140</p>
           </div>
         </div>
         <div className={styles.contact_item} style={{ marginTop: "50px" }}>
           <EmailIcon className={styles.icon} />
-          <div>
+          <div className={styles.divitem}>
             <p>Email:</p>
             <p>info@example.com</p>
           </div>
@@ -36,16 +36,17 @@ const ContactUs = () => {
         {/* Second Row */}
         <div className={styles.contact_item} style={{ marginTop: "250px" }}>
           <HomeIcon className={styles.icon} />
-          <div>
+          <div className={styles.divitem}>
             <p>Address:</p>
             <p>Lower Chelidanga, Asansol, W.B</p>
           </div>
         </div>
         <div className={styles.contact_item} style={{ marginTop: "250px" }}>
           <AccessTimeIcon className={styles.icon} />
-          <div>
+          <div className={styles.divitem}>
             <p>Timing:</p>
             <p>Mon-Fri: 9 AM - 9 PM</p>
+            <p>Sat-Sun: 9 AM - 4 PM</p>
           </div>
         </div>
       </div>
