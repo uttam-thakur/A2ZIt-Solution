@@ -8,7 +8,7 @@ import Typography from "@mui/material/Typography";
 const AboutUs = () => {
   return (
     <div>
-      <Card style={{ boxShadow: "none", backgroundColor: "red" }}>
+      <Card style={{ boxShadow: "none" }}>
         <Grid container>
           {/* Description on the left */}
           <Grid item xs={12} md={6}>

@@ -81,6 +81,7 @@
 @media (max-width: 768px) {
   .img {
     width: 250%;
+    /* //widhth should be 100% for perfect view */
     height: 90%;
   }
 }

@@ -38,14 +38,21 @@ export default function DrawerAppBar(props: Props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
+        Menu
       </Typography>
       <Divider />
       <List>
         {navItems.map((item) => (
           <ListItem key={item.label} disablePadding>
             <Link href={item.path}>
-              <ListItemButton sx={{ textAlign: "center" }}>
+              <ListItemButton
+                // component="a"
+                sx={{
+                  textAlign: "center",
+                  textDecoration: "none",
+                  color: "red",
+                }}
+              >
                 <ListItemText primary={item?.label} />
               </ListItemButton>
             </Link>

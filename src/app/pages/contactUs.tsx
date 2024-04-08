@@ -34,14 +34,14 @@ const ContactUs = () => {
           </div>
         </div>
         {/* Second Row */}
-        <div className={styles.contact_item} style={{ marginTop: "250px" }}>
+        <div className={styles.contact_item} style={{ marginTop: "195px" }}>
           <HomeIcon className={styles.icon} />
           <div className={styles.divitem}>
             <p>Address:</p>
             <p>Lower Chelidanga, Asansol, W.B</p>
           </div>
         </div>
-        <div className={styles.contact_item} style={{ marginTop: "250px" }}>
+        <div className={styles.contact_item} style={{ marginTop: "195px" }}>
           <AccessTimeIcon className={styles.icon} />
           <div className={styles.divitem}>
             <p>Timing:</p>
