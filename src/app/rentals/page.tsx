@@ -1,6 +1,6 @@
 // page.tsx
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../component/Navbar";
 import Reuse from "../pages/reuse";
 import Services from "../pages/services";
@@ -11,14 +11,12 @@ import CustomersFeedback from "../pages/customersFeedback";
 
 const Page = () => {
   const pathname = usePathname();
-  console.log("===>", pathname);
   const isPathMatched: string = pathname;
 
   return (
     <>
       <div>rent page</div>
       <Navbar />
-      {/* //firsthalf */}
       <img
         src={
           "https://img.freepik.com/free-vector/computer-troubleshooting-concept-illustration_114360-7616.jpg?size=626&ext=jpg&ga=GA1.1.718586984.1712132500&semt=ais"
@@ -27,7 +25,6 @@ const Page = () => {
         height="400px"
         alt={"rent image"}
       />
-      {/* //second half */}
       <Reuse
         imageSrc="https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         title="COMPUTERS"
@@ -52,7 +49,6 @@ const Page = () => {
         description="To install a security camera in or around a house/commercial space is a conscious decision, but for uncalled emergencies and preventive measures, one might think to opt for a CCTV camera for a short term basis. At Krishnam Computers, we understand the need for it and hence rent CCTV cameras that help you solve your purpose."
         isImageRight={false}
       />
-      {/* Render Services component based on URL */}
       <Services />
       <CustomersFeedback />
       <Combine />

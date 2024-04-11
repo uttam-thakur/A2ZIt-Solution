@@ -22,7 +22,7 @@ interface Props {
 
 const drawerWidth = 240;
 const navItems = [
-  { label: "Home", path: "/home" },
+  { label: "Home", path: "/" },
   { label: "About", path: "/about" },
   { label: "Contact", path: "/contact" },
 ];
@@ -46,7 +46,6 @@ export default function DrawerAppBar(props: Props) {
           <ListItem key={item.label} disablePadding>
             <Link href={item.path}>
               <ListItemButton
-                // component="a"
                 sx={{
                   textAlign: "center",
                   textDecoration: "none",
