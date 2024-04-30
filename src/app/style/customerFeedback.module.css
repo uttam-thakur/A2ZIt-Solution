@@ -1,0 +1,14 @@
+.lable {
+  color: rgb(255, 144, 0);
+}
+.carasoulDiv {
+  height: 350px;
+  width: 800px;
+  background-color: white;
+}
+.carasoulImage {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 30px;
+}

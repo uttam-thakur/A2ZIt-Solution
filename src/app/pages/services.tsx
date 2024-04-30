@@ -32,7 +32,7 @@ const ServiceCard = ({ title, description, imageSrc, href }: any) => {
             width="200px"
             image={imageSrc}
             alt={title}
-            style={{
+            sx={{
               display: "flex",
               justifyContent: "center",
               padding: "20px",
@@ -44,7 +44,7 @@ const ServiceCard = ({ title, description, imageSrc, href }: any) => {
                 gutterBottom
                 variant="h6"
                 component="div"
-                style={{ display: "flex", justifyContent: "center" }}
+                sx={{ display: "flex", justifyContent: "center" }}
               >
                 {title}
               </Typography>

@@ -6,8 +6,24 @@ import HomeIcon from "@mui/icons-material/Home";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import { Typography } from "@mui/material";
 const ContactUs = () => {
+  const handleCopyMobileNumber = (mobileNumber: any) => {
+    // Create a temporary input element
+    const tempInput = document.createElement("input");
+
+    // Set its value to the mobile number
+    tempInput.value = mobileNumber; // Change to your mobile number
+    // Append it to the document body
+    document.body.appendChild(tempInput);
+    // Select its content
+    tempInput.select();
+    // Copy the selected content
+    document.execCommand("copy");
+    // Remove the temporary input element
+    document.body.removeChild(tempInput);
+    alert("mobile no copied");
+  };
   return (
-    <div style={{ backgroundColor: "#e5e5e5", opacity: 0.9 }}>
+    <div className={styles.background}>
       <Typography
         variant="h4"
         align="center"
@@ -23,7 +39,13 @@ const ContactUs = () => {
 
           <div className={styles.divitem}>
             <p>Mobile No:</p>
-            <p>8670288140</p>
+            {/* <p>8670288140</p> */}
+            <p
+              id="mobileNumber"
+              onClick={() => handleCopyMobileNumber("8670288140")}
+            >
+              8670288140
+            </p>
           </div>
         </div>
         <div className={styles.contact_item} style={{ marginTop: "50px" }}>

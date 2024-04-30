@@ -1,5 +1,8 @@
 /* styles/ContactUs.module.css */
-
+.background {
+  background-color: #e5e5e5;
+  opacity: 0.9;
+}
 .contact_container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

@@ -9,8 +9,6 @@ import {
   Card,
   CardContent,
 } from "@mui/material";
-import Rating from "@mui/material/Rating";
-import Box from "@mui/material/Box";
 import emailjs from "emailjs-com";
 
 import { ToastContainer, toast } from "react-toastify";
@@ -44,20 +42,6 @@ const WriteUs: React.FC = () => {
         toast.error("Failed to send email. Please try again.");
       });
   };
-
-  // const sendFeedbackHandler = () => {
-  //   if (
-  //     feedback.namee.length < 2 ||
-  //     !feedback.emaill.includes(".com") ||
-  //     feedback.comment === ""
-  //   ) {
-  //     toast.error("Please fill in valid details.");
-  //   } else {
-  //     setFeedback({ namee: "", emaill: "", comment: "", rating: 0 });
-
-  //     toast.success("Your feedback has been successfully sent!");
-  //   }
-  // };
 
   return (
     <div
@@ -141,11 +125,7 @@ const WriteUs: React.FC = () => {
               <br />
               <br />
 
-              <Button
-                variant="contained"
-                // onClick={sendFeedbackHandler}
-                type="submit"
-              >
+              <Button variant="contained" type="submit">
                 Send
               </Button>
             </form>

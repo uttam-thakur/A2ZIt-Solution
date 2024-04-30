@@ -7,8 +7,7 @@ import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
-import { Padding } from "@mui/icons-material";
-
+import styles from "../style/chooseUs.module.css";
 const ChooseUs = () => {
   const [expandedItem, setExpandedItem]: any = useState("");
 
@@ -25,12 +24,12 @@ const ChooseUs = () => {
       <Typography
         variant="h5"
         gutterBottom
-        style={{ display: "flex", justifyContent: "center" }}
+        sx={{ display: "flex", justifyContent: "center" }}
       >
         WHY CHOOSE US
       </Typography>
       <Card
-        style={{
+        sx={{
           color: "red",
           backgroundColor: "white",
           boxShadow: "none",
@@ -55,7 +54,7 @@ const ChooseUs = () => {
             <CardContent>
               <IconButton
                 onClick={() => toggleExpansion("rentalService")}
-                style={{
+                sx={{
                   color: "black",
                   marginLeft: "auto",
                   marginTop: "30px",
@@ -67,11 +66,12 @@ const ChooseUs = () => {
                   <AddIcon />
                 )}
                 <p
-                  style={{
-                    marginTop: "15px",
-                    marginLeft: "10px",
-                    color: "grey",
-                  }}
+                  className={styles.p}
+                  // style={{
+                  //   marginTop: "15px",
+                  //   marginLeft: "10px",
+                  //   color: "grey",
+                  // }}
                 >
                   RENTAL SERVICE
                 </p>
@@ -79,7 +79,9 @@ const ChooseUs = () => {
 
               {expandedItem === "rentalService" && (
                 <div
-                  style={{ display: "flex", width: "90%", marginLeft: "40px" }}
+                  className={styles.expandedItem}
+
+                  // style={{ display: "flex", width: "90%", marginLeft: "40px" }}
                 >
                   <img
                     src="https://t4.ftcdn.net/jpg/02/06/84/39/360_F_206843915_5rPRsyBPBW2CSVwt3iO7NXt9Cy5M5HS0.jpg"
@@ -90,7 +92,7 @@ const ChooseUs = () => {
                   />
                   <Typography
                     variant="body1"
-                    style={{
+                    sx={{
                       color: "black",
                       textAlign: "justify",
                       padding: "10px",
@@ -104,11 +106,11 @@ const ChooseUs = () => {
                   </Typography>
                 </div>
               )}
-              <hr style={{ marginTop: "-10px" }}></hr>
+              <hr className={styles.horLine}></hr>
               {/* <br></br> */}
               <IconButton
                 onClick={() => toggleExpansion("maintenance")}
-                style={{
+                sx={{
                   color: "black",
                   marginLeft: "auto",
                   marginTop: "-30px",
@@ -116,11 +118,12 @@ const ChooseUs = () => {
               >
                 {expandedItem === "maintenance" ? <RemoveIcon /> : <AddIcon />}
                 <p
-                  style={{
-                    marginTop: "15px",
-                    marginLeft: "10px",
-                    color: "grey",
-                  }}
+                  className={styles.p}
+                  // style={{
+                  //   marginTop: "15px",
+                  //   marginLeft: "10px",
+                  //   color: "grey",
+                  // }}
                 >
                   MAINTENANCE
                 </p>
@@ -128,12 +131,14 @@ const ChooseUs = () => {
 
               {expandedItem === "maintenance" && (
                 <div
-                  style={{ display: "flex", width: "90%", marginLeft: "40px" }}
+                  className={styles.expandedItem}
+
+                  // style={{ display: "flex", width: "90%", marginLeft: "40px" }}
                 >
                   {" "}
                   <Typography
                     variant="body1"
-                    style={{
+                    sx={{
                       color: "black",
                       textAlign: "justify",
                       padding: "10px",
@@ -153,12 +158,12 @@ const ChooseUs = () => {
                   />
                 </div>
               )}
-              <hr style={{ marginTop: "-10px" }}></hr>
+              <hr className={styles.horLine}></hr>
               {/* <br></br> */}
 
               <IconButton
                 onClick={() => toggleExpansion("accessories")}
-                style={{
+                sx={{
                   color: "black",
                   marginLeft: "auto",
                   marginTop: "-30px",
@@ -166,11 +171,12 @@ const ChooseUs = () => {
               >
                 {expandedItem === "accessories" ? <RemoveIcon /> : <AddIcon />}
                 <p
-                  style={{
-                    marginTop: "15px",
-                    marginLeft: "10px",
-                    color: "grey",
-                  }}
+                  className={styles.p}
+                  // style={{
+                  //   marginTop: "15px",
+                  //   marginLeft: "10px",
+                  //   color: "grey",
+                  // }}
                 >
                   ACCESSORIES
                 </p>
@@ -178,7 +184,8 @@ const ChooseUs = () => {
 
               {expandedItem === "accessories" && (
                 <div
-                  style={{ display: "flex", width: "90%", marginLeft: "40px" }}
+                  className={styles.expandedItem}
+                  // style={{ display: "flex", width: "90%", marginLeft: "40px" }}
                 >
                   {" "}
                   <img
@@ -189,7 +196,7 @@ const ChooseUs = () => {
                   />
                   <Typography
                     variant="body1"
-                    style={{
+                    sx={{
                       color: "black",
                       textAlign: "justify",
                       padding: "10px",

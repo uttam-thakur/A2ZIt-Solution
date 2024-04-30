@@ -1,0 +1,13 @@
+.p {
+  margin-top: 15px;
+  margin-left: 10px;
+  color: grey;
+}
+.expandedItem {
+  display: flex;
+  width: 90%;
+  margin-left: 40px;
+}
+.horLine {
+  margin-top: -10px;
+}
