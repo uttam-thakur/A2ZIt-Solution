@@ -15,7 +15,6 @@ const Page = () => {
 
   return (
     <>
-      {/* <div>rent page</div> */}
       <Navbar />
       <img
         src={
@@ -50,6 +49,7 @@ const Page = () => {
         isImageRight={false}
       />
       <Services />
+
       <CustomersFeedback />
       <Combine />
       <Footer />

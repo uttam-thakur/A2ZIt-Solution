@@ -5,6 +5,8 @@ import EmailIcon from "@mui/icons-material/Email";
 import HomeIcon from "@mui/icons-material/Home";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import { Typography } from "@mui/material";
+import { ToastContainer, toast } from "react-toastify";
+
 const ContactUs = () => {
   const handleCopyMobileNumber = (mobileNumber: any) => {
     // Create a temporary input element
@@ -20,7 +22,8 @@ const ContactUs = () => {
     document.execCommand("copy");
     // Remove the temporary input element
     document.body.removeChild(tempInput);
-    alert("mobile no copied");
+    // alert("mobile no copied");
+    toast.success("Mobile Number Is Copied");
   };
   return (
     <div className={styles.background}>
