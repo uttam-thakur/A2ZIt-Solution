@@ -8,6 +8,7 @@ import { usePathname } from "next/navigation";
 import Combine from "../pages/combine";
 import Footer from "../pages/footer";
 import CustomersFeedback from "../pages/customersFeedback";
+import Map from "../pages/map";
 
 const Page = () => {
   const pathname = usePathname();
@@ -53,6 +54,7 @@ const Page = () => {
       <CustomersFeedback />
       <Combine />
       <Footer />
+      <Map />
     </>
   );
 };
