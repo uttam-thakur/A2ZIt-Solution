@@ -2,6 +2,7 @@
 .background {
   background-color: #e5e5e5;
   opacity: 0.9;
+  background-image: 'url("https://img.freepik.com/free-vector/organic-flat-man-customer-support_23-2148893295.jpg?w=740&t=st=1694160956~exp=1694161556~hmac=237187682149577fcabd9f4d1773426afa7b97bab8d9beedb47da73fe7022e08")';
 }
 .contact_container {
   display: grid;

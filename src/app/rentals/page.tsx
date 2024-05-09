@@ -54,7 +54,6 @@ const Page = () => {
       <CustomersFeedback />
       <Combine />
       <Footer />
-      <Map />
     </>
   );
 };

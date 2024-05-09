@@ -164,7 +164,8 @@ const ContactUs = () => {
         </div>
       </div>
       {/* Dialog to display the map */}
-      <Dialog open={openMap} onClose={handleCloseMap}>
+      {/* <Dialog open={openMap} onClose={handleCloseMap}> */}
+      <Dialog open={openMap} onClose={handleCloseMap} maxWidth="lg" fullWidth>
         <Map />
       </Dialog>
     </div>

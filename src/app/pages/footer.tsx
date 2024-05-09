@@ -8,7 +8,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import PinterestIcon from "@mui/icons-material/Pinterest";
-
+import styles from "../style/footer.module.css";
 const Footer: React.FC = () => {
   return (
     <>
@@ -37,26 +37,26 @@ const Footer: React.FC = () => {
               Useful Links
             </Typography>
             <Link href="#" color="grey" underline="hover">
-              <li>Rentals</li>
+              <li className={styles.redMarker}>Rentals</li>
             </Link>
             <hr></hr>
             <Link href="#" color="grey" underline="hover">
-              <li>Consulting</li>
-            </Link>
-            <hr></hr>
-
-            <Link href="#" color="grey" underline="hover">
-              <li>Softwares</li>
+              <li className={styles.redMarker}>Consulting</li>
             </Link>
             <hr></hr>
 
             <Link href="#" color="grey" underline="hover">
-              <li>Computer & Accessories</li>
+              <li className={styles.redMarker}>Softwares</li>
             </Link>
             <hr></hr>
 
             <Link href="#" color="grey" underline="hover">
-              <li>Maintenance & Repair</li>
+              <li className={styles.redMarker}>Computer & Accessories</li>
+            </Link>
+            <hr></hr>
+
+            <Link href="#" color="grey" underline="hover">
+              <li className={styles.redMarker}>Maintenance & Repair</li>
             </Link>
           </Grid>
           <Grid item xs={12} sm={6} md={6} lg={3}>
