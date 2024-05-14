@@ -7,7 +7,7 @@ import HomeIcon from "@mui/icons-material/Home";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import { Typography } from "@mui/material";
 import { GoogleMap, LoadScript } from "@react-google-maps/api";
-
+import Map from "../pages/map";
 const containerStyle = {
   width: "100%",
   height: "400px",
@@ -72,15 +72,7 @@ const page = () => {
           </div>
         </div>
       </div>
-      {/* google location  map */}
-
-      {/* <LoadScript googleMapsApiKey="YOUR_API_KEY">
-        <GoogleMap
-          mapContainerStyle={containerStyle}
-          center={center}
-          zoom={10}
-        ></GoogleMap>
-      </LoadScript> */}
+      <Map />
     </>
   );
 };
