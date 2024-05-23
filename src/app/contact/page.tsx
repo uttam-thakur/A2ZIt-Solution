@@ -8,6 +8,7 @@ import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import { Typography } from "@mui/material";
 import { GoogleMap, LoadScript } from "@react-google-maps/api";
 import Map from "../pages/map";
+import FeedbackForm from "../pages/feedbackForm";
 const containerStyle = {
   width: "100%",
   height: "400px",
@@ -73,6 +74,7 @@ const page = () => {
         </div>
       </div>
       <Map />
+      <FeedbackForm />
     </>
   );
 };

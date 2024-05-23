@@ -1,25 +1,3 @@
-// import React from "react";
-// import WriteUs from "./writeUs";
-// import ContactUs from "./contactUs";
-
-// const Combine = () => {
-//   return (
-//     <div
-//       style={{
-//         display: "grid",
-//         gridTemplateColumns: "1fr 1fr",
-//         gap: "0px",
-//         paddingRight: "10px",
-//       }}
-//     >
-//       <WriteUs />
-//       <ContactUs />
-//     </div>
-//   );
-// };
-
-// export default Combine;
-
 import React from "react";
 import WriteUs from "./writeUs";
 import ContactUs from "./contactUs";

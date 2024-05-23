@@ -13,7 +13,7 @@ import emailjs from "emailjs-com";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+import { sendEmail } from "../services/services";
 const WriteUs: React.FC = () => {
   const [feedback, setFeedback] = useState({
     namee: "",
@@ -21,26 +21,14 @@ const WriteUs: React.FC = () => {
     comment: "",
   });
 
-  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
-    emailjs
-      .sendForm(
-        // "service_l37lwpj",
-        "service_mvq43kf",
-        "template_25ybnov",
-        e.currentTarget,
-        "Nw7AxfQ-a0XQdVmy0"
-      )
-      .then((res: any) => {
-        console.log(res);
-        setFeedback({ namee: "", emaill: "", comment: "" });
-        toast.success("Your Message sent successfully!");
-      })
-      .catch((err: any) => {
-        console.error(err);
-        toast.error("Failed to send email. Please try again.");
-      });
+    try {
+      await sendEmail(e.currentTarget);
+      setFeedback({ namee: "", emaill: "", comment: "" });
+    } catch (err) {
+      console.error(err);
+    }
   };
 
   return (
@@ -77,7 +65,7 @@ const WriteUs: React.FC = () => {
             !Write Us!
           </Typography>
           <CardContent>
-            <form onSubmit={sendEmail}>
+            <form onSubmit={handleSubmit}>
               <TextField
                 type="text"
                 name="name"
@@ -124,7 +112,6 @@ const WriteUs: React.FC = () => {
               <br />
               <br />
               <br />
-
               <Button variant="contained" type="submit">
                 Send
               </Button>

@@ -7,6 +7,7 @@ import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import { Typography, Dialog } from "@mui/material";
 import Map from "../pages/map";
 import { ToastContainer, toast } from "react-toastify";
+import FeedbackForm from "./feedbackForm";
 
 const ContactUs = () => {
   const [openMap, setOpenMap] = useState(false);
