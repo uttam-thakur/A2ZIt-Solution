@@ -2,6 +2,7 @@
 
 import emailjs from "emailjs-com";
 import { toast } from "react-toastify";
+import axios from "axios";
 
 export const sendEmail = async (form: any) => {
   try {
@@ -42,6 +43,32 @@ export const submitFeedback = async (data: FormData) => {
   } catch (error) {
     console.error(error);
     toast.error("Failed to submit feedback. Please try again.");
+    throw error;
+  }
+};
+
+// Define an interface for the feedback data structure
+interface Feedback {
+  id: number;
+  name: string;
+  comment: string;
+  image?: string;
+}
+
+export const getFeedbacks = async (): Promise<Feedback[]> => {
+  try {
+    const response = await axios.get(
+      "https://hostapi-production-15e5.up.railway.app/api/feedback/all"
+    );
+
+    if (Array.isArray(response.data.data)) {
+      return response.data.data;
+    } else {
+      console.error("API response is not an array:", response.data);
+      return [];
+    }
+  } catch (error) {
+    console.error("Failed to fetch feedbacks:", error);
     throw error;
   }
 };

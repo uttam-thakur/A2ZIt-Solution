@@ -12,3 +12,27 @@
   border-radius: 50%;
   margin-bottom: 30px;
 }
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+.skeletonWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px; /* Adjust the height based on the actual content */
+}
+
+.skeletonLoader {
+  width: 300px; /* Adjust the width based on the actual content */
+  height: 300px; /* Adjust the height based on the actual content */
+  animation: pulse 1.5s infinite ease-in-out;
+}
