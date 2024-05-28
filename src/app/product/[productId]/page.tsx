@@ -1,11 +1,3 @@
-// import React from "react";
-
-// const page = ({ params }: any) => {
-//   return <div>page details {params.productId}</div>;
-// };
-
-// export default page;
-
 "use client";
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
@@ -13,7 +5,7 @@ import axios from "axios";
 
 interface Product {
   id: number;
-  title: string;
+  name: string;
   price: number;
   description: string;
   category: string;
@@ -35,9 +27,11 @@ const ProductDetail: React.FC = ({ params }: any) => {
       const fetchProduct = async () => {
         try {
           const response = await axios.get(
-            `https://fakestoreapi.com/products/${id}`
+            `https://hostapi-production-15e5.up.railway.app/api/product/all/${id}`
           );
           setProduct(response.data);
+          console.log("----->", product);
+
           setLoading(false);
         } catch (error) {
           console.error("Error fetching product:", error);
@@ -59,18 +53,18 @@ const ProductDetail: React.FC = ({ params }: any) => {
 
   return (
     <div>
-      <h1>{product.title}</h1>
+      <h1>{product.name}</h1>
       <img
         src={product.image}
-        alt={product.title}
+        alt={product.name}
         style={{ height: "300px", width: "300px" }}
       />
       <p>{product.description}</p>
       <p>Price: ₹ {product.price * 80} /-</p>
       <p>Category: {product.category}</p>
-      <p>
+      {/* <p>
         Rating: {product.rating.rate} ({product.rating.count} reviews)
-      </p>
+      </p> */}
     </div>
   );
 };

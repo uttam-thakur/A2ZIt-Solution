@@ -7,7 +7,7 @@ import styles from "../style/product.module.css";
 
 interface Product {
   id: number;
-  title: string;
+  name: string;
   price: number;
   description: string;
   category: string;
@@ -20,7 +20,9 @@ interface Product {
 
 const fetchProducts = async () => {
   try {
-    const response = await axios.get("https://fakestoreapi.com/products");
+    const response = await axios.get(
+      "https://hostapi-production-15e5.up.railway.app/api/product/all"
+    );
     return response.data;
   } catch (error) {
     console.error("Error fetching products:", error);
@@ -37,7 +39,9 @@ const Page: React.FC = () => {
       setStatus("loading");
       try {
         const products = await fetchProducts();
-        setProducts(products);
+        setProducts(products.data);
+        console.log("===>", products.data);
+
         setStatus("succeeded");
       } catch (error) {
         console.error("Error fetching products:", error);
@@ -53,17 +57,17 @@ const Page: React.FC = () => {
       {status === "loading" ? (
         <div className={styles.loaderContainer}>Loading...</div>
       ) : (
-        products.map((product: Product) => (
+        products?.map((product: Product) => (
           <div className={styles.card} key={product.id}>
             <img
               src={product.image}
               className={styles.imgProduct}
-              alt={product.title}
+              alt={product.name}
               style={{ height: "200px", width: "200px" }}
             />
             <Link href={`/product/${product.id}`} passHref>
               <h4 style={{ color: "black", cursor: "pointer" }}>
-                {product.title}
+                {product.name}
               </h4>
             </Link>
             <h5>₹ {product.price * 80} /-</h5>
