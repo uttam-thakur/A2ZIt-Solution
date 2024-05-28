@@ -23,6 +23,8 @@
     "react-bootstrap": "^2.10.2",
     "react-content-loader": "^7.0.0",
     "react-dom": "^18",
+    "react-responsive-carousel": "^3.2.23",
+    "react-router-dom": "^6.23.1",
     "react-toastify": "^10.0.4",
     "use-places-autocomplete": "^4.0.1"
   },

@@ -72,3 +72,16 @@ export const getFeedbacks = async (): Promise<Feedback[]> => {
     throw error;
   }
 };
+
+//for product listing
+// servicesApi.ts
+
+export const fetchProducts = async () => {
+  const apiUrl = "https://fakestoreapi.com/products";
+  try {
+    const response = await axios.get(apiUrl);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};

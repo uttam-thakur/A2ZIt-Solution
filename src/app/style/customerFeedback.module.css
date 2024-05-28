@@ -28,11 +28,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 300px; /* Adjust the height based on the actual content */
+  height: 300px;
 }
 
 .skeletonLoader {
-  width: 300px; /* Adjust the width based on the actual content */
-  height: 300px; /* Adjust the height based on the actual content */
+  width: 300px;
+  height: 300px;
   animation: pulse 1.5s infinite ease-in-out;
 }
