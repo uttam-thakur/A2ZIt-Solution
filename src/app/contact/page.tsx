@@ -9,6 +9,7 @@ import { Typography } from "@mui/material";
 import { GoogleMap, LoadScript } from "@react-google-maps/api";
 import Map from "../pages/map";
 import FeedbackForm from "../pages/feedbackForm";
+import Footer from "../pages/footer";
 const containerStyle = {
   width: "100%",
   height: "400px",
@@ -75,6 +76,7 @@ const page = () => {
       </div>
       <Map />
       <FeedbackForm />
+      <Footer />
     </>
   );
 };
