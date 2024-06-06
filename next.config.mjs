@@ -9,6 +9,7 @@ const nextConfig = {
     domains: [
       "img.freepik.com",
       "images.unsplash.com",
+      "t4.ftcdn.net",
       "myutsavawsimagebucket.s3.ap-south-1.amazonaws.com",
     ],
   },
