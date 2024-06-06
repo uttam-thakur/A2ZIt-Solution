@@ -8,6 +8,7 @@ import IconButton from "@mui/material/IconButton";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import styles from "../style/chooseUs.module.css";
+import Image from "next/image";
 const ChooseUs = () => {
   const [expandedItem, setExpandedItem]: any = useState("");
 
@@ -83,12 +84,21 @@ const ChooseUs = () => {
 
                   // style={{ display: "flex", width: "90%", marginLeft: "40px" }}
                 >
-                  <img
+                  {/* <img
                     src="https://t4.ftcdn.net/jpg/02/06/84/39/360_F_206843915_5rPRsyBPBW2CSVwt3iO7NXt9Cy5M5HS0.jpg"
                     // src="https://st4.depositphotos.com/1350793/27775/i/380/depositphotos_277754254-stock-photo-why-choose-us-with-businessman.jpg"
                     alt="laptop image"
                     height="150px"
                     width="200px"
+                  /> */}
+
+                  <Image
+                    src={
+                      "https://t4.ftcdn.net/jpg/02/06/84/39/360_F_206843915_5rPRsyBPBW2CSVwt3iO7NXt9Cy5M5HS0.jpg"
+                    }
+                    width={150}
+                    height={200}
+                    alt={"laptop image"}
                   />
                   <Typography
                     variant="body1"
@@ -150,11 +160,19 @@ const ChooseUs = () => {
                     our backed up with an up to date operating system and
                     anti-virus software.
                   </Typography>
-                  <img
+                  {/* <img
                     src="https://t4.ftcdn.net/jpg/02/06/84/39/360_F_206843915_5rPRsyBPBW2CSVwt3iO7NXt9Cy5M5HS0.jpg"
                     alt="laptop image"
                     height="150px"
                     width="200px"
+                  /> */}
+                  <Image
+                    src={
+                      "https://t4.ftcdn.net/jpg/02/06/84/39/360_F_206843915_5rPRsyBPBW2CSVwt3iO7NXt9Cy5M5HS0.jpg"
+                    }
+                    width={150}
+                    height={200}
+                    alt={"laptop image"}
                   />
                 </div>
               )}
@@ -188,11 +206,19 @@ const ChooseUs = () => {
                   // style={{ display: "flex", width: "90%", marginLeft: "40px" }}
                 >
                   {" "}
-                  <img
+                  {/* <img
                     src="https://t4.ftcdn.net/jpg/02/06/84/39/360_F_206843915_5rPRsyBPBW2CSVwt3iO7NXt9Cy5M5HS0.jpg"
                     alt="laptop image"
                     height="150px"
                     width="200px"
+                  /> */}
+                  <Image
+                    src={
+                      "https://t4.ftcdn.net/jpg/02/06/84/39/360_F_206843915_5rPRsyBPBW2CSVwt3iO7NXt9Cy5M5HS0.jpg"
+                    }
+                    width={150}
+                    height={200}
+                    alt={"laptop image"}
                   />
                   <Typography
                     variant="body1"

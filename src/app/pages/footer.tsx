@@ -65,7 +65,7 @@ const Footer: React.FC = () => {
             </Typography>
             <Typography sx={{ color: "grey" }}>
               Lower Chelidanga, Loretto Para
-              <br /> Near ST Paul's Club
+              <br /> Near ST Pauls Club
               <br />
               Asansol 713304
             </Typography>

@@ -215,7 +215,7 @@ import { PhotoCamera } from "@mui/icons-material";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { submitFeedback } from "../services/services";
-
+import Image from "next/image";
 const FeedbackForm: React.FC = () => {
   const [feedback, setFeedback] = useState({
     name: "",
@@ -354,10 +354,17 @@ const FeedbackForm: React.FC = () => {
                     marginBottom: 2,
                   }}
                 >
-                  <img
+                  {/* <img
                     src={imagePreview}
                     alt="Selected"
                     style={{ maxHeight: 200, borderRadius: 8 }}
+                  /> */}
+                  <Image
+                    src={imagePreview}
+                    alt="Selected"
+                    layout="fill"
+                    objectFit="contain"
+                    style={{ borderRadius: "8px" }}
                   />
                 </Box>
               )}

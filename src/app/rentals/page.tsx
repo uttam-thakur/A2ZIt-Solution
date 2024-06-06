@@ -9,7 +9,7 @@ import Combine from "../pages/combine";
 import Footer from "../pages/footer";
 import CustomersFeedback from "../pages/customersFeedback";
 import Map from "../pages/map";
-
+import Image from "next/image";
 const Page = () => {
   const pathname = usePathname();
   const isPathMatched: string = pathname;
@@ -17,12 +17,20 @@ const Page = () => {
   return (
     <>
       <Navbar />
-      <img
+      {/* <img
         src={
           "https://img.freepik.com/free-vector/computer-troubleshooting-concept-illustration_114360-7616.jpg?size=626&ext=jpg&ga=GA1.1.718586984.1712132500&semt=ais"
         }
         width="100%"
         height="400px"
+        alt={"rent image"}
+      /> */}
+      <Image
+        src={
+          "https://img.freepik.com/free-vector/computer-troubleshooting-concept-illustration_114360-7616.jpg?size=626&ext=jpg&ga=GA1.1.718586984.1712132500&semt=ais"
+        }
+        width={1260}
+        height={400}
         alt={"rent image"}
       />
       <Reuse

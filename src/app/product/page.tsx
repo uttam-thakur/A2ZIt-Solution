@@ -112,7 +112,7 @@ import "react-loading-skeleton/dist/skeleton.css";
 import styles from "../style/product.module.css";
 import Footer from "../pages/footer";
 import Navbar from "../component/Navbar";
-
+import Image from "next/image";
 interface Product {
   id: number;
   name: string;
@@ -180,11 +180,20 @@ const Page: React.FC = () => {
             ))
           : products?.map((product: Product) => (
               <div className={styles.card} key={product.id}>
-                <img
+                {/* <img
                   src={product.image}
                   className={styles.imgProduct}
                   alt={product.title}
                   style={{ height: "200px", width: "200px" }}
+                /> */}
+
+                <Image
+                  height={200}
+                  width={200}
+                  src={product.image}
+                  className={styles.imgProduct}
+                  alt={product.title}
+                  // style={{ height: "200px", width: "200px" }}
                 />
                 <Link
                   style={{ textDecoration: "none" }}

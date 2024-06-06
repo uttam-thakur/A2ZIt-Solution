@@ -1,5 +1,7 @@
 "use client";
 import React from "react";
+import Image from "next/image";
+
 import Services from "../pages/services";
 import Navbar from "../component/Navbar";
 import Reuse from "../pages/reuse";
@@ -11,12 +13,20 @@ const page = () => {
   return (
     <>
       <Navbar />
-      <img
+      {/* <img
         src={
           "https://img.freepik.com/free-vector/computer-troubleshooting-concept-illustration_114360-7616.jpg?size=626&ext=jpg&ga=GA1.1.718586984.1712132500&semt=ais"
         }
         width="100%"
         height="400px"
+        alt={"rent image"}
+      /> */}
+      <Image
+        src={
+          "https://img.freepik.com/free-vector/computer-troubleshooting-concept-illustration_114360-7616.jpg?size=626&ext=jpg&ga=GA1.1.718586984.1712132500&semt=ais"
+        }
+        width={1260}
+        height={400}
         alt={"rent image"}
       />
       <Reuse
