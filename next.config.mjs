@@ -11,6 +11,8 @@ const nextConfig = {
       "images.unsplash.com",
       "t4.ftcdn.net",
       "myutsavawsimagebucket.s3.ap-south-1.amazonaws.com",
+      "mosodigital.com",
+      "brandroofsolutions.com",
     ],
   },
 };
