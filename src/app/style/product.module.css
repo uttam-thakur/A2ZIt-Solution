@@ -32,6 +32,8 @@
 .imgProduct {
   display: block;
   margin: 0 auto 15px;
+  height: 250px;
+  width: 200px;
 }
 
 .h4 {

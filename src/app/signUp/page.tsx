@@ -11,74 +11,50 @@
 //   Grid,
 //   IconButton,
 //   InputAdornment,
+//   CircularProgress,
 // } from "@mui/material";
-// import { CircularProgress } from "@mui/material";
 // import { ToastContainer, toast } from "react-toastify";
 // import "react-toastify/dist/ReactToastify.css";
-// import "../style/signUp.css";
 // import Link from "next/link";
 // import Navbar from "../component/Navbar";
 // import Footer from "../pages/footer";
+// import "../style/signUp.css";
+// import Image from "next/image";
+// import signup from "../services/services";
+
 // const Signup: React.FC = () => {
 //   const [isLoading, setIsLoading] = useState(false);
 //   const [notification, setNotification] = useState({ type: "", message: "" });
+//   const [form, setForm] = useState({
+//     username: "",
+//     email: "",
+//     password: "",
+//     password_confirmation: "",
+//   });
 
-//   //   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-//   //     const { name, value } = event.target;
-//   //     setPayload((prevPayload) => ({
-//   //       ...prevPayload,
-//   //       [name]: value,
-//   //     }));
+//   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+//     setForm({ ...form, [e.target.name]: e.target.value });
+//   };
 
-//   //     if (name === "password") {
-//   //       const passwordValue = value;
-//   //       const passwordPattern = /^(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.*[0-9]).{8,}$/;
+//   const handleSubmit = async (e: React.FormEvent) => {
+//     e.preventDefault();
+//     setIsLoading(true);
 
-//   //       if (!passwordPattern.test(passwordValue)) {
-//   //         setNotification({
-//   //           type: "error",
-//   //           message:
-//   //             "Password must be at least 8 characters long, contain one uppercase letter, one special symbol, and one number.",
-//   //         });
-//   //       } else {
-//   //         setNotification({ type: "", message: "" });
-//   //       }
-//   //     }
-//   //   };
-
-//   //   const handleSubmit = async (event: any) => {
-//   //     event.preventDefault();
-//   //     setIsLoading(true);
-
-//   //     try {
-//   //       const userCredential = await createUserWithEmailAndPassword(
-//   //         auth,
-//   //         payload.email,
-//   //         payload.password
-//   //       );
-//   //       console.log(userCredential);
-//   //       addDoc(collection(db, "users"), {
-//   //         userEmail: payload.email,
-//   //         password: payload.password,
-//   //         uid: userCredential.user.uid,
-//   //         name: payload.username,
-//   //       });
-//   //       toast.success("User Successfully created!", { autoClose: 1500 });
-//   //       setTimeout(() => {
-//   //         navigate("/");
-//   //       }, 1500);
-//   //     } catch (error) {
-//   //       console.log("error", error);
-//   //       toast.error("Email Already in use. Please use another email.");
-//   //     } finally {
-//   //       setIsLoading(false);
-//   //       setPayload({
-//   //         email: "",
-//   //         username: "",
-//   //         password: "",
-//   //       });
-//   //     }
-//   //   };
+//     try {
+//       await signup(
+//         form.username,
+//         form.email,
+//         form.password,
+//         form.password_confirmation
+//       );
+//       toast.success("Account created successfully!");
+//       // Redirect or clear the form as needed
+//     } catch (error: any) {
+//       toast.error(error.response?.data?.message || "Failed to create account");
+//     } finally {
+//       setIsLoading(false);
+//     }
+//   };
 
 //   return (
 //     <>
@@ -99,33 +75,31 @@
 //               <Typography component="h1" variant="h5">
 //                 Register
 //               </Typography>
-//               {/* <form onSubmit={handleSubmit}> */}
-//               <form>
-//                 <TextField
-//                   variant="outlined"
-//                   margin="normal"
-//                   required
-//                   fullWidth
-//                   id="email"
-//                   label="email"
-//                   name="email"
-//                   autoComplete="email"
-//                   autoFocus
-//                   // value={payload.email}
-//                   // onChange={handleInputChange}
-//                 />
+//               <form onSubmit={handleSubmit}>
 //                 <TextField
 //                   variant="outlined"
 //                   margin="normal"
 //                   required
 //                   fullWidth
 //                   id="username"
-//                   label="username"
+//                   label="Username"
 //                   name="username"
 //                   autoComplete="username"
 //                   autoFocus
-//                   // value={payload.username}
-//                   // onChange={handleInputChange}
+//                   value={form.username}
+//                   onChange={handleChange}
+//                 />
+//                 <TextField
+//                   variant="outlined"
+//                   margin="normal"
+//                   required
+//                   fullWidth
+//                   id="email"
+//                   label="Email"
+//                   name="email"
+//                   autoComplete="email"
+//                   value={form.email}
+//                   onChange={handleChange}
 //                 />
 //                 <TextField
 //                   variant="outlined"
@@ -136,13 +110,27 @@
 //                   label="Password"
 //                   id="password"
 //                   autoComplete="current-password"
-//                   // value={payload.password}
-//                   // onChange={handleInputChange}
+//                   type="password"
+//                   value={form.password}
+//                   onChange={handleChange}
 //                   error={notification.type === "error"}
 //                   helperText={notification.message}
-//                   type="password"
 //                 />
-
+//                 <TextField
+//                   variant="outlined"
+//                   margin="normal"
+//                   required
+//                   fullWidth
+//                   name="password"
+//                   label="Confirm Password"
+//                   id="password"
+//                   autoComplete="current-password"
+//                   type="password"
+//                   value={form.password_confirmation}
+//                   onChange={handleChange}
+//                   error={notification.type === "error"}
+//                   helperText={notification.message}
+//                 />
 //                 <CardActions className="cardActions">
 //                   <Button
 //                     type="submit"
@@ -164,10 +152,13 @@
 //             </CardContent>
 //           </Card>
 //         </Container>
-//         <Grid item xs={6} sm={6} md={6} lg={6}>
-//           <img
+//         <Grid item xs={6} sm={6} md={6} lg={6} className="image-container">
+//           <Image
 //             src="https://brandroofsolutions.com/wp-content/uploads/2020/12/cms-and-ecommerce.gif"
 //             alt="Background"
+//             className="image"
+//             width={205}
+//             height={205}
 //           />
 //         </Grid>
 //       </div>
@@ -200,9 +191,48 @@ import Navbar from "../component/Navbar";
 import Footer from "../pages/footer";
 import "../style/signUp.css";
 import Image from "next/image";
+import signup from "../services/services";
+
 const Signup: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [notification, setNotification] = useState({ type: "", message: "" });
+  const [form, setForm] = useState({
+    username: "",
+    email: "",
+    password: "",
+    password_confirmation: "",
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setNotification({ type: "", message: "" });
+
+    if (form.password !== form.password_confirmation) {
+      setNotification({ type: "error", message: "Passwords do not match" });
+      return;
+    }
+
+    setIsLoading(true);
+
+    try {
+      await signup(
+        form.username,
+        form.email,
+        form.password,
+        form.password_confirmation
+      );
+      toast.success("Account created successfully!");
+      // Redirect or clear the form as needed
+    } catch (error: any) {
+      toast.error(error.response?.data?.message || "Failed to create account");
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   return (
     <>
@@ -223,7 +253,7 @@ const Signup: React.FC = () => {
               <Typography component="h1" variant="h5">
                 Register
               </Typography>
-              <form>
+              <form onSubmit={handleSubmit}>
                 <TextField
                   variant="outlined"
                   margin="normal"
@@ -234,6 +264,8 @@ const Signup: React.FC = () => {
                   name="username"
                   autoComplete="username"
                   autoFocus
+                  value={form.username}
+                  onChange={handleChange}
                 />
                 <TextField
                   variant="outlined"
@@ -244,9 +276,9 @@ const Signup: React.FC = () => {
                   label="Email"
                   name="email"
                   autoComplete="email"
-                  autoFocus
+                  value={form.email}
+                  onChange={handleChange}
                 />
-
                 <TextField
                   variant="outlined"
                   margin="normal"
@@ -256,9 +288,30 @@ const Signup: React.FC = () => {
                   label="Password"
                   id="password"
                   autoComplete="current-password"
-                  error={notification.type === "error"}
-                  helperText={notification.message}
                   type="password"
+                  value={form.password}
+                  onChange={handleChange}
+                  error={notification.type === "error"}
+                  helperText={
+                    notification.type === "error" && notification.message
+                  }
+                />
+                <TextField
+                  variant="outlined"
+                  margin="normal"
+                  required
+                  fullWidth
+                  name="password_confirmation"
+                  label="Confirm Password"
+                  id="password_confirmation"
+                  autoComplete="current-password"
+                  type="password"
+                  value={form.password_confirmation}
+                  onChange={handleChange}
+                  error={notification.type === "error"}
+                  helperText={
+                    notification.type === "error" && notification.message
+                  }
                 />
                 <CardActions className="cardActions">
                   <Button
@@ -281,7 +334,6 @@ const Signup: React.FC = () => {
             </CardContent>
           </Card>
         </Container>
-        {/* <Grid item xs={12} className="image-container"> */}
         <Grid item xs={6} sm={6} md={6} lg={6} className="image-container">
           <Image
             src="https://brandroofsolutions.com/wp-content/uploads/2020/12/cms-and-ecommerce.gif"

@@ -7,7 +7,7 @@ import ChooseUs from "./pages/chooseUs";
 import Footer from "./pages/footer";
 import Combine from "./pages/combine";
 import CustomersFeedback from "./pages/customersFeedback";
-
+import "./style/globals.css";
 export default function Home() {
   return (
     <div>

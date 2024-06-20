@@ -25,7 +25,6 @@ const Hero = () => {
             alt="image"
             height={90}
             width={250}
-            // width="250%" for responsive
             className={styles.img}
           />
         </div>

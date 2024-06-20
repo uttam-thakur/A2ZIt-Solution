@@ -74,7 +74,6 @@ export const getFeedbacks = async (): Promise<Feedback[]> => {
 };
 
 //for product listing
-// servicesApi.ts
 
 export const fetchProducts = async () => {
   const apiUrl = "https://fakestoreapi.com/products";
@@ -85,3 +84,38 @@ export const fetchProducts = async () => {
     throw error;
   }
 };
+
+//login
+
+const Login_API_URL =
+  "https://hostapi-production-15e5.up.railway.app/api/auth/login";
+
+export const login = async (email: any, password: any) => {
+  const response = await axios.post(Login_API_URL, {
+    email,
+    password,
+  });
+  return response.data;
+};
+
+//register
+
+const API_URL =
+  "https://hostapi-production-15e5.up.railway.app/api/auth/register";
+
+const signup = async (
+  name: any,
+  email: any,
+  password: any,
+  password_confirmation: any
+) => {
+  const response = await axios.post(`${API_URL}`, {
+    name,
+    email,
+    password,
+    password_confirmation,
+  });
+  return response.data;
+};
+
+export default signup;

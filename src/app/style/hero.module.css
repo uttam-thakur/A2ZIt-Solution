@@ -2,6 +2,7 @@
 .main_hero {
   margin-top: -300px;
   background-color: rgb(236, 221, 221);
+  overflow-x: hidden;
 }
 .hero {
   position: relative;
@@ -85,7 +86,6 @@
   }
   .img {
     width: 250%;
-    /* //widhth should be 100% for perfect view */
     height: 90%;
   }
   .heading {
