@@ -62,7 +62,7 @@ const WriteUs: React.FC = () => {
           }}
         >
           <Typography variant="h4" align="center" gutterBottom>
-            !Write Us!
+            !Write Us!!
           </Typography>
           <CardContent>
             <form onSubmit={handleSubmit}>
