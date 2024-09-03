@@ -13,3 +13,14 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
+
+/* globals.css */
+
+html, body, #__next {
+  height: 100%;
+}
+
+div {
+  scroll-behavior: smooth;
+}
