@@ -10,6 +10,7 @@ import Footer from "../pages/footer";
 import CustomersFeedback from "../pages/customersFeedback";
 import Map from "../pages/map";
 import Image from "next/image";
+import ThreeDBackground from "../pages/threeDBackground";
 const Page = () => {
   const pathname = usePathname();
   const isPathMatched: string = pathname;
@@ -17,14 +18,7 @@ const Page = () => {
   return (
     <>
       <Navbar />
-      {/* <img
-        src={
-          "https://img.freepik.com/free-vector/computer-troubleshooting-concept-illustration_114360-7616.jpg?size=626&ext=jpg&ga=GA1.1.718586984.1712132500&semt=ais"
-        }
-        width="100%"
-        height="400px"
-        alt={"rent image"}
-      /> */}
+    
       <div style={{ overflowX: "hidden" }}>
         <Image
           src={
@@ -34,6 +28,7 @@ const Page = () => {
           height={400}
           alt={"rent image"}
         />
+
         <Reuse
           imageSrc="https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           title="COMPUTERS"
@@ -69,3 +64,49 @@ const Page = () => {
 };
 
 export default Page;
+
+
+// "use client";
+// import React from "react";
+// import Navbar from "../component/Navbar";
+// import Reuse from "../pages/reuse";
+// import Services from "../pages/services";
+// import { usePathname } from "next/navigation";
+// import Combine from "../pages/combine";
+// import Footer from "../pages/footer";
+// import CustomersFeedback from "../pages/customersFeedback";
+// import ThreeDBackground from "../pages/threeDBackground";
+// import styles from "../style/hero.module.css";
+
+
+// const Page = () => {
+//   const pathname = usePathname();
+//   const isPathMatched: string = pathname;
+
+//   return (
+//     <>
+//       <Navbar />
+    
+//       <div style={{ overflowX: "hidden" }}>
+//         <div>
+//           {/* Use the CSS class to style the ThreeDBackground component */}
+//           <ThreeDBackground className={styles.threeDBackground} />
+//         </div>
+
+//         <Reuse
+//           imageSrc="https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+//           title="COMPUTERS"
+//           description="Buying an entire set of a computer for a purpose that lasts a few days- is not a thoughtful decision. Hence, we recommend you rent a laptop, as we have computers from high-end manufacturers. Rent a laptop, use it, and return it after your work gets done; it’s that simple. We keep our PCs and Mac updated with OS and anti-virus software so that customers find it convenient to use."
+//           isImageRight={true}
+//         />
+//         {/* ... other components ... */}
+//         <Services />
+//         <CustomersFeedback />
+//         <Combine />
+//         <Footer />
+//       </div>
+//     </>
+//   );
+// };
+
+// export default Page;

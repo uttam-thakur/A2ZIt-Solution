@@ -60,17 +60,22 @@ const Footer: React.FC = () => {
             </Link>
           </Grid>
           <Grid item xs={12} sm={6} md={6} lg={3}>
-            <Typography variant="h6" gutterBottom sx={{ marginLeft: "100px" }}>
+            <Typography
+              className={styles.contactHead}
+              variant="h6"
+              gutterBottom
+              sx={{ marginLeft: "100px" }}
+            >
               Contact Us
             </Typography>
-            <Typography sx={{ color: "grey" }}>
+            <Typography sx={{ color: "grey" }} className={styles.contact}>
               Lower Chelidanga, Loretto Para
               <br /> Near ST Pauls Club
               <br />
               Asansol 713304
             </Typography>
-            <hr style={{ width: "50%", marginLeft: "110px" }}></hr>
-            <Typography sx={{ color: "grey" }}>
+            <hr style={{ marginTop: "25px" }}></hr>
+            <Typography sx={{ color: "grey" }} className={styles.contact}>
               Phone: 961947358
               <br />
               Email: a2zit@gmail.com

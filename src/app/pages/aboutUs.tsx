@@ -7,7 +7,7 @@ import Typography from "@mui/material/Typography";
 
 const AboutUs = () => {
   return (
-    <div>
+    <div className="aboutUs">
       <Card sx={{ boxShadow: "none" }}>
         <Grid container>
           {/* Description on the left */}

@@ -1,3 +1,14 @@
 .redMarker::marker {
   color: orangered;
 }
+@media (max-width: 760px) {
+  .contact {
+    margin-left: -110px;
+  }
+  .contactHead {
+    margin-left: 0px;
+  }
+  .hra {
+    width: 100%;
+  }
+}
