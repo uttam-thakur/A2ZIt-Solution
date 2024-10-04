@@ -30,8 +30,6 @@
 //   );
 // }
 
-
-
 // Home.tsx
 "use client";
 import Navbar from "./component/Navbar";
@@ -43,13 +41,11 @@ import Footer from "./pages/footer";
 import Combine from "./pages/combine";
 import CustomersFeedback from "./pages/customersFeedback";
 import "./style/globals.css";
+import WriteUs from "./pages/writeUs";
 
 export default function Home() {
   return (
     <div style={{ position: "relative", overflow: "scroll", height: "100vh" }}>
-      {/* 3D Animation Component */}
-
-      {/* Main content */}
       <div style={{ position: "relative", zIndex: 1 }}>
         <Navbar />
         <Hero />
@@ -60,10 +56,9 @@ export default function Home() {
         <br />
         <ChooseUs />
         <br />
-        <br />
         <CustomersFeedback />
         <br />
-        <Combine />
+        <WriteUs />
         <br />
         <Footer />
       </div>

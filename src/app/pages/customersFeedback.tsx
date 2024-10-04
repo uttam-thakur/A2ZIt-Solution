@@ -164,12 +164,10 @@ const CustomersFeedback: React.FC = () => {
       >
         CUSTOMERS REVIEW
       </Typography>
-      <Carousel>
+      <Carousel variant="dark">
         {feedbacks.map((feedback) => (
           <Carousel.Item key={feedback.id}>
-            <div className={styles.carasoulDiv}>
-              {/* Adjust the div style if needed */}
-            </div>
+            <div className={styles.carasoulDiv}></div>
             <Carousel.Caption>
               <Image
                 src={feedback.image || "https://via.placeholder.com/150"}
