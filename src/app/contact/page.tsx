@@ -24,16 +24,7 @@ const page = () => {
   return (
     <>
       <Navbar />
-      {/* <img
-        style={{ marginTop: "-50px" }}
-        src={
-          "https://images.unsplash.com/photo-1534536281715-e28d76689b4d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          // "https://img.freepik.com/free-vector/computer-troubleshooting-concept-illustration_114360-7616.jpg?size=626&ext=jpg&ga=GA1.1.718586984.1712132500&semt=ais"
-        }
-        width="100%"
-        height="400px"
-        alt={"contact image"}
-      /> */}
+
       <Image
         src={
           "https://img.freepik.com/free-vector/computer-troubleshooting-concept-illustration_114360-7616.jpg?size=626&ext=jpg&ga=GA1.1.718586984.1712132500&semt=ais"
