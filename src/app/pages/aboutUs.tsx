@@ -1,18 +1,29 @@
 import React from "react";
+import Image from "next/image";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-
+import styles from "../style/aboutUs.module.css";
 const AboutUs = () => {
   return (
-    <div className="aboutUs">
+    <div>
       <Card sx={{ boxShadow: "none" }}>
         <Grid container>
           {/* Description on the left */}
           <Grid item xs={12} md={6}>
-            <CardContent sx={{ padding: "50px" }}>
+            <CardContent
+              sx={{
+                padding: {
+                  xs: "10px",
+                  sm: "50px",
+                },
+                marginTop: {
+                  xs: "-60px",
+                },
+              }}
+            >
               <Typography
                 variant="h5"
                 gutterBottom
@@ -43,7 +54,11 @@ const AboutUs = () => {
               </Typography>
               <Typography
                 variant="body1"
-                style={{ fontSize: "16px", marginTop: "0px" }}
+                style={{
+                  fontSize: "18px",
+                  marginTop: "0px",
+                  textAlign: "left",
+                }}
               >
                 At A2Z IT Solution, we provide Multi-Brand Hardware Solutions
                 (Sales, Service & Rentals).
@@ -59,12 +74,14 @@ const AboutUs = () => {
 
           {/* Image on the right */}
           <Grid item xs={12} md={6}>
-            <CardMedia
-              component="img"
-              alt="Image Alt Text"
-              height="500"
-              image="https://img.freepik.com/free-photo/male-technician-working-broken-computer_23-2147922177.jpg?w=1380&t=st=1712133492~exp=1712134092~hmac=0bdcb9c737eb4790f8fb311c9a950a9bf9193f705910446156e7bd3069beacbf"
-              sx={{ paddingRight: "10px", opacity: "0.9" }}
+            <Image
+              // component="img"
+              alt={"Image Alt Text"}
+              height={450}
+              width={800}
+              src={"/images/technitian.jpg"}
+              className={styles.image}
+              // sx={{ paddingRight: "10px", opacity: "0.9" }}
             />
           </Grid>
         </Grid>

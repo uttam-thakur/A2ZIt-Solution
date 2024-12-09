@@ -24,7 +24,7 @@ export default function Home() {
         <br />
         <CustomersFeedback />
         <br />
-        <WriteUs />
+        {/* <WriteUs /> */}
         <br />
         <Footer />
       </div>

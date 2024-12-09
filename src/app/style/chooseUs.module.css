@@ -1,3 +1,6 @@
+.mainDiv {
+  margin-top: 100px;
+}
 .p {
   margin-top: 15px;
   margin-left: 10px;
@@ -5,9 +8,28 @@
 }
 .expandedItem {
   display: flex;
-  width: 90%;
-  margin-left: 40px;
+  flex-direction: row; /* Default: image on left, text on right */
+  align-items: flex-start;
+  gap: 16px; /* Optional: space between elements */
 }
 .horLine {
   margin-top: -10px;
+}
+.image {
+  object-fit: cover;
+  padding: 4px;
+  margin-left: 50px;
+}
+@media (max-width: 768px) {
+  .image {
+    object-fit: fill;
+    height: 280px;
+    width: 400px;
+    padding: 4px;
+    margin-left: 7px;
+  }
+  .expandedItem {
+    flex-direction: column; /* Stack image and text */
+    align-items: center; /* Center align in mobile view */
+  }
 }

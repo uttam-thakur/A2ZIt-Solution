@@ -6,29 +6,29 @@
   justify-content: center;
   font-size: large;
 }
-h2 {
+.h2 {
   display: flex;
   justify-content: center;
   font-size: 30px;
 }
-p {
+.p {
   display: flex;
   justify-content: center;
   text-align: center;
 }
-.title-container {
+.titleContainer {
   height: 60px; /* Adjust the height as needed */
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.card-container {
+.cardContainer {
   display: flex;
   justify-content: space-around;
 }
 
 @media (max-width: 600px) {
-  .card-container {
+  .cardContainer {
     flex-direction: column;
     align-items: center;
   }

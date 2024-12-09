@@ -10,7 +10,7 @@ import RemoveIcon from "@mui/icons-material/Remove";
 import styles from "../style/chooseUs.module.css";
 import Image from "next/image";
 const ChooseUs = () => {
-  const [expandedItem, setExpandedItem]: any = useState("");
+  const [expandedItem, setExpandedItem]: any = useState("rentalService");
 
   const toggleExpansion = (itemName: any) => {
     if (expandedItem === itemName) {
@@ -21,7 +21,7 @@ const ChooseUs = () => {
   };
 
   return (
-    <>
+    <div className={styles.mainDiv}>
       <Typography
         variant="h5"
         gutterBottom
@@ -39,19 +39,25 @@ const ChooseUs = () => {
         <Grid container>
           {/* Image on the right */}
           <Grid item xs={12} md={6}>
-            <CardMedia
-              component="img"
-              alt="Image Alt Text"
-              height="500"
-              image=" https://st4.depositphotos.com/1350793/27775/i/380/depositphotos_277754254-stock-photo-why-choose-us-with-businessman.jpg"
-              sx={{
-                padding: "40px",
-              }}
+            <Image
+              // component="img"
+              alt={"Image Alt Text"}
+              height={400}
+              width={750}
+              src={"/images/whychooseUs.jpg"}
+              className={styles.image}
             />
           </Grid>
 
           {/* Description on the left */}
-          <Grid item xs={12} md={6}>
+          <Grid
+            item
+            xs={12}
+            md={6}
+            sx={{
+              marginTop: "-50px",
+            }}
+          >
             <CardContent>
               <IconButton
                 onClick={() => toggleExpansion("rentalService")}
@@ -66,37 +72,16 @@ const ChooseUs = () => {
                 ) : (
                   <AddIcon />
                 )}
-                <p
-                  className={styles.p}
-                  // style={{
-                  //   marginTop: "15px",
-                  //   marginLeft: "10px",
-                  //   color: "grey",
-                  // }}
-                >
-                  RENTAL SERVICE
-                </p>
+                <p className={styles.p}>RENTAL SERVICE</p>
               </IconButton>
 
               {expandedItem === "rentalService" && (
-                <div
-                  className={styles.expandedItem}
-
-                  // style={{ display: "flex", width: "90%", marginLeft: "40px" }}
-                >
-                  {/* <img
-                    src="https://t4.ftcdn.net/jpg/02/06/84/39/360_F_206843915_5rPRsyBPBW2CSVwt3iO7NXt9Cy5M5HS0.jpg"
-                    // src="https://st4.depositphotos.com/1350793/27775/i/380/depositphotos_277754254-stock-photo-why-choose-us-with-businessman.jpg"
-                    alt="laptop image"
-                    height="150px"
-                    width="200px"
-                  /> */}
-
+                <div className={`${styles.expandedItem} ${styles.mobileView}`}>
                   <Image
                     src={
                       "https://t4.ftcdn.net/jpg/02/06/84/39/360_F_206843915_5rPRsyBPBW2CSVwt3iO7NXt9Cy5M5HS0.jpg"
                     }
-                    width={150}
+                    width={250}
                     height={200}
                     alt={"laptop image"}
                   />
@@ -106,6 +91,10 @@ const ChooseUs = () => {
                       color: "black",
                       textAlign: "justify",
                       padding: "10px",
+                      marginTop: {
+                        xs: "0px",
+                        sm: "20px",
+                      },
                     }}
                   >
                     We carry a wide range of reliable PCs, Macs, and Laptops
@@ -117,7 +106,6 @@ const ChooseUs = () => {
                 </div>
               )}
               <hr className={styles.horLine}></hr>
-              {/* <br></br> */}
               <IconButton
                 onClick={() => toggleExpansion("maintenance")}
                 sx={{
@@ -127,24 +115,11 @@ const ChooseUs = () => {
                 }}
               >
                 {expandedItem === "maintenance" ? <RemoveIcon /> : <AddIcon />}
-                <p
-                  className={styles.p}
-                  // style={{
-                  //   marginTop: "15px",
-                  //   marginLeft: "10px",
-                  //   color: "grey",
-                  // }}
-                >
-                  MAINTENANCE
-                </p>
+                <p className={styles.p}>MAINTENANCE</p>
               </IconButton>
 
               {expandedItem === "maintenance" && (
-                <div
-                  className={styles.expandedItem}
-
-                  // style={{ display: "flex", width: "90%", marginLeft: "40px" }}
-                >
+                <div className={`${styles.expandedItem} ${styles.mobileView}`}>
                   {" "}
                   <Typography
                     variant="body1"
@@ -152,6 +127,10 @@ const ChooseUs = () => {
                       color: "black",
                       textAlign: "justify",
                       padding: "10px",
+                      marginTop: {
+                        xs: "0px",
+                        sm: "20px",
+                      },
                     }}
                   >
                     We carry a wide range of reliable PCs, Macs, and Laptops
@@ -160,24 +139,17 @@ const ChooseUs = () => {
                     our backed up with an up to date operating system and
                     anti-virus software.
                   </Typography>
-                  {/* <img
-                    src="https://t4.ftcdn.net/jpg/02/06/84/39/360_F_206843915_5rPRsyBPBW2CSVwt3iO7NXt9Cy5M5HS0.jpg"
-                    alt="laptop image"
-                    height="150px"
-                    width="200px"
-                  /> */}
                   <Image
                     src={
                       "https://t4.ftcdn.net/jpg/02/06/84/39/360_F_206843915_5rPRsyBPBW2CSVwt3iO7NXt9Cy5M5HS0.jpg"
                     }
-                    width={150}
+                    width={250}
                     height={200}
                     alt={"laptop image"}
                   />
                 </div>
               )}
               <hr className={styles.horLine}></hr>
-              {/* <br></br> */}
 
               <IconButton
                 onClick={() => toggleExpansion("accessories")}
@@ -188,35 +160,17 @@ const ChooseUs = () => {
                 }}
               >
                 {expandedItem === "accessories" ? <RemoveIcon /> : <AddIcon />}
-                <p
-                  className={styles.p}
-                  // style={{
-                  //   marginTop: "15px",
-                  //   marginLeft: "10px",
-                  //   color: "grey",
-                  // }}
-                >
-                  ACCESSORIES
-                </p>
+                <p className={styles.p}>ACCESSORIES</p>
               </IconButton>
 
               {expandedItem === "accessories" && (
-                <div
-                  className={styles.expandedItem}
-                  // style={{ display: "flex", width: "90%", marginLeft: "40px" }}
-                >
+                <div className={`${styles.expandedItem} ${styles.mobileView}`}>
                   {" "}
-                  {/* <img
-                    src="https://t4.ftcdn.net/jpg/02/06/84/39/360_F_206843915_5rPRsyBPBW2CSVwt3iO7NXt9Cy5M5HS0.jpg"
-                    alt="laptop image"
-                    height="150px"
-                    width="200px"
-                  /> */}
                   <Image
                     src={
                       "https://t4.ftcdn.net/jpg/02/06/84/39/360_F_206843915_5rPRsyBPBW2CSVwt3iO7NXt9Cy5M5HS0.jpg"
                     }
-                    width={150}
+                    width={250}
                     height={200}
                     alt={"laptop image"}
                   />
@@ -226,6 +180,10 @@ const ChooseUs = () => {
                       color: "black",
                       textAlign: "justify",
                       padding: "10px",
+                      marginTop: {
+                        xs: "0px",
+                        sm: "20px",
+                      },
                     }}
                   >
                     We carry a wide range of reliable PCs, Macs, and Laptops
@@ -240,7 +198,7 @@ const ChooseUs = () => {
           </Grid>
         </Grid>
       </Card>
-    </>
+    </div>
   );
 };
 

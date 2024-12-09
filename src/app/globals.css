@@ -24,6 +24,6 @@ div {
 
 @media (max-width: 768px) {
   .aboutUs {
-    margin-top: -140px;
+    /* margin-top: -140px; */
   }
 }

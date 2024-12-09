@@ -15,7 +15,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Link from "next/link";
-
+import Image from "next/image";
 interface Props {
   window?: () => Window;
 }
@@ -38,10 +38,13 @@ export default function DrawerAppBar(props: Props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        Menu
-      </Typography>
       <Divider />
+      <Image
+        src={"/images/logopng.png"}
+        height={100}
+        width={100}
+        alt={"logo"}
+      />
       <List>
         {navItems.map((item) => (
           <ListItem key={item.label} disablePadding>
@@ -50,7 +53,7 @@ export default function DrawerAppBar(props: Props) {
                 sx={{
                   textAlign: "center",
                   textDecoration: "none",
-                  color: "red",
+                  color: "black",
                 }}
               >
                 <ListItemText primary={item?.label} />

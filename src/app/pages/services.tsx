@@ -6,7 +6,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 import Link from "next/link";
-import "../style/services.css";
+import styles from "../style/services.module.css";
 import { usePathname } from "next/navigation";
 
 const ServiceCard = ({ title, description, imageSrc, href }: any) => {
@@ -42,7 +42,7 @@ const ServiceCard = ({ title, description, imageSrc, href }: any) => {
             }}
           />
           <CardContent>
-            <div className="title-container">
+            <div className={styles.titleContainer}>
               <Typography
                 gutterBottom
                 variant="h6"
@@ -117,10 +117,10 @@ const Services = () => {
   );
 
   return (
-    <div className="container">
-      <p className="h">WHAT WE PROVIDE</p>
-      <h2>SERVICES</h2>
-      <p>
+    <div className={styles.container}>
+      <p className={styles.p}>WHAT WE PROVIDE</p>
+      <h2 className={styles.h2}>SERVICES</h2>
+      <p className={styles.p}>
         We believe in providing quality and timely service to the customers.
         <br /> Our team of experts is pro at executing all kinds of repair work{" "}
         <br /> right from data recovery to desktop screen replacement, we manage
@@ -129,7 +129,7 @@ const Services = () => {
         software updates as per their need.
       </p>
 
-      <div className="card-container">
+      <div className={styles.cardContainer}>
         {filteredServicesData?.map((service, index) => (
           <ServiceCard key={index} {...service} />
         ))}

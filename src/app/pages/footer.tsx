@@ -81,8 +81,8 @@ const Footer: React.FC = () => {
               Email: a2zit@gmail.com
             </Typography>
           </Grid>
-          <Grid item xs={12} sm={6} md={6} lg={3}>
-            <Typography variant="h6" gutterBottom sx={{ marginLeft: "10px" }}>
+          <Grid item xs={12} sm={6} md={6} lg={3} paddingBottom={3}>
+            <Typography variant="h6" gutterBottom sx={{ marginLeft: "0px" }}>
               Follow Us
             </Typography>
             <IconButton color="warning">
