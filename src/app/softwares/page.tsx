@@ -57,7 +57,7 @@ const page = () => {
         <Services />
 
         <CustomersFeedback />
-        <Combine />
+        {/* <Combine /> */}
         <Footer />
       </div>
     </>

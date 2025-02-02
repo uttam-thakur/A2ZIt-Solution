@@ -25,7 +25,7 @@ const navItems = [
   { label: "Home", path: "/" },
   { label: "About", path: "/about" },
   { label: "Contact", path: "/contact" },
-  { label: "Product", path: "/product" },
+  // { label: "Product", path: "/product" },
 ];
 
 export default function DrawerAppBar(props: Props) {
@@ -44,6 +44,7 @@ export default function DrawerAppBar(props: Props) {
         height={100}
         width={100}
         alt={"logo"}
+        style={{ marginTop: "25px" }}
       />
       <List>
         {navItems.map((item) => (
@@ -82,6 +83,19 @@ export default function DrawerAppBar(props: Props) {
           >
             <MenuIcon />
           </IconButton>
+
+          {/* Text next to Drawer Icon */}
+          <Typography
+            variant="h6"
+            component="div"
+            sx={{
+              display: { xs: "block", sm: "none" },
+              flexGrow: 1,
+              marginLeft: "160px",
+            }}
+          >
+            A2Z IT SOLUTION
+          </Typography>
           <Typography
             variant="h6"
             component="div"
