@@ -7,20 +7,41 @@ import CustomersFeedback from "../pages/customersFeedback";
 import Combine from "../pages/combine";
 import Footer from "../pages/footer";
 import Image from "next/image";
+import styles from "./styles.module.css";
 const page = () => {
   return (
     <>
       <Navbar />
 
-      <div style={{ overflowX: "hidden" }}>
-        <Image
+      {/* <div style={{ overflowX: "hidden" }}> */}
+      {/* <Image
           src={
             "https://img.freepik.com/free-vector/computer-troubleshooting-concept-illustration_114360-7616.jpg?size=626&ext=jpg&ga=GA1.1.718586984.1712132500&semt=ais"
           }
           width={1260}
           height={400}
           alt={"rent image"}
-        />
+        /> */}
+
+      <div style={{ overflowX: "hidden", marginTop: "-50px" }}>
+        <div className={styles.mainSection}>
+          <div className={styles.introContainer}>
+            <p className={styles.introHeading}>
+              We take immense pride in contributing to transformative projects
+              that redefine possibilities and shape a brighter future.
+            </p>
+            <p className={styles.introSubHeading}>
+              With over 27 years of trusted expertise, we are dedicated to
+              offering innovative solutions tailored to your needs. Let us help
+              you create spaces that inspire, with products that stand the test
+              of time.
+            </p>
+            <div className={styles.ctaContainer}>
+              <p>Your satisfaction is our priority—visit us today!</p>
+            </div>
+          </div>
+        </div>
+        <div style={{ marginTop: "20px" }}></div>
         <Reuse
           imageSrc="https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           title="LAPTOP MAINTENANCE & REPAIR
@@ -46,8 +67,14 @@ const page = () => {
         "
           isImageRight={true}
         />
-
+        <br></br>
+        <br></br>
+        <br></br>
         <Services />
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
 
         <CustomersFeedback />
         {/* <Combine /> */}

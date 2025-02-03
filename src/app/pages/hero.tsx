@@ -29,11 +29,6 @@ const Hero = () => {
               professional needs. Thank you for trusting us to power your tech
               journey!
             </p>
-
-            {/* <div className={styles.buttonContainer}>
-              <button className={styles.button}>MORE DETAILS</button>
-              <button className={styles.button}>ASK FOR TEST</button>
-            </div> */}
           </div>
         </div>
       </div>
