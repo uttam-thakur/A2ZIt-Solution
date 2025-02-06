@@ -13,7 +13,12 @@ const Reuse = ({ imageSrc, title, description, isImageRight }: any) => {
         {isImageRight ? (
           <>
             <Grid item xs={12} md={6}>
-              <CardContent style={{ padding: "50px", marginTop: "90px" }}>
+              <CardContent
+                sx={{
+                  padding: { xs: "50px", md: "50px" },
+                  marginTop: { xs: "40px", md: "90px" },
+                }}
+              >
                 <Typography
                   variant="h3"
                   gutterBottom
@@ -35,9 +40,15 @@ const Reuse = ({ imageSrc, title, description, isImageRight }: any) => {
               <CardMedia
                 component="img"
                 alt="Image Alt Text"
-                height="500"
                 image={imageSrc}
-                sx={{ opacity: "0.9" }}
+                sx={{
+                  opacity: "0.9",
+                  height: { xs: "350px", md: "500px" },
+                  width: "100%",
+                  objectFit: "cover",
+
+                  padding: { xs: "0px", md: "50px" },
+                }}
               />
             </Grid>
           </>
@@ -47,13 +58,24 @@ const Reuse = ({ imageSrc, title, description, isImageRight }: any) => {
               <CardMedia
                 component="img"
                 alt="Image Alt Text"
-                height="500"
                 image={imageSrc}
-                sx={{ opacity: "0.9" }}
+                sx={{
+                  opacity: "0.9",
+                  height: { xs: "350px", md: "500px" },
+                  width: "100%",
+                  objectFit: "cover",
+
+                  padding: { xs: "0px", md: "50px" },
+                }}
               />
             </Grid>
             <Grid item xs={12} md={6}>
-              <CardContent style={{ padding: "50px", marginTop: "90px" }}>
+              <CardContent
+                sx={{
+                  padding: { xs: "50px", md: "50px" },
+                  marginTop: { xs: "40px", md: "90px" },
+                }}
+              >
                 <Typography
                   variant="h3"
                   gutterBottom

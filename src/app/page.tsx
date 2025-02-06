@@ -18,9 +18,12 @@ export default function Home() {
         <br />
         <AboutUs />
         <br />
+        <br />
+        <br />
         <Services />
         <br />
         <ChooseUs />
+        <br />
         <br />
         <CustomersFeedback />
         <br />

@@ -1,75 +1,22 @@
-// import React, { useState } from "react";
-// // import { BsQuestionSquare } from "react-icons/bs";
-// import styles from "../style/FAQ.module.css";
-// import { faqData } from "../common/constant";
-// import PortalModal from "../component/common-components/Modal";
-// import { log } from "console";
-
-// const FAQ: React.FC = () => {
-//   const [faqOpen, setFaqOpen] = useState(false);
-//   const [SelectedData, setSelectedData] = useState({
-//     question: "",
-//     answer: "",
-//   });
-
-//   return (
-//     <div className={styles.faq}>
-//       <h2 className={styles.faqHeading}>Frequently Asked Questions</h2>
-//       <div className={styles.faqSection}>
-//         {faqData.map((faq, index) => (
-//           <div
-//             key={index}
-//             className={styles.faqCard}
-//             onClick={() => {
-//               setSelectedData({ question: faq.question, answer: faq.answer });
-//               setFaqOpen(true);
-//             }}
-//           >
-//             {/* <BsQuestionSquare className={styles.faqCardIcon} /> */}
-//             <div className={styles.faqCardSummary}>{faq.question}</div>
-//           </div>
-//         ))}
-//       </div>
-//       <PortalModal
-//         open={faqOpen}
-//         onBackdropClick={() => {
-//           setFaqOpen(false);
-//         }}
-//       >
-//         <div className={styles.faqModal}>
-//           <button
-//             onClick={() => {
-//               setFaqOpen(false);
-//             }}
-//             className={styles.close}
-//           >
-//             X
-//           </button>
-
-//           <div className={styles.questionSection}>
-//             {/* <BsQuestionSquare className={styles.faqCardIcon} /> */}
-//             <h1 className={styles.faqModalQuestion}>
-//               {SelectedData?.question}
-//             </h1>
-//           </div>
-//           <h1 className={styles.faqModalAnswer}>{SelectedData?.answer}</h1>
-//         </div>
-//       </PortalModal>
-//     </div>
-//   );
-// };
-
-// export default FAQ;
-
 import React, { useState } from "react";
+import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
+import Modal from "@mui/material/Modal";
+import Box from "@mui/material/Box";
+import IconButton from "@mui/material/IconButton";
+import CloseIcon from "@mui/icons-material/Close";
+
 import styles from "../style/FAQ.module.css";
 import { faqData } from "../common/constant";
 
 const FAQ: React.FC = () => {
+  const [faqOpen, setFaqOpen] = useState(false);
   const [selectedData, setSelectedData] = useState<{
     question: string;
     answer: string;
-  } | null>(null);
+  }>({
+    question: "",
+    answer: "",
+  });
 
   return (
     <div className={styles.faq}>
@@ -79,29 +26,46 @@ const FAQ: React.FC = () => {
           <div
             key={index}
             className={styles.faqCard}
-            onClick={() => setSelectedData(faq)}
+            onClick={() => {
+              setSelectedData({ question: faq.question, answer: faq.answer });
+              setFaqOpen(true);
+            }}
           >
+            <HelpOutlineIcon className={styles.faqCardIcon} />
             <div className={styles.faqCardSummary}>{faq.question}</div>
           </div>
         ))}
       </div>
 
-      {/* Show the selected question-answer below the list */}
-      {selectedData && (
-        <div className={styles.faqModal}>
-          <button
-            onClick={() => setSelectedData(null)}
-            className={styles.close}
+      <Modal open={faqOpen} onClose={() => setFaqOpen(false)}>
+        <Box
+          className={styles.faqModal}
+          sx={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            bgcolor: "background.paper",
+            boxShadow: 24,
+            p: 4,
+            borderRadius: "10px",
+            width: "90%",
+            maxWidth: "500px",
+          }}
+        >
+          <IconButton
+            onClick={() => setFaqOpen(false)}
+            sx={{ position: "absolute", top: 8, right: 8 }}
           >
-            X
-          </button>
+            <CloseIcon />
+          </IconButton>
 
           <div className={styles.questionSection}>
             <h1 className={styles.faqModalQuestion}>{selectedData.question}</h1>
           </div>
-          <h1 className={styles.faqModalAnswer}>{selectedData.answer}</h1>
-        </div>
-      )}
+          <p className={styles.faqModalAnswer}>{selectedData.answer}</p>
+        </Box>
+      </Modal>
     </div>
   );
 };

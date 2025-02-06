@@ -13,12 +13,12 @@ import {
   Button,
 } from "@mui/material";
 // import ReactImageMagnify from "react-image-magnify";
+
 import Navbar from "@/app/component/Navbar";
 import Footer from "@/app/pages/footer";
 import { motion, AnimatePresence } from "framer-motion";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart"; // Import Material-UI cart icon
-import Image from "next/image"; // Import next/image component
-
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import Image from "next/image";
 interface Product {
   id: number;
   name: string;
@@ -41,21 +41,62 @@ const ProductDetail: React.FC = ({ params }: any) => {
   const [cartAnimation, setCartAnimation] = useState(false);
   const [showText, setShowText] = useState(true);
 
-  useEffect(() => {
-    if (id) {
-      const fetchProduct = async () => {
-        try {
-          const response = await axios.get(
-            `https://hostapi-production-15e5.up.railway.app/api/products/${id}`
-          );
-          setProduct(response.data.data);
-          setLoading(false);
-        } catch (error) {
-          console.error("Error fetching product:", error);
-          setLoading(false);
-        }
-      };
+  // Fake data as fallback
+  const fallbackProducts: Product[] = [
+    {
+      id: 1,
+      name: "Wireless Headphones",
+      price: 1200,
+      description: "High-quality wireless headphones with noise cancellation.",
+      category: "Electronics",
+      image: "/images/Rental/1.webp",
+      rating: { rate: 4.5, count: 100 },
+      title: "Wireless Headphones",
+    },
+    {
+      id: 2,
+      name: "Smartphone",
+      price: 25000,
+      description:
+        "Latest model smartphone with an AMOLED display and 128GB and 128GB and 128GB and 128GB and 128GB and 128GB and 128GB storage.",
+      category: "Electronics",
+      image: "/images/sample2.jpg",
+      rating: { rate: 4.7, count: 200 },
+      title: "Smartphone",
+    },
+    {
+      id: 3,
+      name: "Laptop",
+      price: 60000,
+      description: "Powerful laptop with 16GB RAM and 512GB SSD.",
+      category: "Electronics",
+      image: "/images/sample3.jpg",
+      rating: { rate: 4.6, count: 150 },
+      title: "Laptop",
+    },
+  ];
 
+  useEffect(() => {
+    const fetchProduct = async () => {
+      try {
+        const response = await axios.get(
+          `https://hostapi-production-15e5.up.railway.app/api/products/${id}`
+        );
+
+        if (response.data && response.data.data) {
+          setProduct(response.data.data);
+        } else {
+          setProduct(fallbackProducts.find((p) => p.id === Number(id)) || null);
+        }
+      } catch (error) {
+        console.error("Error fetching product:", error);
+        setProduct(fallbackProducts.find((p) => p.id === Number(id)) || null);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    if (id) {
       fetchProduct();
     }
   }, [id]);
@@ -123,6 +164,10 @@ const ProductDetail: React.FC = ({ params }: any) => {
                 />
               </div>
             </Grid> */}
+            <Grid item xs={12} md={6}>
+              <img src={product.image} height="300px" width="300px" />
+            </Grid>
+
             <Grid item xs={12} md={6}>
               <CardContent>
                 <Typography variant="h4" component="h1" gutterBottom>

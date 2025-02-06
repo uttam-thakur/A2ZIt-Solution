@@ -22,6 +22,24 @@ div {
   scroll-behavior: smooth;
 }
 
+.heading {
+  color: rgb(252, 158, 123);
+  text-align: left;
+
+  /* font-size: 1.8em; */
+  /* margin-bottom: 1rem; */
+  animation: fadeInDown 1s ease-out; /* Simple fade-in animation */
+}
+.glow {
+  color: #ffffff; /* Optional: Set the text color */
+  text-shadow: 0 0 3px #00ffcc, 0 0 6px #00ffcc, 0 0 9px #00ffcc,
+    0 0 12px #00ffcc, 0 0 15px #00ffcc;
+  animation: glowing 1.5s infinite alternate;
+}
+.glow :hover {
+  text-shadow: 0 0 3px #a9bb0c, 0 0 6px #a9bb0c, 0 0 9px #a9bb0c,
+    0 0 12px #a9bb0c, 0 0 15px #a9bb0c;
+}
 @media (max-width: 768px) {
   .aboutUs {
     /* margin-top: -140px; */

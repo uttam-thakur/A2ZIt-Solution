@@ -1,9 +1,9 @@
-import React, { useEffect, useRef, ReactNode } from 'react';
-import * as THREE from 'three';
+import React, { useEffect, useRef, ReactNode } from "react";
+import * as THREE from "three";
 
 interface ThreeDBackgroundProps {
   children?: ReactNode; // Accept children props
-  className?:string;
+  className?: string;
 }
 
 const ThreeDBackground: React.FC<ThreeDBackgroundProps> = ({ children }) => {
@@ -37,7 +37,7 @@ const ThreeDBackground: React.FC<ThreeDBackgroundProps> = ({ children }) => {
     // Load the custom image texture
     const textureLoader = new THREE.TextureLoader();
     const laptopScreenTexture = textureLoader.load(
-      'https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 
+      "https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       () => renderer.render(scene, camera)
     );
 
@@ -47,7 +47,10 @@ const ThreeDBackground: React.FC<ThreeDBackgroundProps> = ({ children }) => {
       side: THREE.DoubleSide,
     });
     const laptopScreenGeometry = new THREE.PlaneGeometry(5.5, 3.5);
-    const laptopScreen = new THREE.Mesh(laptopScreenGeometry, laptopScreenMaterial);
+    const laptopScreen = new THREE.Mesh(
+      laptopScreenGeometry,
+      laptopScreenMaterial
+    );
     laptopScreen.position.z = 0.11;
     laptopBody.add(laptopScreen);
 
@@ -80,10 +83,10 @@ const ThreeDBackground: React.FC<ThreeDBackgroundProps> = ({ children }) => {
       camera.updateProjectionMatrix();
       renderer.setSize(window.innerWidth, window.innerHeight);
     };
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
       if (mountRef.current) {
         mountRef.current.removeChild(renderer.domElement);
       }
@@ -91,7 +94,10 @@ const ThreeDBackground: React.FC<ThreeDBackgroundProps> = ({ children }) => {
   }, []);
 
   return (
-    <div ref={mountRef} style={{ position: 'relative', width: '100%', height: '100%' }}>
+    <div
+      ref={mountRef}
+      style={{ position: "relative", width: "100%", height: "100%" }}
+    >
       {children} {/* Render children inside the component */}
     </div>
   );

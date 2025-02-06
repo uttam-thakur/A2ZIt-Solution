@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
@@ -44,7 +43,7 @@ const ChooseUs = () => {
               alt={"Image Alt Text"}
               height={400}
               width={750}
-              src={"/images/whychooseUs.jpg"}
+              src={"/images/Rental/background4.webp"}
               className={styles.image}
             />
           </Grid>
