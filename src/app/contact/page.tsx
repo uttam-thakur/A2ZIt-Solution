@@ -94,6 +94,7 @@ import { infoData } from "../common/constant";
 import styles from "./contact.module.css";
 import Footer from "../pages/footer";
 import Navbar from "../component/Navbar";
+import MobileNavbarWrapper from "../component/MobileNavbarWrapper";
 // import ContactModal from "../components/ContactModal";
 // import { handleLocationClick } from "../components/fabComponents/FABLocation";
 
@@ -114,30 +115,7 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* <div className={styles.container}>
-        <div className={styles.contactHeader}>
-          <h1>Contact our friendly team</h1>
-          <p>Let us know how we can help.</p>
-        </div>
-
-        <div className={styles.grid}>
-          {contactData.map((contact, index) => (
-            <div key={index} className={styles.card}>
-              <h2>{contact.title}</h2>
-              <p>{contact.description}</p>
-              {contact.isButton ? (
-                <button className={styles.button} onClick={handleLocationClick}>
-                  {contact.contactInfo}
-                </button>
-              ) : (
-                <p className={styles.email}>{contact.contactInfo}</p>
-              )}
-            </div>
-          ))}
-        </div>
-
-        <ContactModal open={openModal} onClose={() => setOpenModal(false)} />
-      </div> */}
+        <MobileNavbarWrapper />
         <FAQ />
         <GetInTouchForm />
         <Footer />
