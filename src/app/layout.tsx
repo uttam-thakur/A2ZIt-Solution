@@ -3,6 +3,9 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import logo from "../../public/images/logo.jpeg";
 import SEO from ".././app/component/SEO";
+import FABWhatsApp from "./component/fabComponents/FABWhatsApp";
+import FABLocation from "./component/fabComponents/FABLocation";
+import FABProduct from "./component/fabComponents/FABProduct";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -22,14 +25,26 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <SEO
-        title={metadata.title}
-        description={metadata.description}
-        keywords={metadata.keywords}
-        image={metadata.image}
-        url={metadata.url}
-      />
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <SEO
+          title={metadata.title}
+          description={metadata.description}
+          keywords={metadata.keywords}
+          image={metadata.image}
+          url={metadata.url}
+        />
+        <main>{children} </main>
+        <div className="application-portal" id={"portalRoot"}></div>
+        {/* <Navbar /> */}
+        <FABWhatsApp />
+        <FABLocation />
+        <div className="fab-product">
+          <FABProduct />
+        </div>{" "}
+        {/* <div style={{ marginTop: "-145px" }}> */}
+        {/* <Footer /> */}
+        {/* </div> */}
+      </body>
     </html>
   );
 }

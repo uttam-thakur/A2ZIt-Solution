@@ -1,0 +1,123 @@
+.fab-whatsapp {
+  position: fixed;
+  top: calc(100vh - 170px); /* Use vh for responsive positioning */
+  right: 1.5rem; /* Adjust as needed */
+  background-color: rgba(239, 239, 239, 0.88);
+  z-index: 2;
+  border-radius: 9999px; /* Full rounding */
+  padding: 1rem; /* Padding similar to Tailwind's p-4 */
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(21, 29, 49, 0.24);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.85s ease, transform 1s ease;
+  border: 1px solid black;
+}
+
+.fab-whatsapp.hidden {
+  opacity: 0;
+  transform: translateX(200px);
+}
+
+.fab-whatsapp.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fab-whatsapp-icon {
+  font-size: 1.875rem; /* Equivalent to text-3xl */
+  color: #4caf50; /* Equivalent to text-green-500 */
+  transition: duration 0.3s; /* Adjust as needed */
+}
+
+/* Location */
+.fab-location {
+  position: fixed;
+  top: calc(100vh - 250px); /* Use vh for responsive positioning */
+  right: 1.5rem; /* Adjust as needed */
+  background-color: #363535;
+  z-index: 2;
+  border-radius: 9999px;
+  padding: 1rem;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(21, 29, 49, 0.24);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.85s ease, transform 2s ease;
+  border: 1px solid black;
+}
+
+.fab-location.hidden {
+  opacity: 0;
+  transform: translateX(200px);
+}
+
+.fab-location.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fab-location-icon {
+  font-size: 1.875rem;
+  color: white;
+}
+
+.fab-location-icon:hover {
+  color: red;
+}
+/* Product */
+.fab-product {
+  position: fixed;
+  top: calc(100vh - 93px);
+  right: 1.5rem; /* Adjust as needed */
+  background-color: #363535;
+  z-index: 2;
+  border-radius: 9999px;
+  padding: 1rem;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(21, 29, 49, 0.24);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.85s ease, transform 2s ease;
+  border: 1px solid black;
+}
+
+.fab-product.hidden {
+  opacity: 0;
+  transform: translateX(200px);
+}
+
+.fab-product.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fab-product-icon {
+  font-size: 1.875rem;
+  color: white;
+}
+.paraProduct {
+  color: rgb(218, 204, 13);
+  margin-left: 10px;
+  /* margin-top: 10px; */
+  text-transform: capitalize;
+}
+
+@media only screen and (max-width: 768px) {
+  .fab-product {
+    height: 62px;
+    width: 62px;
+    top: calc(100vh - 90px);
+  }
+  .fab-location {
+    height: 62px;
+    width: 62px;
+  }
+  .fab-whatsapp {
+    height: 62px;
+    width: 62px;
+  }
+}

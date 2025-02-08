@@ -44,4 +44,7 @@ div {
   .aboutUs {
     /* margin-top: -140px; */
   }
+  .fab-product {
+    display: none;
+  }
 }

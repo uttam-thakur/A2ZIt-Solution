@@ -1,3 +1,27 @@
+export const phoneNumber = 8670288140;
+
+export const whatsappNumber = 8670288140;
+
+const message = `Thank you for reaching out to A2Z IT SOLUTION!
+
+We specialize in computer, laptop, printer, and CCTV sales & service. Kindly share your requirements, and our team will be happy to assist you.
+
+📞 Contact Us:
+📱 Phone: 8670288140
+💻 Website: www.a2zitsolution.com
+📧 Email: a2zitsolution@gmail.com
+📲 Facebook: A2Z IT SOLUTION
+
+📍 Location: Asansol, West Bengal, India
+
+Best Regards,
+🚀 A2Z IT SOLUTION
+🔧 Your Trusted IT Partner!
+
+🙏🏻 Thank you! We look forward to serving you.`;
+
+export const whatsAppContactMsg = message;
+
 export const infoData = {
   title: "Get in Touch with Us",
   subTitle: "Quick answers and reliable support are just a message away.",
