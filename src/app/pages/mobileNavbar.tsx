@@ -10,6 +10,7 @@ import {
   IoInformationCircleOutline,
   IoCallOutline,
   IoCartOutline,
+  IoCubeOutline,
 } from "react-icons/io5";
 
 import styles from "../style/Navbar.module.css";
@@ -18,6 +19,7 @@ const icons = [
   { component: IoHomeOutline, name: "Home", path: "/" },
   { component: IoInformationCircleOutline, name: "Profile", path: "/about" },
   { component: IoCallOutline, name: "Chat", path: "/contact" },
+  { component: IoCubeOutline, name: "Cart", path: "/products" },
   { component: IoCartOutline, name: "Cart", path: "/cartItems" },
 ];
 

@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
             {/* <Typography variant="h6" gutterBottom>
               About Us
             </Typography> */}
-            <Typography variant="body2" color="grey" paragraph>
+            <Typography variant="body2" color="grey" marginTop="10px" paragraph>
               At A2Z IT SOLUTION, we provide Multi-Brand Hardware Solutions
               (Sales, Service & Rentals). By providing tech-related solutions,
               we strive to meet our customer’s specific individual or business

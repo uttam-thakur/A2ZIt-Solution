@@ -3,7 +3,7 @@
   /* width: 420px; */
   width: 100%;
   height: 66px;
-  background: #209cff;
+  background: #828f9a;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -64,7 +64,7 @@
 }
 
 .activeIcon {
-  color: #209cff !important;
+  color: #c0820f !important;
   transform: translateY(-10px);
 }
 
@@ -121,7 +121,7 @@
   left: -1px;
   width: 48px;
   height: 48px;
-  border: 4px solid #209cff;
+  border: 4px solid #828f9a;
   border-radius: 50%;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
   transform: scale(0.85);

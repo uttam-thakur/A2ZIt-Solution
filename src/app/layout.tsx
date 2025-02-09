@@ -38,9 +38,9 @@ export default function RootLayout({
         {/* <Navbar /> */}
         <FABWhatsApp />
         <FABLocation />
-        <div className="fab-product">
-          <FABProduct />
-        </div>{" "}
+        {/* <div className="fab-product"> */}
+        <FABProduct />
+        {/* </div>{" "} */}
         {/* <div style={{ marginTop: "-145px" }}> */}
         {/* <Footer /> */}
         {/* </div> */}
