@@ -116,7 +116,13 @@ import CardMedia from "@mui/material/CardMedia";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 
-const Reuse = ({ imageSrc, title, description, isImageRight }: any) => {
+const Reuse = ({
+  imageSrc,
+  title,
+  subtitle,
+  description,
+  isImageRight,
+}: any) => {
   return (
     <Card
       sx={{
@@ -154,6 +160,7 @@ const Reuse = ({ imageSrc, title, description, isImageRight }: any) => {
             >
               <b>{title}</b>
             </Typography>
+            <p style={{ fontSize: "22px", color: "grey" }}>{subtitle}</p>
             <Typography variant="body1" sx={{ fontSize: "16px" }}>
               {description}
             </Typography>
@@ -175,7 +182,7 @@ const Reuse = ({ imageSrc, title, description, isImageRight }: any) => {
               opacity: "0.9",
               height: { xs: "350px", md: "500px" },
               width: "100%",
-              objectFit: "cover",
+              objectFit: "contain",
               padding: { xs: "0px", md: "50px" },
             }}
           />

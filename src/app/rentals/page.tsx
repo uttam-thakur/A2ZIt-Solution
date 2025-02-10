@@ -51,25 +51,28 @@ const Page = () => {
         <Reuse
           imageSrc="/images/Rental/2.webp"
           altText="On-Site Expertise"
-          subtitle="Trust in Our Specialists"
+          subtitle="Wide Range of Laptops for Every Need
+"
           title="LAPTOPS"
-          description="For all types of work and all types of need, we at Krishnam Computers provide our customer wide array of laptops that differ in style, size, and features. Our laptops are best for travelers or the ones who are always on the go. For your unstoppable work, we make sure to rent you a laptop that has an up-to-date operating system and anti-virus software."
+          description="Why invest in a full computer setup for a temporary requirement? With our hassle-free laptop rental service, you get access to high-performance PCs and Macs from top brands—ready to use and updated with the latest OS and antivirus software. Simply rent, work, and return when you're done. It's that simple! Enjoy a seamless and secure experience without the long-term commitment."
           isImageRight={false}
         />
         <Reuse
           imageSrc="/images/Rental/1.webp"
           altText="On-Site Expertise"
-          subtitle="Trust in Our Specialists"
+          subtitle="Rent Printers & Projectors for Your Urgent Needs
+"
           title="PRINTERS & PROJECTORS"
-          description="A printer and a projector, both in their spaces are very useful. But not everyone on a personal level would need either of them on a daily basis. Even in offices, there can be situations that call for an urgent demand for extra printer and projector; hence, for all of your urgent requirements, we rent printer and projector, both."
+          description="Printers and projectors are essential tools, but not everyone needs them daily. Even in office environments, unexpected situations may arise where an extra printer or projector is required. At Krishnam Computers, we offer hassle-free rental services to meet your urgent needs. Whether for a business presentation, an event, or temporary office use, our high-quality printers and projectors are available whenever you need them. Rent with ease and stay prepared for any situation!"
           isImageRight={true}
         />
         <Reuse
           imageSrc="/images/Rental/cctv.jfif"
           altText="On-Site Expertise"
-          subtitle="Trust in Our Specialists"
+          subtitle="Short-Term CCTV Camera Rentals for Security & Emergencies
+"
           title="CCTV CAMERA"
-          description="To install a security camera in or around a house/commercial space is a conscious decision, but for uncalled emergencies and preventive measures, one might think to opt for a CCTV camera for a short term basis. At Krishnam Computers, we understand the need for it and hence rent CCTV cameras that help you solve your purpose."
+          description="Installing a security camera is a smart choice for homes and commercial spaces. However, there are times when a temporary CCTV solution is needed for emergencies or preventive measures. At Krishnam Computers, we provide short-term CCTV camera rentals to ensure your security needs are met without a long-term commitment. Whether for events, temporary surveillance, or urgent situations, our reliable cameras offer the protection you need. Rent with confidence and enhance your security effortlessly!"
           isImageRight={false}
         />
         <br></br>
