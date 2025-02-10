@@ -10,7 +10,6 @@ import Footer from "../pages/footer";
 import CustomersFeedback from "../pages/customersFeedback";
 import Map from "../pages/map";
 import Image from "next/image";
-import ThreeDBackground from "../pages/threeDBackground";
 import styles from "./styles.module.css";
 
 const Page = () => {
