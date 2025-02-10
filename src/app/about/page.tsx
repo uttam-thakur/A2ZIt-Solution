@@ -16,10 +16,10 @@ const About = () => {
             className={styles.image}
           />
           <div className={styles.mission}>
-            {/* <p>
+            <p>
               At Deal Magsil, our vision is to be the foremost provider of
               premium precast concrete solutions, setting the benchmark for
-              quality and reliability across India's infrastructure landscape.
+              quality and reliability across Indias infrastructure landscape.
               With over three decades of expertise, we are committed to
               delivering excellence through our advanced manufacturing processes
               and rigorous quality standards. As a registered S.S.I. Unit with
@@ -31,7 +31,7 @@ const About = () => {
               modern technology, allows us to support both government
               initiatives and private enterprises, delivering solutions that
               drive sustainable growth and national development.
-            </p> */}
+            </p>
             <br></br>
             <p className={styles.name}>Abhra Dey</p>
             <p className={styles.role}>Founder &amp; & CEO - A2Z IT SOLUTION</p>
