@@ -165,7 +165,14 @@ const ProductDetail: React.FC = ({ params }: any) => {
               </div>
             </Grid> */}
             <Grid item xs={12} md={6}>
-              <img src={product.image} height="300px" width="300px" />
+              <Image
+                src={product.image}
+                alt="Product Image"
+                width={300}
+                height={300}
+              />
+
+              {/* <img src={product.image} height="300px" width="300px" /> */}
             </Grid>
 
             <Grid item xs={12} md={6}>

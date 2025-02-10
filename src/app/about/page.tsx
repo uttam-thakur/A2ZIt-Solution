@@ -34,26 +34,26 @@ const About = () => {
             </p>
             <br></br>
             <p className={styles.name}>Abhra Dey</p>
-            <p className={styles.role}>Founder & CEO - Deal Magsil</p>
+            <p className={styles.role}>Founder &amp; & CEO - A2Z IT SOLUTION</p>
           </div>
         </div>
         <div className={styles.description}>
           <p>
             {" "}
-            Abrha Dey, the visionary Founder and CEO of Deal Magsil, has been
-            instrumental in transforming the landscape of precast concrete and
-            paver block manufacturing in India. Under his leadership, Deal
+            Abrha Dey, the visionary Founder and CEO of A2Z IT SOLUTION, has
+            been instrumental in transforming the landscape of precast concrete
+            and paver block manufacturing in India. Under his leadership, Deal
             Magsil has grown from a local supplier into a trusted name across
             major infrastructure projects, recognized for its commitment to
             quality, reliability, and technological advancement. Driven by a
-            dedication to excellence, Abrha has positioned Deal Magsil as a key
-            player in the industry, serving both government and private sectors
-            with distinction.{" "}
+            dedication to excellence, Abrha has positioned A2Z IT SOLUTION as a
+            key player in the industry, serving both government and private
+            sectors with distinction.{" "}
           </p>{" "}
           <p>
             {" "}
             With a background rich in engineering and project management, Abrha
-            Dey has successfully spearheaded Deal Magsil's involvement in
+            Dey has successfully spearheaded A2Z IT SOLUTION's involvement in
             prestigious projects, including the National Highway-2
             Panagarh-Barwa Adda stretch, Andal Airport, and DVC RTPP
             Raghunathpur. His approach emphasizes meticulous planning and
@@ -64,16 +64,17 @@ const About = () => {
           <p>
             {" "}
             Abrha's leadership extends beyond operations to strategic
-            partnerships. Under his guidance, Deal Magsil has forged alliances
-            with industry giants like SAIL - IISCO, DVC, and L&T, solidifying
-            its reputation as a reliable partner for large-scale projects. His
-            commitment to fostering strong relationships with clients and
-            stakeholders has been pivotal to the company's success and growth.{" "}
+            partnerships. Under his guidance, A2Z IT SOLUTION has forged
+            alliances with industry giants like SAIL - IISCO, DVC, and L&T,
+            solidifying its reputation as a reliable partner for large-scale
+            projects. His commitment to fostering strong relationships with
+            clients and stakeholders has been pivotal to the company's success
+            and growth.{" "}
           </p>{" "}
           <p>
             {" "}
             Through his unwavering dedication to innovation and quality, Abrha
-            Dey continues to drive Deal Magsil forward, ensuring that the
+            Dey continues to drive A2Z IT SOLUTION forward, ensuring that the
             company remains at the forefront of the precast and paving industry.
             His forward-thinking vision and relentless pursuit of excellence
             reflect his commitment to shaping a sustainable, high-quality future
