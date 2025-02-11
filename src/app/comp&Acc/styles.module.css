@@ -1,7 +1,9 @@
 /* General Section Styling */
 .mainSection {
-  background-image: url("/images/contact1.jpg");
-  background-size: cover;
+  /* background-image: url("/images/Comp&Acc/background1.avif"); */
+  /* background-image: url("/images/Comp&Acc/background2.avif"); */
+  background-image: url("/images/Comp&Acc/background3.jpg");
+  background-size: fill;
   background-position: center;
   background-repeat: no-repeat;
   width: 100vw;

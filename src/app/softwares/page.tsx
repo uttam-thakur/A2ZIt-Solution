@@ -25,46 +25,74 @@ const page = () => {
         <div className={styles.mainSection}>
           <div className={styles.introContainer}>
             <p className={styles.introHeading}>
-              We take immense pride in contributing to transformative projects
-              that redefine possibilities and shape a brighter future.
+              Delivering Advanced Software Solutions for Laptops and Desktops.
             </p>
             <p className={styles.introSubHeading}>
-              With over 27 years of trusted expertise, we are dedicated to
-              offering innovative solutions tailored to your needs. Let us help
-              you create spaces that inspire, with products that stand the test
-              of time.
+              With over a decade of expertise, we provide{" "}
+              <strong>tailored software services</strong> to enhance
+              productivity and efficiency. From{" "}
+              <strong>business management and accounting software</strong> to{" "}
+              <strong>antivirus protection and enterprise solutions</strong>, we
+              ensure seamless integration for your laptops and desktops.
             </p>
             <div className={styles.ctaContainer}>
-              <p>Your satisfaction is our priority—visit us today!</p>
+              <p>
+                Optimize your workflow with our cutting-edge software — get
+                started today!
+              </p>
             </div>
           </div>
         </div>
         <div style={{ marginTop: "20px" }}></div>
 
         <Reuse
-          imageSrc="https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          imageSrc="/images/Software/erp1.avif"
           title="ERP SOFTWARES"
-          description="Enterprise Resource Planning is a suite of software that manages all the essential tasks of enterprises. The activities might vary depending on the company and its need, but ERP majorly handles accounting, procurement, project management, risk management & compliance, and supply chain operations. It provides complete visibility into all the important processes across departments. It also helps in sharing information and saves time by eliminating unnecessary operations and data."
+          subtitle="Enterprise Resource Planning (ERP) Software
+"
+          description="Enterprise Resource Planning (ERP) software is a comprehensive solution designed to streamline and integrate essential business operations. It enables organizations to efficiently manage key functions such as accounting, procurement, project management, risk compliance, and supply chain operations—all from a centralized system. With real-time data access and automation, ERP enhances productivity, improves decision-making, and ensures seamless collaboration across departments. By eliminating redundant processes and optimizing workflows, our ERP software empowers businesses to operate smarter and more efficiently."
           isImageRight={true}
         />
         <Reuse
-          imageSrc="https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          imageSrc="/images/Software/accounting1.avif"
           title="ACCOUNTING SOFTWARE"
-          description="Every small-to-large-sized enterprise needs a structured system that looks into all the whereabouts related to finance. To match up the level of accuracy that deals in number, Accounting Software in such scenarios come to a big help; and many businesses are now looking forward to adopting it. The Software not only manages the accounting transaction but also helps in dealing with payroll, accounts receivable, accounts payable, and trial balances.
+          subtitle="Accounting Software – Simplifying Financial Management
+"
+          description="Every business, from startups to large enterprises, requires a reliable system to manage its financial operations with accuracy and efficiency. Our Accounting Software is designed to streamline financial processes, ensuring precision in managing transactions, payroll, accounts receivable, accounts payable, and trial balances. By automating complex calculations and reducing manual errors, it enhances productivity and compliance. Stay on top of your finances with real-time insights, seamless reporting, and a user-friendly interface—empowering your business to make informed financial decisions with ease.
 
         "
           isImageRight={false}
         />
         <Reuse
-          imageSrc="https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          imageSrc="/images/Software/security1.avif"
           title="SECURITY"
-          description="Data breaching and computer threats are spreading all over the world, and to date has affected many people and companies. With every new variant of malware that gets introduced, the threat associated with it also multiplies. In such scenarios, every computer system is ought to have a backup of strong security and privacy software. At Krishnam Computers, we have Antivirus, Antimalware, VPN software for Laptops, PC and Mac."
+          subtitle="Advanced Security Solutions – Protecting Your Digital World
+"
+          description="With cyber threats and data breaches on the rise, securing your systems has never been more critical. Every new strain of malware brings increased risks, making robust security measures essential for individuals and businesses alike. At A2Z IT SOLUTION, we provide top-tier Antivirus, Antimalware, and VPN software for Laptops, PCs, and Mac to safeguard your data, privacy, and digital assets. Stay protected from cyber threats, prevent unauthorized access, and ensure a secure computing environment with our trusted security solutions.
+
+
+
+
+
+
+
+"
           isImageRight={true}
         />
         <Reuse
-          imageSrc="https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          imageSrc="/images/Software/business.avif"
           title="BUSSINESS OPERATIONS"
-          description="The objective of a Business Operation Software is to increase the value of the firm and bring profit to the business. But due to many ongoing tasks and chaotic workflow, the pre-decided goal of the firm takes longer to achieve. Now to manage the entire workflow and optimize the expenses, a Business Management/Operation Software helps to do the needful and takes the firm closer to its goal. "
+          subtitle="Business Operation Software – Streamline, Optimize, and Grow
+"
+          description="Efficient business operations are key to maximizing productivity and profitability. However, managing multiple tasks and complex workflows can slow down progress toward organizational goals. Business Operation Software simplifies and automates processes, optimizing resource allocation and reducing operational costs. From workflow management to expense tracking, it provides a unified platform to enhance efficiency and drive business growth. Empower your organization with smart solutions that help you stay on track and achieve success faster.
+
+
+
+
+
+
+
+ "
           isImageRight={false}
         />
         <Services />
