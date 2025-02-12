@@ -19,7 +19,7 @@ const icons = [
   { component: IoHomeOutline, name: "Home", path: "/" },
   { component: IoInformationCircleOutline, name: "Profile", path: "/about" },
   { component: IoCallOutline, name: "Chat", path: "/contact" },
-  { component: IoCubeOutline, name: "Cart", path: "/products" },
+  { component: IoCubeOutline, name: "Cart", path: "/product" },
   { component: IoCartOutline, name: "Cart", path: "/cartItems" },
 ];
 

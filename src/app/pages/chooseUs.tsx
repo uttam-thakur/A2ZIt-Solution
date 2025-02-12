@@ -92,15 +92,16 @@ const ChooseUs = () => {
                       padding: "10px",
                       marginTop: {
                         xs: "0px",
-                        sm: "20px",
+                        // sm: "20px",
+                        sm: "40px",
                       },
                     }}
                   >
-                    We carry a wide range of reliable PCs, Macs, and Laptops
-                    that cater to all kinds of needs on a professional and
-                    non-professional level. We ensure that every device we rent
-                    our backed up with an up to date operating system and
-                    anti-virus software.
+                    We offer a diverse selection of high-performance PCs, Macs,
+                    and laptops tailored to both professional and personal
+                    needs. Every device we rent is equipped with an up-to-date
+                    operating system and robust antivirus software, ensuring
+                    security and seamless functionality
                   </Typography>
                 </div>
               )}
@@ -132,16 +133,14 @@ const ChooseUs = () => {
                       },
                     }}
                   >
-                    We carry a wide range of reliable PCs, Macs, and Laptops
-                    that cater to all kinds of needs on a professional and
-                    non-professional level. We ensure that every device we rent
-                    our backed up with an up to date operating system and
-                    anti-virus software.
+                    Regular maintenance is essential to keep your PC and Mac
+                    running at peak performance. At A2Z IT SOLUTION, we provide
+                    comprehensive services, including device driver updates,
+                    system optimization, and junk file cleanup, ensuring faster
+                    and more efficient performance.
                   </Typography>
                   <Image
-                    src={
-                      "https://t4.ftcdn.net/jpg/02/06/84/39/360_F_206843915_5rPRsyBPBW2CSVwt3iO7NXt9Cy5M5HS0.jpg"
-                    }
+                    src={"/images/Maintenance/maintenance.avif"}
                     width={250}
                     height={200}
                     alt={"laptop image"}
@@ -166,9 +165,7 @@ const ChooseUs = () => {
                 <div className={`${styles.expandedItem} ${styles.mobileView}`}>
                   {" "}
                   <Image
-                    src={
-                      "https://t4.ftcdn.net/jpg/02/06/84/39/360_F_206843915_5rPRsyBPBW2CSVwt3iO7NXt9Cy5M5HS0.jpg"
-                    }
+                    src={"/images/access.avif"}
                     width={250}
                     height={200}
                     alt={"laptop image"}
@@ -185,11 +182,11 @@ const ChooseUs = () => {
                       },
                     }}
                   >
-                    We carry a wide range of reliable PCs, Macs, and Laptops
-                    that cater to all kinds of needs on a professional and
-                    non-professional level. We ensure that every device we rent
-                    our backed up with an up to date operating system and
-                    anti-virus software.
+                    Peripherals and accessories play a crucial role in
+                    optimizing daily computing tasks. At A2Z IT SOLUTION, we
+                    offer a comprehensive range of high-quality accessories and
+                    peripherals from leading brands, ensuring seamless
+                    performance and enhanced productivity.
                   </Typography>
                 </div>
               )}

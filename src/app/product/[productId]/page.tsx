@@ -139,7 +139,7 @@ const ProductDetail: React.FC = ({ params }: any) => {
 
   return (
     <Box display="flex" flexDirection="column" minHeight="100vh">
-      <Navbar />
+      {/* <Navbar /> */}
       <Container maxWidth="md" sx={{ mt: 5, flex: "1" }}>
         <Card>
           <Grid container spacing={2}>
@@ -256,7 +256,7 @@ const ProductDetail: React.FC = ({ params }: any) => {
           </Grid>
         </Card>
       </Container>
-      <Footer />
+      {/* <Footer /> */}
     </Box>
   );
 };

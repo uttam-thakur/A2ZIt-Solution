@@ -54,7 +54,7 @@ const Login = () => {
   return (
     <>
       <div className="container">
-        <Navbar />
+        {/* <Navbar /> */}
         <ToastContainer
           position="top-right"
           autoClose={1500}
@@ -148,7 +148,7 @@ const Login = () => {
           />
         </Grid>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

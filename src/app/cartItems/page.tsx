@@ -236,7 +236,7 @@ const CartItems: React.FC = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto p-4">
+    <div className="max-w-md mx-auto p-4  " style={{ marginTop: "80px" }}>
       <h1 className="text-2xl font-bold text-center">Shopping Cart</h1>
 
       {cart.length === 0 ? (

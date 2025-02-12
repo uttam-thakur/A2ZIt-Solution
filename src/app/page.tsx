@@ -13,26 +13,26 @@ import WriteUs from "./pages/writeUs";
 export default function Home() {
   return (
     <div style={{ position: "relative" }}>
-      <div style={{ position: "relative", zIndex: 1 }}>
-        <Navbar />
-        <Hero />
-        <br />
-        <AboutUs />
-        <br />
-        <br />
-        <br />
-        <Services />
-        <br />
-        <ChooseUs />
-        <br />
-        <br />
-        <CustomersFeedback />
-        <br />
-        <br />
-        <Footer />
-      </div>
+      {/* <div style={{ position: "relative", zIndex: 1 }}> */}
+      {/* <Navbar /> */}
+      <Hero />
+      <br />
+      <AboutUs />
+      <br />
+      <br />
+      <br />
+      <Services />
+      <br />
+      <ChooseUs />
+      <br />
+      <br />
+      <CustomersFeedback />
+      <br />
+      <br />
+      {/* <Footer /> */}
+      {/* </div> */}
 
-      <MobileNavbarWrapper />
+      {/* <MobileNavbarWrapper /> */}
     </div>
   );
 }

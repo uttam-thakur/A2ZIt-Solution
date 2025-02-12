@@ -11,7 +11,7 @@ import styles from "./styles.module.css";
 const page = () => {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
 
       <div style={{ overflowX: "hidden", marginTop: "-50px" }}>
         <div className={styles.mainSection}>
@@ -74,7 +74,7 @@ const page = () => {
 
         <CustomersFeedback />
         {/* <Combine /> */}
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </>
   );

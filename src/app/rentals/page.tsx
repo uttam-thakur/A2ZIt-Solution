@@ -18,7 +18,7 @@ const Page = () => {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
 
       <div style={{ overflowX: "hidden", marginTop: "-50px" }}>
         <div className={styles.mainSection}>
@@ -84,7 +84,7 @@ const Page = () => {
         <br></br>
         <CustomersFeedback />
         {/* <Combine /> */}
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </>
   );

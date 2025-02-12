@@ -1,6 +1,9 @@
 /* General Section Styling */
 .mainSection {
-  background-image: url("/images/contact1.jpg");
+  /* background-image: url("/images/Maintenance/background1.jfif"); */
+  /* background-image: url("/images/Maintenance/background2.jfif"); */
+  /* background-image: url("/images/Maintenance/background3.jfif"); */
+  background-image: url("/images/Maintenance/background4.jfif");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

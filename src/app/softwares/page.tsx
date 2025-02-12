@@ -12,7 +12,7 @@ import styles from "./styles.module.css";
 const page = () => {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       {/* <img
         src={
           "https://img.freepik.com/free-vector/computer-troubleshooting-concept-illustration_114360-7616.jpg?size=626&ext=jpg&ga=GA1.1.718586984.1712132500&semt=ais"
@@ -99,7 +99,7 @@ const page = () => {
 
         <CustomersFeedback />
         {/* <Combine /> */}
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </>
   );

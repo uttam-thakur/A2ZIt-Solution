@@ -66,7 +66,7 @@ const Signup: React.FC = () => {
   return (
     <>
       <div className="container">
-        <Navbar />
+        {/* <Navbar /> */}
         <ToastContainer
           position="top-right"
           autoClose={1500}
@@ -173,7 +173,7 @@ const Signup: React.FC = () => {
           />
         </Grid>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

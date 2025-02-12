@@ -6,6 +6,9 @@ import SEO from ".././app/component/SEO";
 import FABWhatsApp from "./component/fabComponents/FABWhatsApp";
 import FABLocation from "./component/fabComponents/FABLocation";
 import FABProduct from "./component/fabComponents/FABProduct";
+import MobileNavbarWrapper from "./component/MobileNavbarWrapper";
+import Navbar from "./component/Navbar";
+import Footer from "./pages/footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -35,7 +38,7 @@ export default function RootLayout({
         />
         <main>{children} </main>
         <div className="application-portal" id={"portalRoot"}></div>
-        {/* <Navbar /> */}
+        <Navbar />
         <FABWhatsApp />
         <FABLocation />
         {/* <div className="fab-product"> */}
@@ -44,6 +47,8 @@ export default function RootLayout({
         {/* <div style={{ marginTop: "-145px" }}> */}
         {/* <Footer /> */}
         {/* </div> */}
+        <MobileNavbarWrapper />
+        <Footer />
       </body>
     </html>
   );

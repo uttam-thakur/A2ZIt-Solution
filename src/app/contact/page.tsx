@@ -103,7 +103,7 @@ export default function Contact() {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <div style={{ overflowX: "hidden", marginTop: "-50px" }}>
         <div className={styles.main}>
           <div className={styles.info}>
@@ -115,10 +115,10 @@ export default function Contact() {
           </div>
         </div>
 
-        <MobileNavbarWrapper />
+        {/* <MobileNavbarWrapper /> */}
         <FAQ />
         <GetInTouchForm />
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </>
   );

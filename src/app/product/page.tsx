@@ -451,7 +451,7 @@ const Page: React.FC = () => {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <div className={styles.productsWrapper} style={{ minHeight: "500px" }}>
         {products?.map((product: Product) => (
           <div className={styles.card} key={product.id}>
@@ -507,7 +507,7 @@ const Page: React.FC = () => {
         ))}
       </div>
 
-      <Footer />
+      {/* <Footer /> */}
 
       <ToastContainer />
     </>
