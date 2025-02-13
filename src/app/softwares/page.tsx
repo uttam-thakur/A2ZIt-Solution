@@ -21,7 +21,7 @@ const page = () => {
         height="400px"
         alt={"rent image"}
       /> */}
-      <div style={{ overflowX: "hidden", marginTop: "-50px" }}>
+      <div style={{ overflowX: "hidden" }}>
         <div className={styles.mainSection}>
           <div className={styles.introContainer}>
             <p className={styles.introHeading}>

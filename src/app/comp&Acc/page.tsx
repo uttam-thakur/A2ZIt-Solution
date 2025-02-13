@@ -14,7 +14,7 @@ const page = () => {
     <>
       {/* <Navbar /> */}
 
-      <div style={{ overflowX: "hidden", marginTop: "-50px" }}>
+      <div style={{ overflowX: "hidden" }}>
         <div className={styles.mainSection}>
           <div className={styles.introContainer}>
             <p className={styles.introHeading}>

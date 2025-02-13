@@ -17,67 +17,64 @@ const About = () => {
           />
           <div className={styles.mission}>
             <p>
-              At Deal Magsil, our vision is to be the foremost provider of
-              premium precast concrete solutions, setting the benchmark for
-              quality and reliability across Indias infrastructure landscape.
-              With over three decades of expertise, we are committed to
-              delivering excellence through our advanced manufacturing processes
-              and rigorous quality standards. As a registered S.S.I. Unit with
-              the Government of West Bengal, and a trusted supplier to industry
-              leaders like SAIL - IISCO, DVC, L&T, and various Municipal
-              Corporations, we play a vital role in significant projects like
-              the National Highway-2, Andal Airport, and DVC RTPP Raghunathpur.
-              Our dedication to innovation, combined with a skilled team and
-              modern technology, allows us to support both government
-              initiatives and private enterprises, delivering solutions that
-              drive sustainable growth and national development.
+              At A2Z IT SOLUTION, our vision is to be a leading provider of
+              comprehensive IT solutions, delivering excellence in laptop,
+              desktop, and printer sales, repairs, and AMC services. With years
+              of expertise, we are committed to offering reliable,
+              cost-effective, and innovative solutions tailored for both
+              individual clients and corporate businesses. We strive to enhance
+              productivity and efficiency through expert IT support, proactive
+              maintenance, and cutting-edge technology solutions. Our mission is
+              to build long-term partnerships by ensuring seamless IT
+              operations, minimizing downtime, and delivering unparalleled
+              customer satisfaction. Through our dedication to quality and
+              innovation, we aim to empower businesses and individuals with
+              robust IT infrastructure, supporting their growth and success in
+              the ever-evolving digital world.
             </p>
             <br></br>
-            <p className={styles.name}>Abhra Dey</p>
-            <p className={styles.role}>Founder &amp; & CEO - A2Z IT SOLUTION</p>
+            <p className={styles.name}>
+              Jitendra Thakur &amp; Birendra Thakur{" "}
+            </p>
+            <p className={styles.role}>Founder &amp; CEO - A2Z IT SOLUTION</p>
           </div>
         </div>
         <div className={styles.description}>
           <p>
             {" "}
-            Abrha Dey, the visionary Founder and CEO of A2Z IT SOLUTION, has
-            been instrumental in transforming the landscape of precast concrete
-            and paver block manufacturing in India. Under his leadership, Deal
-            Magsil has grown from a local supplier into a trusted name across
-            major infrastructure projects, recognized for its commitment to
-            quality, reliability, and technological advancement. Driven by a
-            dedication to excellence, Abrha has positioned A2Z IT SOLUTION as a
-            key player in the industry, serving both government and private
-            sectors with distinction.{" "}
+            Jitendra, the visionary Founder and CEO of A2Z IT SOLUTION, has been
+            instrumental in redefining IT services and solutions, catering to
+            both individual clients and corporate enterprises. Under his
+            leadership, A2Z IT SOLUTION has evolved into a trusted name in
+            laptop, desktop, and printer sales, repair services, and
+            comprehensive AMC solutions. His unwavering commitment to quality,
+            reliability, and technological advancement has positioned the
+            company as a leader in the IT industry.
           </p>{" "}
           <p>
-            {" "}
-            With a background rich in engineering and project management, Abrha
-            Dey has successfully spearheaded A2Z IT SOLUTION involvement in
-            prestigious projects, including the National Highway-2
-            Panagarh-Barwa Adda stretch, Andal Airport, and DVC RTPP
-            Raghunathpur. His approach emphasizes meticulous planning and
-            operational efficiency, ensuring that each project meets the highest
-            standards and contributes to the nations infrastructure development.{" "}
+            With a strong background in engineering and project management,
+            Jitendra has successfully led A2Z IT SOLUTION in delivering
+            cutting-edge IT infrastructure solutions to a diverse clientele. His
+            expertise in strategic planning, operational efficiency, and
+            client-focused services ensures that every project meets the highest
+            standards, minimizing downtime and optimizing productivity for
+            businesses.
           </p>{" "}
           <p>
-            {" "}
-            Abrhas leadership extends beyond operations to strategic
-            partnerships. Under his guidance, A2Z IT SOLUTION has forged
-            alliances with industry giants like SAIL - IISCO, DVC, and L&T,
-            solidifying its reputation as a reliable partner for large-scale
-            projects. His commitment to fostering strong relationships with
-            clients and stakeholders has been pivotal to the companys success
-            and growth.{" "}
+            Beyond technical expertise, Birendra’s leadership is defined by
+            customer-centric innovation and strong industry relationships. His
+            vision extends to creating long-term partnerships with businesses,
+            offering tailored IT solutions that drive growth, security, and
+            efficiency. Through proactive maintenance, expert support, and
+            seamless IT integration, A2Z IT SOLUTION continues to empower
+            businesses and individuals with reliable, future-ready technology
+            solutions.
           </p>{" "}
           <p>
-            {" "}
-            Through his unwavering dedication to innovation and quality, Abrha
-            Dey continues to drive A2Z IT SOLUTION forward, ensuring that the
-            company remains at the forefront of the precast and paving industry.
-            His forward-thinking vision and relentless pursuit of excellence
-            reflect his commitment to shaping a sustainable, high-quality future
-            for infrastructure in India.{" "}
+            Driven by excellence and innovation, Jitendra remains committed to
+            advancing A2Z IT SOLUTION as a pioneer in IT services, ensuring that
+            businesses have access to the best technology support for sustained
+            success in a rapidly evolving digital landscape.
           </p>
         </div>
       </div>

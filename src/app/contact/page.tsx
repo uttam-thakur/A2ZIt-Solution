@@ -95,6 +95,7 @@ import styles from "./contact.module.css";
 import Footer from "../pages/footer";
 import Navbar from "../component/Navbar";
 import MobileNavbarWrapper from "../component/MobileNavbarWrapper";
+import ParticlesBackground from "../component/ParticlesBackground";
 // import ContactModal from "../components/ContactModal";
 // import { handleLocationClick } from "../components/fabComponents/FABLocation";
 
@@ -104,8 +105,9 @@ export default function Contact() {
   return (
     <>
       {/* <Navbar /> */}
-      <div style={{ overflowX: "hidden", marginTop: "-50px" }}>
+      <div style={{ overflowX: "hidden" }}>
         <div className={styles.main}>
+          <ParticlesBackground />
           <div className={styles.info}>
             <div className={styles.title}>{infoData.title}</div>
             <div className={styles.infoWindow}>
@@ -115,7 +117,6 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* <MobileNavbarWrapper /> */}
         <FAQ />
         <GetInTouchForm />
         {/* <Footer /> */}

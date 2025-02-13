@@ -17,20 +17,44 @@ const CustomersFeedback: React.FC = () => {
   const fakeFeedbacks: Feedback[] = [
     {
       id: 1,
-      name: "John Doe",
-      comment: "Excellent service! Highly recommended.",
-      image: "https://via.placeholder.com/150",
+      name: "Abhra Dey",
+      comment:
+        "Outstanding laptop service! My device was slow and lagging, but after their maintenance, it's performing like brand new. Highly recommended for quick and efficient service.",
+      image: "/images/5.png",
     },
     {
       id: 2,
-      name: "Jane Smith",
-      comment: "Great quality products! Will purchase again.",
-      image: "https://via.placeholder.com/150",
+      name: "Dr. Pravin Roy",
+      comment:
+        "Purchased a high-performance computer from them, and I must say, the quality is top-notch. The team guided me well and helped me choose the best system for my needs. Great pricing too!",
+      image: "/images/5.png",
     },
     {
       id: 3,
-      name: "Robert Johnson",
-      comment: "Fast delivery and very professional.",
+      name: "Ratan Jaiswal",
+      comment:
+        "Got my CCTV system installed, and I’m really impressed with the clarity of the footage. The installation was done professionally, and they ensured everything was working perfectly.",
+      image: "/images/5.png",
+    },
+    {
+      id: 4,
+      name: "Rahul Prasad",
+      comment:
+        "Their AMC service has been a lifesaver for our office! Regular maintenance checks keep all our computers, laptops, and CCTV systems running smoothly without any downtime. Excellent support team!",
+      image: "/images/5.png",
+    },
+    {
+      id: 5,
+      name: "Abhishek Prasad",
+      comment:
+        "Fast and reliable computer repair service. My PC had multiple issues, but their technicians diagnosed and fixed everything quickly. Now, it's running better than ever. Highly satisfied!",
+      image: "/images/5.png",
+    },
+    {
+      id: 6,
+      name: "Kuldip Kr Sah",
+      comment:
+        "Top-notch software maintenance service! They handle all updates, bug fixes, and security patches, ensuring our business software stays optimized and secure. A great investment for long-term performance!",
       image: "https://via.placeholder.com/150",
     },
   ];
@@ -58,8 +82,8 @@ const CustomersFeedback: React.FC = () => {
                 alt={`Customer image ${feedback.id}`}
                 className={styles.carasoulImage}
               />
+              <p className={styles.comment}>{feedback.comment}</p>
               <h5 className={styles.lable}>{feedback.name}</h5>
-              <p className={styles.lable}>{feedback.comment}</p>
             </Carousel.Caption>
           </Carousel.Item>
         ))}

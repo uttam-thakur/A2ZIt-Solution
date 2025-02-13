@@ -37,16 +37,12 @@ export default function RootLayout({
           url={metadata.url}
         />
         <main>{children} </main>
-        <div className="application-portal" id={"portalRoot"}></div>
         <Navbar />
+        {/* <div className="application-portal" id={"portalRoot"}></div> */}
         <FABWhatsApp />
         <FABLocation />
-        {/* <div className="fab-product"> */}
         <FABProduct />
-        {/* </div>{" "} */}
-        {/* <div style={{ marginTop: "-145px" }}> */}
-        {/* <Footer /> */}
-        {/* </div> */}
+
         <MobileNavbarWrapper />
         <Footer />
       </body>

@@ -78,9 +78,23 @@ const Footer: React.FC = () => {
             </Typography>
             <hr style={{ marginTop: "25px" }}></hr>
             <Typography sx={{ color: "grey" }} className={styles.contact}>
-              Phone: 961947358
+              Phone:{" "}
+              <a
+                href="tel:961947358"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                961947358
+              </a>
               <br />
-              Email: a2zit@gmail.com
+              Email:{" "}
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=a2zit@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                a2zit@gmail.com
+              </a>
             </Typography>
           </Grid>
           <Grid item xs={12} sm={6} md={6} lg={3} paddingBottom={3}>

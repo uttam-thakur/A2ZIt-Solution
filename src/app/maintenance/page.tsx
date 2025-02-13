@@ -11,19 +11,7 @@ import styles from "./styles.module.css";
 const page = () => {
   return (
     <>
-      {/* <Navbar /> */}
-
-      {/* <div style={{ overflowX: "hidden" }}> */}
-      {/* <Image
-          src={
-            "https://img.freepik.com/free-vector/computer-troubleshooting-concept-illustration_114360-7616.jpg?size=626&ext=jpg&ga=GA1.1.718586984.1712132500&semt=ais"
-          }
-          width={1260}
-          height={400}
-          alt={"rent image"}
-        /> */}
-
-      <div style={{ overflowX: "hidden", marginTop: "-50px" }}>
+      <div style={{ overflowX: "hidden" }}>
         <div className={styles.mainSection}>
           <div className={styles.introContainer}>
             <p className={styles.introHeading}>
@@ -44,6 +32,36 @@ const page = () => {
           </div>
         </div>
         <div style={{ marginTop: "20px" }}></div>
+
+        <Reuse
+          imageSrc="/images/Maintenance/AMC.jfif"
+          title="Annual Maintenance Contract Services
+        "
+          description={
+            <>
+              Ensure the smooth and uninterrupted operation of your IT
+              infrastructure with our <b>Annual Maintenance Contract (AMC)</b>{" "}
+              services for{" "}
+              <b>laptops, computers, CCTV systems, and software solutions</b>.
+              At <b>A2Z IT SOLUTION</b>, we provide comprehensive maintenance
+              and support, ensuring that your devices and security systems
+              remain in top condition. Our expert team specializes in:
+              <br></br>
+              <br></br>
+              <b>Laptop & Computer Maintenance</b> – Regular servicing, hardware
+              diagnostics, and software updates to keep your systems running
+              efficiently.
+              <br></br>
+              <b>CCTV System Support</b> – Routine checks, camera
+              troubleshooting, DVR/NVR maintenance, and security updates for
+              24/7 surveillance reliability.
+              <br></br>
+              <b>Software Maintenance</b> – Installation, updates, bug fixes,
+              and license management to keep your software optimized and secure.
+            </>
+          }
+          isImageRight={false}
+        />
         <Reuse
           imageSrc="/images/Maintenance/laptop.avif"
           title="LAPTOP MAINTENANCE & REPAIR
@@ -79,8 +97,6 @@ const page = () => {
         <br></br>
 
         <CustomersFeedback />
-        {/* <Combine /> */}
-        {/* <Footer /> */}
       </div>
     </>
   );
