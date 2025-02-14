@@ -1,15 +1,15 @@
 "use client";
 import React from "react";
+import Link from "next/link";
+import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
+import { CardActionArea } from "@mui/material";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { CardActionArea } from "@mui/material";
-import Link from "next/link";
 import styles from "../style/services.module.css";
+import CardContent from "@mui/material/CardContent";
 import { usePathname, useRouter } from "next/navigation";
 import CircularProgress from "@mui/material/CircularProgress";
-import Box from "@mui/material/Box";
 import MobileNavbarWrapper from "../component/MobileNavbarWrapper";
 
 const ServiceCard = ({ title, description, imageSrc, href }: any) => {
@@ -133,7 +133,7 @@ const Services = () => {
   );
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} style={{ backgroundColor: "snow" }}>
       {loading && (
         <Box
           sx={{

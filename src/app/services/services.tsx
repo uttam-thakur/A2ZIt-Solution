@@ -1,8 +1,8 @@
 // services.js
 
+import axios from "axios";
 import emailjs from "emailjs-com";
 import { toast } from "react-toastify";
-import axios from "axios";
 
 export const sendEmail = async (form: any) => {
   try {

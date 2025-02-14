@@ -1,26 +1,13 @@
 "use client";
 import React from "react";
-import Services from "../pages/services";
-import Navbar from "../component/Navbar";
 import Reuse from "../pages/reuse";
+import Services from "../pages/services";
 import CustomersFeedback from "../pages/customersFeedback";
-import Combine from "../pages/combine";
-import Footer from "../pages/footer";
-import Image from "next/image";
 import styles from "./styles.module.css";
 
 const page = () => {
   return (
     <>
-      {/* <Navbar /> */}
-      {/* <img
-        src={
-          "https://img.freepik.com/free-vector/computer-troubleshooting-concept-illustration_114360-7616.jpg?size=626&ext=jpg&ga=GA1.1.718586984.1712132500&semt=ais"
-        }
-        width="100%"
-        height="400px"
-        alt={"rent image"}
-      /> */}
       <div style={{ overflowX: "hidden" }}>
         <div className={styles.mainSection}>
           <div className={styles.introContainer}>
@@ -95,11 +82,14 @@ const page = () => {
  "
           isImageRight={false}
         />
+        <br></br>
+        <br></br>
+        <br></br>
         <Services />
-
+        <br></br>
+        <br></br>
+        <br></br>
         <CustomersFeedback />
-        {/* <Combine /> */}
-        {/* <Footer /> */}
       </div>
     </>
   );

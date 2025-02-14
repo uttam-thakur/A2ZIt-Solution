@@ -10,6 +10,15 @@
   align-items: center;
   justify-content: center;
 }
+.particlesContainer {
+  position: absolute;
+  width: 100%;
+  height: 100vh; /* Adjust as needed */
+  top: 90px;
+  left: 0;
+  z-index: 3;
+  /* z-index: 9999; */
+}
 
 .hero {
   position: relative;
@@ -128,31 +137,6 @@
   }
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .container {
-    width: 100%;
-  }
-  .heading {
-    padding: 4px;
-    font-size: 1.2rem;
-    margin-top: 70%;
-    text-align: center;
-  }
-
-  .para {
-    padding: 10px;
-    margin-top: 20%;
-
-    font-size: 1.1rem;
-  }
-
-  .img {
-    height: 100%;
-    width: 100%;
-  }
-}
-
 .getInTouch {
   width: 100vw;
   height: 100vh;
@@ -163,6 +147,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  z-index: 2;
 }
 
 .getInTouch::after {
@@ -259,5 +244,30 @@
   }
   .gridContainer {
     padding: 16px;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+  .heading {
+    padding: 4px;
+    font-size: 1.2rem;
+    margin-top: 70%;
+    text-align: center;
+  }
+
+  .para {
+    padding: 10px;
+    margin-top: 20%;
+
+    font-size: 1.1rem;
+  }
+
+  .img {
+    height: 100%;
+    width: 100%;
   }
 }

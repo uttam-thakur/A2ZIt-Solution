@@ -5,11 +5,12 @@ import ParticlesBackground from "../component/ParticlesBackground"; // Import Pa
 const Hero = () => {
   return (
     <div className={styles.mainHero}>
-      <div
-        className={styles.getInTouch}
-        style={{ position: "relative", overflow: "hidden" }}
-      >
+      {/* This ensures Particles stay inside Hero only */}
+      <div className={styles.particlesContainer}>
         <ParticlesBackground />
+      </div>
+
+      <div className={styles.getInTouch}>
         <div className={styles.leftSection}>
           <div className={styles.info}>
             <div className={styles.infoWindow}>

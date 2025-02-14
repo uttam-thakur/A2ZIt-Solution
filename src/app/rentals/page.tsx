@@ -1,15 +1,10 @@
 // page.tsx
 "use client";
 import React, { useEffect } from "react";
-import Navbar from "../component/Navbar";
 import Reuse from "../pages/reuse";
 import Services from "../pages/services";
 import { usePathname } from "next/navigation";
-import Combine from "../pages/combine";
-import Footer from "../pages/footer";
 import CustomersFeedback from "../pages/customersFeedback";
-import Map from "../pages/map";
-import Image from "next/image";
 import styles from "./styles.module.css";
 
 const Page = () => {
@@ -18,8 +13,6 @@ const Page = () => {
 
   return (
     <>
-      {/* <Navbar /> */}
-
       <div style={{ overflowX: "hidden" }}>
         <div className={styles.mainSection}>
           <div className={styles.introContainer}>

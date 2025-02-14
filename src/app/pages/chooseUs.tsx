@@ -1,13 +1,13 @@
+import Image from "next/image";
 import React, { useState } from "react";
 import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
 import Grid from "@mui/material/Grid";
-import Typography from "@mui/material/Typography";
-import IconButton from "@mui/material/IconButton";
 import AddIcon from "@mui/icons-material/Add";
+import IconButton from "@mui/material/IconButton";
+import Typography from "@mui/material/Typography";
+import CardContent from "@mui/material/CardContent";
 import RemoveIcon from "@mui/icons-material/Remove";
 import styles from "../style/chooseUs.module.css";
-import Image from "next/image";
 const ChooseUs = () => {
   const [expandedItem, setExpandedItem]: any = useState("rentalService");
 

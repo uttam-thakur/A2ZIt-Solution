@@ -1,9 +1,8 @@
 "use client";
-import Navbar from "./component/Navbar";
 import Hero from "./pages/hero";
 import AboutUs from "./pages/aboutUs";
-import Services from "./pages/services";
 import ChooseUs from "./pages/chooseUs";
+import Services from "./pages/services";
 import CustomersFeedback from "./pages/customersFeedback";
 import "./style/globals.css";
 

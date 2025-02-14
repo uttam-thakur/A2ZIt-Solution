@@ -1,9 +1,9 @@
+import Image from "next/image";
 import React, { useState } from "react";
+import { Typography } from "@mui/material";
 import { Carousel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Typography } from "@mui/material";
 import styles from "../style/customerFeedback.module.css";
-import Image from "next/image";
 
 interface Feedback {
   id: number;

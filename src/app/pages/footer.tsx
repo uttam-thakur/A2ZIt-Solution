@@ -1,15 +1,15 @@
 import React from "react";
-import Typography from "@mui/material/Typography";
+import Image from "next/image";
+import Box from "@mui/material/Box";
 import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
 import IconButton from "@mui/material/IconButton";
-import FacebookIcon from "@mui/icons-material/Facebook";
+import Typography from "@mui/material/Typography";
 import TwitterIcon from "@mui/icons-material/Twitter";
+import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import PinterestIcon from "@mui/icons-material/Pinterest";
 import styles from "../style/footer.module.css";
-import Image from "next/image";
 const Footer: React.FC = () => {
   return (
     <>
@@ -22,10 +22,13 @@ const Footer: React.FC = () => {
       >
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6} md={6} lg={3}>
-            <Image src="/images/logo.jpeg" alt="logo" height={80} width={80} />
-            {/* <Typography variant="h6" gutterBottom>
-              About Us
-            </Typography> */}
+            <Image
+              src="/images/logopng.png"
+              alt="logo"
+              height={80}
+              width={80}
+            />
+           
             <Typography variant="body2" color="grey" marginTop="10px" paragraph>
               At A2Z IT SOLUTION, we provide Multi-Brand Hardware Solutions
               (Sales, Service & Rentals). By providing tech-related solutions,
@@ -116,6 +119,20 @@ const Footer: React.FC = () => {
           </Grid>
         </Grid>
       </Box>
+      <div
+        style={{
+          height: "50px",
+          width: "100%",
+          backgroundColor: "black",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          color: "white",
+          fontSize: "14px",
+        }}
+      >
+        <p>© {new Date().getFullYear()}Bhookad Tech. All rights reserved.</p>
+      </div>
     </>
   );
 };

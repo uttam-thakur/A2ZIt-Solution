@@ -1,113 +1,20 @@
-// import React from "react";
-// import Navbar from "../component/Navbar";
-// import styles from "../style/contact.module.css";
-// import AdUnitsIcon from "@mui/icons-material/AdUnits";
-// import EmailIcon from "@mui/icons-material/Email";
-// import HomeIcon from "@mui/icons-material/Home";
-// import AccessTimeIcon from "@mui/icons-material/AccessTime";
-// import { Typography } from "@mui/material";
-// import { GoogleMap, LoadScript } from "@react-google-maps/api";
-// import Map from "../pages/map";
-// import FeedbackForm from "../pages/feedbackForm";
-// import Footer from "../pages/footer";
-// import Image from "next/image";
-// const containerStyle = {
-//   width: "100%",
-//   height: "400px",
-// };
-
-// const center = {
-//   lat: -34.397,
-//   lng: 150.644,
-// };
-// const page = () => {
-//   return (
-//     <>
-//       <Navbar />
-
-//       <Image
-//         src={
-//           "https://img.freepik.com/free-vector/computer-troubleshooting-concept-illustration_114360-7616.jpg?size=626&ext=jpg&ga=GA1.1.718586984.1712132500&semt=ais"
-//         }
-//         width={1260}
-//         height={400}
-//         alt={"rent image"}
-//       />
-
-//       <div className={styles.contact_container}>
-//         {/* First Row */}
-//         <div className={styles.contact_item} style={{ marginTop: "50px" }}>
-//           <AdUnitsIcon className={styles.icon} />
-
-//           <div className={styles.divitem}>
-//             <p>Mobile No:</p>
-//             {/* <p>8670288140</p> */}
-//             <p
-//               id="mobileNumber"
-//               // onClick={() => handleCopyMobileNumber("8670288140")}
-//             >
-//               8670288140
-//             </p>
-//           </div>
-//         </div>
-//         <div className={styles.contact_item} style={{ marginTop: "50px" }}>
-//           <EmailIcon className={styles.icon} />
-//           <div className={styles.divitem}>
-//             <p>Email:</p>
-//             <p>info@example.com</p>
-//           </div>
-//         </div>
-//         {/* Second Row */}
-//         <div className={styles.contact_item} style={{ marginTop: "195px" }}>
-//           <HomeIcon className={styles.icon} />
-//           <div className={styles.divitem}>
-//             <p>Address:</p>
-//             <p>Lower Chelidanga, Asansol, W.B</p>
-//           </div>
-//         </div>
-//         <div className={styles.contact_item} style={{ marginTop: "195px" }}>
-//           <AccessTimeIcon className={styles.icon} />
-//           <div className={styles.divitem}>
-//             <p>Timing:</p>
-//             <p>Mon-Fri: 9 AM - 9 PM</p>
-//             <p>Sat-Sun: 9 AM - 4 PM</p>
-//           </div>
-//         </div>
-//       </div>
-//       <Map />
-//       <FeedbackForm />
-//       <Footer />
-//     </>
-//   );
-// };
-
-// export default page;
-
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import FAQ from "../pages/FAQ";
-import GetInTouchForm from "../pages/GetInTouchForm";
-
-import { infoData } from "../common/constant";
-
 import styles from "./contact.module.css";
-import Footer from "../pages/footer";
-import Navbar from "../component/Navbar";
-import MobileNavbarWrapper from "../component/MobileNavbarWrapper";
+import { infoData } from "../common/constant";
+import GetInTouchForm from "../pages/GetInTouchForm";
 import ParticlesBackground from "../component/ParticlesBackground";
-// import ContactModal from "../components/ContactModal";
-// import { handleLocationClick } from "../components/fabComponents/FABLocation";
 
 export default function Contact() {
-  const [openModal, setOpenModal] = useState(false);
-
   return (
     <>
-      {/* <Navbar /> */}
       <div style={{ overflowX: "hidden" }}>
         <div className={styles.main}>
-          <ParticlesBackground />
+          <div className={styles.particlesContainer}>
+            <ParticlesBackground />
+          </div>{" "}
           <div className={styles.info}>
             <div className={styles.title}>{infoData.title}</div>
             <div className={styles.infoWindow}>
@@ -119,7 +26,6 @@ export default function Contact() {
 
         <FAQ />
         <GetInTouchForm />
-        {/* <Footer /> */}
       </div>
     </>
   );

@@ -3,7 +3,7 @@
   top: calc(100vh - 170px); /* Use vh for responsive positioning */
   right: 1.5rem; /* Adjust as needed */
   background-color: rgba(239, 239, 239, 0.88);
-  z-index: 2;
+  z-index: 4;
   border-radius: 9999px; /* Full rounding */
   padding: 1rem; /* Padding similar to Tailwind's p-4 */
   cursor: pointer;
@@ -37,7 +37,7 @@
   top: calc(100vh - 250px); /* Use vh for responsive positioning */
   right: 1.5rem; /* Adjust as needed */
   background-color: #363535;
-  z-index: 2;
+  z-index: 4;
   border-radius: 9999px;
   padding: 1rem;
   cursor: pointer;
@@ -73,7 +73,7 @@
   top: calc(100vh - 93px);
   right: 1.5rem; /* Adjust as needed */
   background-color: #363535;
-  z-index: 2;
+  z-index: 4;
   border-radius: 9999px;
   padding: 1rem;
   cursor: pointer;

@@ -14,8 +14,8 @@ import {
 } from "@mui/material";
 // import ReactImageMagnify from "react-image-magnify";
 
-import Navbar from "@/app/component/Navbar";
 import Footer from "@/app/pages/footer";
+import Navbar from "@/app/component/Navbar";
 import { motion, AnimatePresence } from "framer-motion";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import Image from "next/image";

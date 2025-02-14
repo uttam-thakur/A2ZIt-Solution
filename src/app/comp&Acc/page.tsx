@@ -2,18 +2,16 @@
 import React from "react";
 import Image from "next/image";
 
+import Reuse from "../pages/reuse";
+import Footer from "../pages/footer";
+import Combine from "../pages/combine";
 import Services from "../pages/services";
 import Navbar from "../component/Navbar";
-import Reuse from "../pages/reuse";
 import CustomersFeedback from "../pages/customersFeedback";
-import Combine from "../pages/combine";
-import Footer from "../pages/footer";
 import styles from "./styles.module.css";
 const page = () => {
   return (
     <>
-      {/* <Navbar /> */}
-
       <div style={{ overflowX: "hidden" }}>
         <div className={styles.mainSection}>
           <div className={styles.introContainer}>

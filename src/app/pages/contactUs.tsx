@@ -1,14 +1,14 @@
 "use client";
 import React, { useState } from "react";
-import styles from "../style/contact.module.css";
-import AdUnitsIcon from "@mui/icons-material/AdUnits";
-import EmailIcon from "@mui/icons-material/Email";
-import HomeIcon from "@mui/icons-material/Home";
-import AccessTimeIcon from "@mui/icons-material/AccessTime";
-import { Typography, Dialog } from "@mui/material";
 import Map from "../pages/map";
-import { ToastContainer, toast } from "react-toastify";
 import FeedbackForm from "./feedbackForm";
+import HomeIcon from "@mui/icons-material/Home";
+import EmailIcon from "@mui/icons-material/Email";
+import { Typography, Dialog } from "@mui/material";
+import AdUnitsIcon from "@mui/icons-material/AdUnits";
+import { ToastContainer, toast } from "react-toastify";
+import AccessTimeIcon from "@mui/icons-material/AccessTime";
+import styles from "../style/contact.module.css";
 
 const ContactUs = () => {
   const [openMap, setOpenMap] = useState(false);

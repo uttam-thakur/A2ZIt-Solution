@@ -1,14 +1,14 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-import logo from "../../public/images/logo.jpeg";
+import Footer from "./pages/footer";
+import Navbar from "./component/Navbar";
+import { Inter } from "next/font/google";
 import SEO from ".././app/component/SEO";
+// import logo from "../../public/images/logo.jpeg";
+import logo from "../../public/images/logopng.png";
 import FABWhatsApp from "./component/fabComponents/FABWhatsApp";
 import FABLocation from "./component/fabComponents/FABLocation";
 import FABProduct from "./component/fabComponents/FABProduct";
 import MobileNavbarWrapper from "./component/MobileNavbarWrapper";
-import Navbar from "./component/Navbar";
-import Footer from "./pages/footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -16,8 +16,8 @@ export const metadata = {
   description:
     "Your one-stop solution for laptop, desktop, CCTV, and printer sales and services. We provide expert maintenance, repair, and support, ensuring top-quality technology solutions for home and business needs.",
   keywords:
-    "laptop, desktop, repair, sales, service, cctv, camera, software, antivirus, a2z it solution, printer, mouse, keyboard, motherboard",
-  url: "https://www.a2ziysolution23.com",
+    "laptop, desktop, repair, sales, service, cctv, camera, software, antivirus, a2z it solution, printer, mouse, keyboard, motherboard, AMC, Laptop repair shop near me, Annual Maintenance Contract, Data Recovery, IT Service, Motherboard repair, printer Service, Refilling, ",
+  url: "https://www.a2zitsolution.com",
   image: logo,
 };
 

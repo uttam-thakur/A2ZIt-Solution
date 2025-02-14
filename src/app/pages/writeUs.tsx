@@ -11,9 +11,9 @@ import {
 } from "@mui/material";
 import emailjs from "emailjs-com";
 
-import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { sendEmail } from "../services/services";
+import { ToastContainer, toast } from "react-toastify";
 const WriteUs: React.FC = () => {
   const [feedback, setFeedback] = useState({
     namee: "",

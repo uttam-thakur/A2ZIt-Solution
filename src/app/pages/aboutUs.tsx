@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
 import Grid from "@mui/material/Grid";
+import Card from "@mui/material/Card";
+import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
+import CardContent from "@mui/material/CardContent";
 import styles from "../style/aboutUs.module.css";
 const AboutUs = () => {
   return (
@@ -75,13 +75,11 @@ const AboutUs = () => {
           {/* Image on the right */}
           <Grid item xs={12} md={6}>
             <Image
-              // component="img"
               alt={"Image Alt Text"}
               height={450}
               width={800}
               src={"/images/technitian.jpg"}
               className={styles.image}
-              // sx={{ paddingRight: "10px", opacity: "0.9" }}
             />
           </Grid>
         </Grid>

@@ -1,18 +1,12 @@
 "use client";
 import React from "react";
-import Services from "../pages/services";
-import Navbar from "../component/Navbar";
 import Reuse from "../pages/reuse";
+import Services from "../pages/services";
 import CustomersFeedback from "../pages/customersFeedback";
-import Combine from "../pages/combine";
-import Footer from "../pages/footer";
-import Image from "next/image";
 import styles from "./styles.module.css";
 const page = () => {
   return (
     <>
-      {/* <Navbar /> */}
-
       <div style={{ overflowX: "hidden" }}>
         <div className={styles.mainSection}>
           <div className={styles.introContainer}>
@@ -73,8 +67,6 @@ const page = () => {
         <br></br>
 
         <CustomersFeedback />
-        {/* <Combine /> */}
-        {/* <Footer /> */}
       </div>
     </>
   );

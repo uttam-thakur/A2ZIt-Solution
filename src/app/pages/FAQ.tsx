@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
-import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
+import Modal from "@mui/material/Modal";
+import { faqData } from "../common/constant";
+import styles from "../style/FAQ.module.css";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
-
-import styles from "../style/FAQ.module.css";
-import { faqData } from "../common/constant";
+import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 
 const FAQ: React.FC = () => {
   const [faqOpen, setFaqOpen] = useState(false);
