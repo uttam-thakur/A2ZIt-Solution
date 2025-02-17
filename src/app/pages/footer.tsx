@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import Box from "@mui/material/Box";
@@ -10,6 +11,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import PinterestIcon from "@mui/icons-material/Pinterest";
 import styles from "../style/footer.module.css";
+import CircularText from "../component/CircularText";
 const Footer: React.FC = () => {
   return (
     <>
@@ -22,19 +24,28 @@ const Footer: React.FC = () => {
       >
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6} md={6} lg={3}>
+            <CircularText
+              // text="REACT*BITS*COMPONENTS*"
+              text="A2Z*IT*SOLUTION*"
+              onHover="speedUp"
+              spinDuration={20}
+              className="custom-class"
+            />
             <Image
               src="/images/logopng.png"
               alt="logo"
-              height={80}
-              width={80}
+              height={100}
+              width={100}
+              className={styles.image}
             />
-           
+
             <Typography variant="body2" color="grey" marginTop="10px" paragraph>
-              At A2Z IT SOLUTION, we provide Multi-Brand Hardware Solutions
-              (Sales, Service & Rentals). By providing tech-related solutions,
-              we strive to meet our customer’s specific individual or business
-              needs. We also specialized in custom building PC’s on very
-              competitive rates.
+              At A2Z IT SOLUTION, we offer comprehensive Multi-Brand Hardware
+              Solutions, including (Sales, Service, Rentals, and Annual
+              Maintenance Contracts (AMC)). Our goal is to deliver tailored tech
+              solutions that meet the unique needs of both individuals and
+              businesses. We also specialize in custom-built PCs at highly
+              competitive rates, ensuring optimal performance and value.
             </Typography>
           </Grid>
           <Grid item xs={12} sm={6} md={6} lg={3}>
@@ -73,14 +84,20 @@ const Footer: React.FC = () => {
             >
               Contact Us
             </Typography>
-            <Typography sx={{ color: "grey" }} className={styles.contact}>
+            <Typography
+              sx={{ color: "grey", marginLeft: "100px" }}
+              className={styles.contact}
+            >
               Lower Chelidanga, Loretto Para
               <br /> Near ST Pauls Club
               <br />
               Asansol 713304
             </Typography>
             <hr style={{ marginTop: "25px" }}></hr>
-            <Typography sx={{ color: "grey" }} className={styles.contact}>
+            <Typography
+              sx={{ color: "grey", marginLeft: "100px" }}
+              className={styles.contact}
+            >
               Phone:{" "}
               <a
                 href="tel:961947358"
@@ -131,7 +148,7 @@ const Footer: React.FC = () => {
           fontSize: "14px",
         }}
       >
-        <p>© {new Date().getFullYear()}Bhookad Tech. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Bhookhad Tech. All rights reserved.</p>
       </div>
     </>
   );

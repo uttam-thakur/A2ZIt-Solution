@@ -5,6 +5,7 @@ import ChooseUs from "./pages/chooseUs";
 import Services from "./pages/services";
 import CustomersFeedback from "./pages/customersFeedback";
 import "./style/globals.css";
+import CircularText from "./component/CircularText";
 
 export default function Home() {
   return (

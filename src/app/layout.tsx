@@ -9,6 +9,8 @@ import FABWhatsApp from "./component/fabComponents/FABWhatsApp";
 import FABLocation from "./component/fabComponents/FABLocation";
 import FABProduct from "./component/fabComponents/FABProduct";
 import MobileNavbarWrapper from "./component/MobileNavbarWrapper";
+import CustomersFeedback from "./pages/customersFeedback";
+import Services from "./pages/services";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -42,6 +44,15 @@ export default function RootLayout({
         <FABWhatsApp />
         <FABLocation />
         <FABProduct />
+        <Services />
+        <br></br>
+        <br></br>
+        <br></br>
+
+        <CustomersFeedback />
+        <br></br>
+        <br></br>
+        <br></br>
 
         <MobileNavbarWrapper />
         <Footer />

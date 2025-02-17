@@ -83,7 +83,7 @@ const page = () => {
         "
           isImageRight={true}
         />
-        <br></br>
+        {/* <br></br>
         <br></br>
         <br></br>
         <Services />
@@ -92,7 +92,7 @@ const page = () => {
         <br></br>
         <br></br>
 
-        <CustomersFeedback />
+        <CustomersFeedback /> */}
       </div>
     </>
   );

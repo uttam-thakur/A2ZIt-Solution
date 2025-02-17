@@ -82,14 +82,14 @@ const page = () => {
  "
           isImageRight={false}
         />
-        <br></br>
+        {/* <br></br>
         <br></br>
         <br></br>
         <Services />
         <br></br>
         <br></br>
         <br></br>
-        <CustomersFeedback />
+        <CustomersFeedback /> */}
       </div>
     </>
   );

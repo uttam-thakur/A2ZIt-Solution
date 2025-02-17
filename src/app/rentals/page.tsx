@@ -55,7 +55,7 @@ const Page = () => {
           subtitle="Rent Printers & Projectors for Your Urgent Needs
 "
           title="PRINTERS & PROJECTORS"
-          description="Printers and projectors are essential tools, but not everyone needs them daily. Even in office environments, unexpected situations may arise where an extra printer or projector is required. At Krishnam Computers, we offer hassle-free rental services to meet your urgent needs. Whether for a business presentation, an event, or temporary office use, our high-quality printers and projectors are available whenever you need them. Rent with ease and stay prepared for any situation!"
+          description="Printers and projectors are essential tools, but not everyone needs them daily. Even in office environments, unexpected situations may arise where an extra printer or projector is required. At A2Z IT SOLUTION, we offer hassle-free rental services to meet your urgent needs. Whether for a business presentation, an event, or temporary office use, our high-quality printers and projectors are available whenever you need them. Rent with ease and stay prepared for any situation!"
           isImageRight={true}
         />
         <Reuse
@@ -64,10 +64,10 @@ const Page = () => {
           subtitle="Short-Term CCTV Camera Rentals for Security & Emergencies
 "
           title="CCTV CAMERA"
-          description="Installing a security camera is a smart choice for homes and commercial spaces. However, there are times when a temporary CCTV solution is needed for emergencies or preventive measures. At Krishnam Computers, we provide short-term CCTV camera rentals to ensure your security needs are met without a long-term commitment. Whether for events, temporary surveillance, or urgent situations, our reliable cameras offer the protection you need. Rent with confidence and enhance your security effortlessly!"
+          description="Installing a security camera is a smart choice for homes and commercial spaces. However, there are times when a temporary CCTV solution is needed for emergencies or preventive measures. At A2Z IT SOLUTION, we provide short-term CCTV camera rentals to ensure your security needs are met without a long-term commitment. Whether for events, temporary surveillance, or urgent situations, our reliable cameras offer the protection you need. Rent with confidence and enhance your security effortlessly!"
           isImageRight={false}
         />
-        <br></br>
+        {/* <br></br>
         <br></br>
         <br></br>
 
@@ -75,9 +75,7 @@ const Page = () => {
         <br></br>
         <br></br>
         <br></br>
-        <CustomersFeedback />
-        {/* <Combine /> */}
-        {/* <Footer /> */}
+        <CustomersFeedback /> */}
       </div>
     </>
   );
