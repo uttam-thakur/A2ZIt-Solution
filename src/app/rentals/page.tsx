@@ -1,16 +1,10 @@
 // page.tsx
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 import Reuse from "../pages/reuse";
-import Services from "../pages/services";
-import { usePathname } from "next/navigation";
-import CustomersFeedback from "../pages/customersFeedback";
 import styles from "./styles.module.css";
 
 const Page = () => {
-  const pathname = usePathname();
-  const isPathMatched: string = pathname;
-
   return (
     <>
       <div style={{ overflowX: "hidden" }}>
@@ -67,15 +61,6 @@ const Page = () => {
           description="Installing a security camera is a smart choice for homes and commercial spaces. However, there are times when a temporary CCTV solution is needed for emergencies or preventive measures. At A2Z IT SOLUTION, we provide short-term CCTV camera rentals to ensure your security needs are met without a long-term commitment. Whether for events, temporary surveillance, or urgent situations, our reliable cameras offer the protection you need. Rent with confidence and enhance your security effortlessly!"
           isImageRight={false}
         />
-        {/* <br></br>
-        <br></br>
-        <br></br>
-
-        <Services />
-        <br></br>
-        <br></br>
-        <br></br>
-        <CustomersFeedback /> */}
       </div>
     </>
   );

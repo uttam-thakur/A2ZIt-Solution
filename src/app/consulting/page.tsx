@@ -1,8 +1,6 @@
 "use client";
 import React from "react";
 import Reuse from "../pages/reuse";
-import Services from "../pages/services";
-import CustomersFeedback from "../pages/customersFeedback";
 import styles from "./styles.module.css";
 const page = () => {
   return (
@@ -59,14 +57,6 @@ const page = () => {
           description="Choosing the right CCTV camera for your security needs requires careful consideration of features, coverage, and technology. At A2Z IT SOLUTION, we provide professional consultation services to help you select the ideal surveillance solution for your home, office, or commercial space. Whether you need indoor monitoring, outdoor surveillance, or advanced features like night vision and remote access, our experts guide you in making the best choice. Ensure maximum security with the right CCTV system—consult with us today!"
           isImageRight={false}
         />
-        {/* <br></br>
-        <br></br>
-        <br></br>
-        <Services />
-        <br></br>
-        <br></br>
-
-        <CustomersFeedback /> */}
       </div>
     </>
   );

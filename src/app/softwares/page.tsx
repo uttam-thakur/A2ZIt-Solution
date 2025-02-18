@@ -1,8 +1,6 @@
 "use client";
 import React from "react";
 import Reuse from "../pages/reuse";
-import Services from "../pages/services";
-import CustomersFeedback from "../pages/customersFeedback";
 import styles from "./styles.module.css";
 
 const page = () => {
@@ -82,14 +80,6 @@ const page = () => {
  "
           isImageRight={false}
         />
-        {/* <br></br>
-        <br></br>
-        <br></br>
-        <Services />
-        <br></br>
-        <br></br>
-        <br></br>
-        <CustomersFeedback /> */}
       </div>
     </>
   );
