@@ -33,7 +33,7 @@ const fallbackProducts: Product[] = [
     description:
       "High-performance laptop with Intel Core i5, 8GB RAM, and 512GB SSD.",
     category: "Laptops",
-    image: "https://via.placeholder.com/300", // Replace with Google image URL
+    image: "/laptop.jpg", // Replace with Google image URL
     rating: { rate: 4.8, count: 150 },
     title: "Laptop",
   },
@@ -44,7 +44,7 @@ const fallbackProducts: Product[] = [
     description:
       "Powerful gaming laptop with RTX graphics, 16GB RAM, and 1TB SSD.",
     category: "Laptops",
-    image: "https://via.placeholder.com/300",
+    image: "/laptop.jpg",
     rating: { rate: 4.9, count: 120 },
     title: "Gaming Laptop",
   },
@@ -55,7 +55,7 @@ const fallbackProducts: Product[] = [
     description:
       "Assembled desktop PC with i7 processor, 16GB RAM, and 1TB HDD.",
     category: "Desktops",
-    image: "https://via.placeholder.com/300",
+    image: "/laptop.jpg",
     rating: { rate: 4.7, count: 80 },
     title: "Desktop PC",
   },
@@ -66,7 +66,7 @@ const fallbackProducts: Product[] = [
     description:
       "All-in-one wireless printer with scanning and copying functions.",
     category: "Printers",
-    image: "https://via.placeholder.com/300",
+    image: "/laptop.jpg",
     rating: { rate: 4.6, count: 90 },
     title: "Printer",
   },
@@ -77,7 +77,7 @@ const fallbackProducts: Product[] = [
     description:
       "Ergonomic wireless mouse with high precision and long battery life.",
     category: "Accessories",
-    image: "https://via.placeholder.com/300",
+    image: "/laptop.jpg",
     rating: { rate: 4.7, count: 140 },
     title: "Wireless Mouse",
   },
@@ -87,7 +87,7 @@ const fallbackProducts: Product[] = [
     price: 6000,
     description: "2TB external hard drive for secure data storage and backups.",
     category: "Storage",
-    image: "https://via.placeholder.com/300",
+    image: "/laptop.jpg",
     rating: { rate: 4.8, count: 110 },
     title: "External Hard Disk",
   },
@@ -97,7 +97,7 @@ const fallbackProducts: Product[] = [
     price: 4500,
     description: "512GB SSD for faster performance and system boot speeds.",
     category: "Storage",
-    image: "https://via.placeholder.com/300",
+    image: "/laptop.jpg",
     rating: { rate: 4.9, count: 95 },
     title: "SSD (Solid State Drive)",
   },
@@ -108,7 +108,7 @@ const fallbackProducts: Product[] = [
     description:
       "Portable laptop cooling fan with multiple speed modes and silent operation.",
     category: "Accessories",
-    image: "https://via.placeholder.com/300",
+    image: "/laptop.jpg",
     rating: { rate: 4.5, count: 85 },
     title: "Laptop Cooling Fan",
   },
@@ -118,7 +118,7 @@ const fallbackProducts: Product[] = [
     price: 800,
     description: "USB 3.0 32GB pen drive with high-speed data transfer.",
     category: "Storage",
-    image: "https://via.placeholder.com/300",
+    image: "/laptop.jpg",
     rating: { rate: 4.7, count: 150 },
     title: "Pendrive (32GB)",
   },
@@ -128,7 +128,7 @@ const fallbackProducts: Product[] = [
     price: 500,
     description: "High-speed HDMI cable for 4K display output.",
     category: "Cables",
-    image: "https://via.placeholder.com/300",
+    image: "/laptop.jpg",
     rating: { rate: 4.6, count: 100 },
     title: "HDMI Cable",
   },
@@ -138,7 +138,7 @@ const fallbackProducts: Product[] = [
     price: 400,
     description: "Fast-charging USB Type-C cable with durable braided design.",
     category: "Cables",
-    image: "https://via.placeholder.com/300",
+    image: "/laptop.jpg",
     rating: { rate: 4.5, count: 80 },
     title: "USB Type-C Cable",
   },
@@ -149,7 +149,7 @@ const fallbackProducts: Product[] = [
     description:
       "Adjustable aluminum laptop stand for comfortable working posture.",
     category: "Accessories",
-    image: "https://via.placeholder.com/300",
+    image: "/laptop.jpg",
     rating: { rate: 4.8, count: 90 },
     title: "Laptop Stand",
   },
@@ -172,7 +172,6 @@ const fetchProducts = async () => {
 const Page: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const [cartItems, setCartItems] = useState<Product[]>([]);
-  const [flag, setFlag] = React.useState(false);
 
   useEffect(() => {
     const fetchProductsData = async () => {
@@ -208,7 +207,6 @@ const Page: React.FC = () => {
 
     localStorage.setItem("cart", JSON.stringify(cart));
     setCartItems(cart); // Update state to reflect changes
-    setFlag(true);
     toast.success(`${product.name} added to cart! 🛒`, {
       position: "top-right",
       autoClose: 2000,
@@ -297,8 +295,6 @@ const Page: React.FC = () => {
           </div>
         ))}
       </div>
-
-      {/* <Footer /> */}
 
       <ToastContainer />
     </>

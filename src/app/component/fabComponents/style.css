@@ -111,6 +111,7 @@
     height: 62px;
     width: 62px;
     top: calc(100vh - 90px);
+    display: none !important;
   }
   .fab-location {
     height: 62px;

@@ -18,7 +18,6 @@ const FABProduct = () => {
       className={`fab-product ${!scrolling ? "visible" : "hidden"}`}
     >
       <AiOutlineShoppingCart className="fab-product-icon" />
-      {/* <p className="paraProduct">visit here for products</p> */}
     </button>
   );
 };

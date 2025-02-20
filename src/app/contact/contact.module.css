@@ -92,6 +92,14 @@
     width: 100%;
     padding: 16px;
   }
+  .particlesContainer {
+    position: absolute;
+    width: 100%;
+    height: 70vh;
+    top: 90px;
+    left: 0;
+    z-index: 1;
+  }
 }
 
 .infoWindow {
