@@ -3,6 +3,7 @@ import Hero from "./pages/hero";
 import AboutUs from "./pages/aboutUs";
 import ChooseUs from "./pages/chooseUs";
 import FadeInSection from "./component/FadeInSection";
+import Scene from "./component/FaceModel";
 export default function Home() {
   return (
     <div style={{ position: "relative" }}>
@@ -15,6 +16,8 @@ export default function Home() {
       <FadeInSection>
         <ChooseUs />
       </FadeInSection>
+
+      {/* <Scene /> */}
     </div>
   );
 }
