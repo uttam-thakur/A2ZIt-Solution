@@ -27,7 +27,8 @@ const Page = () => {
         </div>
         <div style={{ marginTop: "20px" }}></div>
         <Reuse
-          imageSrc="/images/Rental/3.webp"
+          // imageSrc="/images/Rental/3.webp"
+          imageSrc="/images/Rental/9.jpg"
           altText="On-Site Expertise"
           subtitle="Trust in Our Specialists"
           title="COMPUTERS"
@@ -35,7 +36,8 @@ const Page = () => {
           isImageRight={true}
         />
         <Reuse
-          imageSrc="/images/Rental/2.webp"
+          // imageSrc="/images/Rental/2.webp"
+          imageSrc="/images/Rental/4.jpg"
           altText="On-Site Expertise"
           subtitle="Wide Range of Laptops for Every Need
 "
@@ -44,7 +46,8 @@ const Page = () => {
           isImageRight={false}
         />
         <Reuse
-          imageSrc="/images/Rental/1.webp"
+          // imageSrc="/images/Rental/1.webp"
+          imageSrc="/images/Rental/8.jpg"
           altText="On-Site Expertise"
           subtitle="Rent Printers & Projectors for Your Urgent Needs
 "
@@ -53,7 +56,8 @@ const Page = () => {
           isImageRight={true}
         />
         <Reuse
-          imageSrc="/images/Rental/cctv.jfif"
+          // imageSrc="/images/Rental/cctv.jfif"
+          imageSrc="/images/Rental/6.jpg"
           altText="On-Site Expertise"
           subtitle="Short-Term CCTV Camera Rentals for Security & Emergencies
 "

@@ -8,6 +8,7 @@ import Typography from "@mui/material/Typography";
 import CardContent from "@mui/material/CardContent";
 import RemoveIcon from "@mui/icons-material/Remove";
 import styles from "../style/chooseUs.module.css";
+import WhyChooseUs from "./whyChooseUs";
 const ChooseUs = () => {
   const [expandedItem, setExpandedItem]: any = useState("rentalService");
 
@@ -47,6 +48,9 @@ const ChooseUs = () => {
               className={styles.image}
             />
           </Grid>
+          {/* <Grid item xs={12} md={6}>
+            <WhyChooseUs />
+          </Grid> */}
 
           {/* Description on the left */}
           <Grid

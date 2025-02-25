@@ -4,6 +4,7 @@ import AboutUs from "./pages/aboutUs";
 import ChooseUs from "./pages/chooseUs";
 import FadeInSection from "./component/FadeInSection";
 import Scene from "./component/FaceModel";
+import WhyChooseUs from "./pages/whyChooseUs";
 export default function Home() {
   return (
     <div style={{ position: "relative" }}>
@@ -16,7 +17,7 @@ export default function Home() {
       <FadeInSection>
         <ChooseUs />
       </FadeInSection>
-
+      <WhyChooseUs />
       {/* <Scene /> */}
     </div>
   );

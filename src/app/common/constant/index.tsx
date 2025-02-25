@@ -31,15 +31,22 @@ export const infoData = {
 
 export const faqData = [
   {
-    question: "Is there a free trial available?",
-    answer: `Yes, you can try us for free for 30 days. During this trial period, you will have access to all the features and benefits of our platform. 
-        This allows you to explore the full capabilities of our service, test its compatibility with your needs, and evaluate its overall performance without any commitment. 
-        If you decide it's the right fit for you, you can seamlessly transition to a paid plan at the end of the trial.`,
+    question: "How do i book laptop repair service?",
+    answer: `Open the a2z website and browse through the categories of laptop services in Asansol provided by ServiceOnWheel. click the service you need, choose your date and time preference. You will be asked to make a payment for the service, you will get service at your doorstep.`,
   },
   {
-    question: "Can I change my plan later?",
-    answer: `Yes, you can change your plan at any time based on your evolving needs. Our platform is designed to provide flexibility, ensuring that you can upgrade or downgrade your subscription effortlessly. 
-        Whether you need access to additional features, increased limits, or a plan that better fits your budget, the process is simple and straightforward. 
-        Additionally, our support team is always available to guide you through the transition and answer any questions.`,
+    question: "Does A2Z IT SOLUTION offer repair services at home ?",
+    answer: `Yes, our laptop repairing centres in Asansol offer home laptop repair services in Asansol. However, certain issues might require the technician to take the laptop to their service centre.`,
+  },
+  {
+    question:
+      " How much time does it take by laptop repair technician to repair it",
+    answer: ` The time taken to repair a laptop in Asansol depends on the type and severity of issue at hand. However, it should not take longer than two to three days. Please discuss the timeline with our laptop repair technician in Asansol once he comes for laptop service.`,
+  },
+  {
+    question:
+      "What are the common software and hardware issues resolved by A2Z IT SOLUTION?",
+    answer:
+      "A. The common issues in laptop are:\n\n1. Device compatibility issue\n\n2. Laptop freezes\n\n3. Blank screen\n\n4. Unwanted noise\n\n5. Laptop crash\n\n6. Loading failure or slowdown\n\n7. Internet connectivity issues",
   },
 ];

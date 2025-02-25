@@ -52,26 +52,26 @@ const Footer: React.FC = () => {
             <Typography variant="h6" gutterBottom>
               Useful Links
             </Typography>
-            <Link href="#" color="grey" underline="hover">
+            <Link href="/rentals" color="grey" underline="hover">
               <li className={styles.redMarker}>Rentals</li>
             </Link>
             <hr></hr>
-            <Link href="#" color="grey" underline="hover">
+            <Link href="/consulting" color="grey" underline="hover">
               <li className={styles.redMarker}>Consulting</li>
             </Link>
             <hr></hr>
 
-            <Link href="#" color="grey" underline="hover">
+            <Link href="/softwares" color="grey" underline="hover">
               <li className={styles.redMarker}>Softwares</li>
             </Link>
             <hr></hr>
 
-            <Link href="#" color="grey" underline="hover">
+            <Link href="/comp&Acc" color="grey" underline="hover">
               <li className={styles.redMarker}>Computer & Accessories</li>
             </Link>
             <hr></hr>
 
-            <Link href="#" color="grey" underline="hover">
+            <Link href="/maintenance" color="grey" underline="hover">
               <li className={styles.redMarker}>Maintenance & Repair</li>
             </Link>
           </Grid>
