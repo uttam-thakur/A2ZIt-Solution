@@ -12,7 +12,14 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import PinterestIcon from "@mui/icons-material/Pinterest";
 import styles from "../style/footer.module.css";
 import CircularText from "../component/CircularText";
+import { SxProps, Theme } from "@mui/material";
+
 const Footer: React.FC = () => {
+  const boxStyles: SxProps<Theme> = {
+    backgroundColor: "#232f3e",
+    color: "white",
+    padding: "20px",
+  };
   return (
     <>
       {/* <Box
@@ -22,7 +29,7 @@ const Footer: React.FC = () => {
           padding: "20px",
         }}
       > */}
-      <Box
+      <div
         style={{ backgroundColor: "#232f3e", color: "white", padding: "20px" }}
       >
         <Grid container spacing={2}>
@@ -138,7 +145,7 @@ const Footer: React.FC = () => {
             </IconButton>
           </Grid>
         </Grid>
-      </Box>
+      </div>
       <div
         style={{
           height: "50px",
