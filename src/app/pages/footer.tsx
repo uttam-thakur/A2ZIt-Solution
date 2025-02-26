@@ -15,12 +15,15 @@ import CircularText from "../component/CircularText";
 const Footer: React.FC = () => {
   return (
     <>
-      <Box
+      {/* <Box
         sx={{
           backgroundColor: "#232f3e",
           color: "white",
           padding: "20px",
         }}
+      > */}
+      <Box
+        style={{ backgroundColor: "#232f3e", color: "white", padding: "20px" }}
       >
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6} md={6} lg={3}>
