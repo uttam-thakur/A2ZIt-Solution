@@ -1,4 +1,3 @@
-
 "use client";
 import * as React from "react";
 import Link from "next/link";
@@ -62,7 +61,10 @@ export default function DrawerAppBar({ window }: Props) {
   }, [pathname]);
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
+    <Box
+      onClick={handleDrawerToggle}
+      sx={{ textAlign: "center" } as React.CSSProperties}
+    >
       <Divider />
       <Image
         src="/images/logopng.png"
@@ -77,11 +79,13 @@ export default function DrawerAppBar({ window }: Props) {
             <Link href={item.path} style={{ textDecoration: "none" }}>
               <ListItemButton
                 onClick={() => handleNavigation(item.path)}
-                sx={{
-                  textAlign: "center",
-                  color: pathname === item.path ? "#fdba74" : "black",
-                  fontWeight: pathname === item.path ? "bold" : "normal",
-                }}
+                sx={
+                  {
+                    textAlign: "center",
+                    color: pathname === item.path ? "#fdba74" : "black",
+                    fontWeight: pathname === item.path ? "bold" : "normal",
+                  } as React.CSSProperties
+                }
               >
                 <ListItemText primary={item.label} />
               </ListItemButton>
@@ -96,24 +100,26 @@ export default function DrawerAppBar({ window }: Props) {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: "flex" } as React.CSSProperties}>
       <CssBaseline />
 
       {/* Full-Screen Loader */}
       {loading && (
         <Box
-          sx={{
-            position: "fixed",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100vh",
-            backgroundColor: "rgba(0, 0, 0, 0.8)",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            zIndex: 2000,
-          }}
+          sx={
+            {
+              position: "fixed",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100vh",
+              backgroundColor: "rgba(0, 0, 0, 0.8)",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              zIndex: 2000,
+            } as React.CSSProperties
+          }
         >
           <CircularProgress color="warning" size={80} />
         </Box>
@@ -122,12 +128,14 @@ export default function DrawerAppBar({ window }: Props) {
       {/* Navbar */}
       <AppBar
         component="nav"
-        sx={{
-          background: "rgba(0, 0, 0, 0.5)", // Transparent black
-          backdropFilter: "blur(10px)", // Glass effect
-          WebkitBackdropFilter: "blur(10px)", // Safari support
-          boxShadow: "0 4px 10px rgba(0, 0, 0, 0.2)", // Soft shadow for depth
-        }}
+        sx={
+          {
+            background: "rgba(0, 0, 0, 0.5)", // Transparent black
+            backdropFilter: "blur(10px)", // Glass effect
+            WebkitBackdropFilter: "blur(10px)", // Safari support
+            boxShadow: "0 4px 10px rgba(0, 0, 0, 0.2)", // Soft shadow for depth
+          } as React.CSSProperties
+        }
       >
         {" "}
         <Toolbar>
@@ -136,7 +144,7 @@ export default function DrawerAppBar({ window }: Props) {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
+            sx={{ mr: 2, display: { sm: "none" } as React.CSSProperties }}
           >
             <MenuIcon />
           </IconButton>
@@ -167,29 +175,31 @@ export default function DrawerAppBar({ window }: Props) {
                 <Button
                   onClick={() => handleNavigation(item.path)}
                   className="heading glow"
-                  sx={{
-                    color: pathname === item.path ? "red" : "#fff",
-                    fontSize: "20px",
-                    letterSpacing: "1px",
-                    position: "relative",
-                    "&:hover": {
-                      // color: "blue",
-                    },
-                    "&::after": {
-                      content: '""',
-                      position: "absolute",
-                      bottom: "-5px",
-                      left: "50%",
-                      width: pathname === item.path ? "100%" : "0%",
-                      height: "2px",
-                      backgroundColor: "#fdba74",
-                      transition: "width 0.3s ease-in-out",
-                      transform: "translateX(-50%)",
-                    },
-                    "&:hover::after": {
-                      width: "100%",
-                    },
-                  }}
+                  sx={
+                    {
+                      color: pathname === item.path ? "red" : "#fff",
+                      fontSize: "20px",
+                      letterSpacing: "1px",
+                      position: "relative",
+                      "&:hover": {
+                        // color: "blue",
+                      },
+                      "&::after": {
+                        content: '""',
+                        position: "absolute",
+                        bottom: "-5px",
+                        left: "50%",
+                        width: pathname === item.path ? "100%" : "0%",
+                        height: "2px",
+                        backgroundColor: "#fdba74",
+                        transition: "width 0.3s ease-in-out",
+                        transform: "translateX(-50%)",
+                      },
+                      "&:hover::after": {
+                        width: "100%",
+                      },
+                    } as React.CSSProperties
+                  }
                 >
                   {item.label}
                 </Button>

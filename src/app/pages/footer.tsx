@@ -85,6 +85,7 @@ const Footer: React.FC = () => {
               <li className={styles.redMarker}>Maintenance & Repair</li>
             </Link>
           </Grid>
+
           <Grid item xs={12} sm={6} md={6} lg={3}>
             <Typography
               className={styles.contactHead}
