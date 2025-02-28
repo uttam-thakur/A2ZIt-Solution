@@ -12,6 +12,20 @@ import { usePathname, useRouter } from "next/navigation";
 import CircularProgress from "@mui/material/CircularProgress";
 import MobileNavbarWrapper from "../component/MobileNavbarWrapper";
 
+import { SxProps, Theme } from "@mui/system";
+
+const loadingStyles: SxProps<Theme> = {
+  position: "fixed",
+  top: 0,
+  left: 0,
+  width: "100vw",
+  height: "100vh",
+  backgroundColor: "rgba(0,0,0,0.5)",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+};
+
 const ServiceCard = ({ title, description, imageSrc, href }: any) => {
   const [isHovered, setIsHovered] = React.useState(false);
   const pathname = usePathname();
@@ -135,20 +149,23 @@ const Services = () => {
   return (
     <div className={styles.container} style={{ backgroundColor: "snow" }}>
       {loading && (
-        <Box
-          sx={{
-            position: "fixed",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100vh",
-            backgroundColor: "rgba(0, 0, 0, 0.8)",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            zIndex: 2000,
-          }}
-        >
+        // <Box
+        //   sx={{
+        //     position: "fixed",
+        //     top: 0,
+        //     left: 0,
+        //     width: "100%",
+        //     height: "100vh",
+        //     backgroundColor: "rgba(0, 0, 0, 0.8)",
+        //     display: "flex",
+        //     justifyContent: "center",
+        //     alignItems: "center",
+        //     zIndex: 2000,
+        //   }}
+        // >
+
+        // @ts-ignore
+        <Box sx={loadingStyles}>
           <CircularProgress color="warning" size={60} />
         </Box>
       )}
