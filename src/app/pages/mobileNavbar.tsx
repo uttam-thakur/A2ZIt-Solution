@@ -50,7 +50,7 @@ const Navbar = () => {
         </div>
       )}
 
-      <div className={styles.navigation}>
+      <div className={styles.navigation} style={{ zIndex: "1" }}>
         <ul>
           {icons.map((icon, index) => {
             const IconComponent = icon.component;

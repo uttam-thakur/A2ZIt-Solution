@@ -17,7 +17,10 @@ export default function Home() {
       <FadeInSection>
         <ChooseUs />
       </FadeInSection>
-      <WhyChooseUs />
+      <FadeInSection>
+        <WhyChooseUs />
+      </FadeInSection>
+
       {/* <Scene /> */}
     </div>
   );

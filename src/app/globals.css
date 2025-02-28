@@ -38,6 +38,9 @@ div {
   text-shadow: 0 0 3px #a9bb0c, 0 0 6px #a9bb0c, 0 0 9px #a9bb0c,
     0 0 12px #a9bb0c, 0 0 15px #a9bb0c;
 }
+
+
+
 @media (max-width: 768px) {
   .aboutUs {
     /* margin-top: -140px; */
