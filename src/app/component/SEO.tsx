@@ -6,6 +6,7 @@ const SEO = ({ title, description, keywords, image, url }: any) => {
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
+      <meta name="robots" content="index, follow" />
 
       {/* Open Graph Meta Tags */}
       <meta property="og:title" content={title} />
@@ -14,8 +15,10 @@ const SEO = ({ title, description, keywords, image, url }: any) => {
       <meta property="og:url" content={url} />
       <meta property="og:image" content={image} />
       <meta property="og:image:alt" content={`${title} Image`} />
-      <meta property="og:image:width" content={String(400)} />
-      <meta property="og:image:height" content={String(600)} />
+      {/* <meta property="og:image:width" content={String(400)} />
+      <meta property="og:image:height" content={String(600)} /> */}
+      <meta property="og:image:width" content="400" />
+      <meta property="og:image:height" content="600" />
 
       {/* Twitter Meta Tags */}
       <meta name="twitter:card" content="summary_large_image" />
@@ -27,7 +30,7 @@ const SEO = ({ title, description, keywords, image, url }: any) => {
       <link rel="canonical" href={url} />
 
       {/* Title */}
-      <title>{title}</title>
+      <title>{title} | A2Z IT Solution</title>
     </Head>
   );
 };
