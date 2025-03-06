@@ -1,18 +1,31 @@
 .navigation {
   position: fixed;
-
-  width: 100%;
+  width: 90%;
   height: 66px;
   background: #828f9a;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-
   z-index: 1000;
-  transition: transform 0.3s ease-in-out;
-  bottom: 0;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  bottom: 50px; /* ✅ Raised 50px above the bottom */
+  margin-left: 25px;
+  border-radius: 50px;
 }
+
+.hidden {
+  transform: translateY(100px); /* ✅ Moves the navbar down, hiding it */
+  opacity: 0;
+  pointer-events: none;
+}
+
+.visible {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: all;
+}
+
 .loaderOverlay {
   position: fixed;
   top: 0;

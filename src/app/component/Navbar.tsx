@@ -296,14 +296,14 @@ export default function Navbar() {
       <nav className={styles.navContainer}>
         {/* Logo */}
         <div className={styles.logoContainer}>
-          <Image src="/images/logopng.png" width={50} height={50} alt="Logo" />
+          <Image src="/images/logopng.png" width={45} height={45} alt="Logo" />
           <span className={styles.logoText}>A2Z IT SOLUTION</span>
         </div>
 
         {/* Desktop Menu */}
         <ul className={styles.navMenu}>
           {navItems.map((item) => (
-            <li key={item.label}>
+            <li key={item.label} className={styles.glow}>
               <button
                 onClick={() => handleNavigation(item.path)}
                 className={`${styles.navLink} ${

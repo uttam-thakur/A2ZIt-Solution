@@ -25,7 +25,7 @@
 
 .logoText {
   margin-left: 10px;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: bold;
   color: white;
 }
@@ -48,6 +48,11 @@
   cursor: pointer;
   position: relative;
   transition: color 0.3s ease;
+
+  /* color: #ffffff; Optional: Set the text color */
+  text-shadow: 0 0 3px #d2f7ef, 0 0 6px #00ffcc, 0 0 9px #00ffcc,
+    0 0 12px #00ffcc, 0 0 15px #00ffcc;
+  animation: glowing 1.5s infinite alternate;
 }
 
 .navLink:hover,
@@ -155,6 +160,18 @@
   transform: translate(-50%, -50%);
   transition: top 0.05s ease-out, left 0.05s ease-out;
 }
+
+@keyframes glowing {
+  from {
+    text-shadow: 0 0 3px #00ffcc, 0 0 6px #00ffcc, 0 0 9px #00ffcc,
+      0 0 12px #00ffcc, 0 0 15px #00ffcc;
+  }
+  to {
+    text-shadow: 0 0 1px #00ff99, 0 0 3px #00ff99, 0 0 6px #00ff99,
+      0 0 9px #00ff99, 0 0 12px #00ff99;
+  }
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);

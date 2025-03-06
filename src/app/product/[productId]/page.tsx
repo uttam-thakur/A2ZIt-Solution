@@ -284,7 +284,11 @@ const ProductDetail: React.FC = ({ params }: any) => {
                   {product.name}
                 </Typography>
                 <Typography variant="h5" color="textSecondary" gutterBottom>
-                  ₹ {product.price * 80} /-
+                  ₹{" "}
+                  {`${product.price.toString()[0]}***${product.price
+                    .toString()
+                    .slice(-1)}`}{" "}
+                  /-
                 </Typography>
                 <Typography variant="body1" paragraph>
                   {product.description}

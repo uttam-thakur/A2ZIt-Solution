@@ -33,7 +33,7 @@ const fallbackProducts: Product[] = [
     description:
       "High-performance laptop with Intel Core i5, 8GB RAM, and 512GB SSD.",
     category: "Laptops",
-    image: "/laptop.jpg", // Replace with Google image URL
+    image: "/laptop.jpg",
     rating: { rate: 4.8, count: 150 },
     title: "Laptop",
   },
@@ -162,10 +162,10 @@ const fetchProducts = async () => {
     );
     return response.data?.data.length > 0
       ? response.data.data
-      : fallbackProducts; // Use fallback if no data
+      : fallbackProducts;
   } catch (error) {
     console.error("Error fetching products:", error);
-    return fallbackProducts; // Return fallback on API failure
+    return fallbackProducts;
   }
 };
 
@@ -240,7 +240,6 @@ const Page: React.FC = () => {
 
   return (
     <>
-      {/* <Navbar /> */}
       <div className={styles.productsWrapper} style={{ minHeight: "500px" }}>
         {products?.map((product: Product) => (
           <div className={styles.card} key={product.id}>
@@ -260,7 +259,14 @@ const Page: React.FC = () => {
                 {product.name || "hard disk"}
               </h4>
             </Link>
-            <h5>₹ {product.price || "450"} /-</h5>
+            <h5>
+              ₹{" "}
+              {`${product.price.toString()[0]}***${product.price
+                .toString()
+                .slice(-1)}`}{" "}
+              /-
+            </h5>
+
             <div className={styles.product}>
               <div className={styles.description}>
                 <p>
