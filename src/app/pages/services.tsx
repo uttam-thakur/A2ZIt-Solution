@@ -24,6 +24,7 @@ const loadingStyles: SxProps<Theme> = {
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
+  zIndex: 9999,
 };
 
 const ServiceCard = ({ title, description, imageSrc, href }: any) => {
@@ -142,6 +143,18 @@ const Services = () => {
     setLoading(false);
   }, [pathname]);
 
+  // 🚫 Freeze background scroll when loading
+  React.useEffect(() => {
+    if (loading) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [loading]);
+
   const filteredServicesData = servicesData.filter(
     (service) => service.href !== isPathMatched
   );
@@ -149,21 +162,6 @@ const Services = () => {
   return (
     <div className={styles.container} style={{ backgroundColor: "snow" }}>
       {loading && (
-        // <Box
-        //   sx={{
-        //     position: "fixed",
-        //     top: 0,
-        //     left: 0,
-        //     width: "100%",
-        //     height: "100vh",
-        //     backgroundColor: "rgba(0, 0, 0, 0.8)",
-        //     display: "flex",
-        //     justifyContent: "center",
-        //     alignItems: "center",
-        //     zIndex: 2000,
-        //   }}
-        // >
-
         // @ts-ignore
         <Box sx={loadingStyles}>
           <CircularProgress color="warning" size={60} />

@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+
 import {
   Box,
   Typography,
@@ -10,12 +11,8 @@ import {
   Card,
   CardContent,
   Container,
-  Button,
 } from "@mui/material";
-// import ReactImageMagnify from "react-image-magnify";
 
-import Footer from "@/app/pages/footer";
-import Navbar from "@/app/component/Navbar";
 import { motion, AnimatePresence } from "framer-motion";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import Image from "next/image";
@@ -50,7 +47,7 @@ const ProductDetail: React.FC = ({ params }: any) => {
       description:
         "High-performance laptop with Intel Core i5, 8GB RAM, and 512GB SSD.",
       category: "Laptops",
-      image: "https://via.placeholder.com/300", // Replace with Google image URL
+      image: "/laptop.jpg", // Replace with Google image URL
       rating: { rate: 4.8, count: 150 },
       title: "Laptop",
     },
@@ -246,36 +243,13 @@ const ProductDetail: React.FC = ({ params }: any) => {
       <Container maxWidth="md" sx={{ mt: 5, flex: "1" }}>
         <Card>
           <Grid container spacing={2}>
-            {/* <Grid item xs={12} md={6}>
-              <div
-                onMouseEnter={() => setIsZoomedIn(true)}
-                onMouseLeave={() => setIsZoomedIn(false)}
-              >
-                <ReactImageMagnify
-                  {...{
-                    smallImage: {
-                      alt: product.title,
-                      src: product.image,
-                      isFluidWidth: true,
-                    },
-                    largeImage: {
-                      src: product.image,
-                      width: 800,
-                      height: 800,
-                    },
-                  }}
-                />
-              </div>
-            </Grid> */}
             <Grid item xs={12} md={6}>
               <Image
-                src={product.image}
+                src={product?.image}
                 alt="Product Image"
                 width={300}
                 height={300}
               />
-
-              {/* <img src={product.image} height="300px" width="300px" /> */}
             </Grid>
 
             <Grid item xs={12} md={6}>
@@ -363,7 +337,6 @@ const ProductDetail: React.FC = ({ params }: any) => {
           </Grid>
         </Card>
       </Container>
-      {/* <Footer /> */}
     </Box>
   );
 };
