@@ -41,8 +41,6 @@
 // export default Hero;
 
 import React from "react";
-import styles from "../style/hero.module.css";
-import ParticlesBackground from "../component/ParticlesBackground"; // Import Particles Component
 import ImageSlider from "./ImageSlider";
 
 const Hero = () => {

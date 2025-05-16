@@ -185,16 +185,13 @@ const Page: React.FC = () => {
 
     fetchProductsData();
 
-    // Load cart items from localStorage on component mount
     const storedCart = JSON.parse(localStorage.getItem("cart") || "[]");
     setCartItems(storedCart);
   }, []);
 
-  // Function to handle Add to Cart
   const handleAddToCart = (product: Product) => {
     let cart = JSON.parse(localStorage.getItem("cart") || "[]");
 
-    // Check if the product is already in the cart
     const existingProductIndex = cart.findIndex(
       (item: Product) => item.id === product.id
     );
@@ -206,14 +203,13 @@ const Page: React.FC = () => {
     }
 
     localStorage.setItem("cart", JSON.stringify(cart));
-    setCartItems(cart); // Update state to reflect changes
+    setCartItems(cart);
     toast.success(`${product.name} added to cart! 🛒`, {
       position: "top-right",
       autoClose: 2000,
     });
   };
 
-  // Function to update quantity
   const updateQuantity = (productId: number, change: number) => {
     let cart = JSON.parse(localStorage.getItem("cart") || "[]");
 
@@ -224,7 +220,6 @@ const Page: React.FC = () => {
     if (productIndex !== -1) {
       cart[productIndex].quantity += change;
 
-      // If quantity is zero or less, remove the item from cart
       if (cart[productIndex].quantity <= 0) {
         const removedItem = cart.splice(productIndex, 1);
         toast.error(`${removedItem[0].name} removed from cart ❌`, {
@@ -234,14 +229,14 @@ const Page: React.FC = () => {
       }
 
       localStorage.setItem("cart", JSON.stringify(cart));
-      setCartItems(cart); // Update state
+      setCartItems(cart);
     }
   };
 
   return (
     <>
-      <div className={styles.productsWrapper} style={{ minHeight: "500px" }}>
-        {products?.map((product: Product) => (
+      <div className={styles.productsWrapper}>
+        {products.map((product: Product) => (
           <div className={styles.card} key={product.id}>
             <Image
               height={200}
@@ -251,15 +246,14 @@ const Page: React.FC = () => {
               alt={product.title}
             />
             <Link
-              style={{ textDecoration: "none" }}
               href={`/product/${product.id}`}
-              passHref
+              style={{ textDecoration: "none" }}
             >
-              <h4 style={{ color: "black", cursor: "pointer" }}>
+              <h4 className={styles.productTitle}>
                 {product.name || "hard disk"}
               </h4>
             </Link>
-            <h5>
+            <h5 className={styles.productPrice}>
               ₹{" "}
               {`${product.price.toString()[0]}***${product.price
                 .toString()
@@ -267,20 +261,17 @@ const Page: React.FC = () => {
               /-
             </h5>
 
-            <div className={styles.product}>
-              <div className={styles.description}>
-                <p>
-                  {product.description.length > 100
-                    ? `${product.description.slice(0, 100)}...`
-                    : product.description}
-                </p>
-              </div>
+            <div className={styles.description}>
+              <p>
+                {product.description.length > 100
+                  ? `${product.description.slice(0, 100)}...`
+                  : product.description}
+              </p>
             </div>
-            <div>
-              {cartItems.find((item: any) => item.id === product.id) ? (
-                <div
-                  style={{ display: "flex", alignItems: "center", gap: "10px" }}
-                >
+
+            <div className={styles.buttonContainer}>
+              {cartItems.find((item) => item.id === product.id) ? (
+                <div className={styles.qtyButtonGroup}>
                   <button onClick={() => updateQuantity(product.id, -1)}>
                     -
                   </button>
@@ -293,7 +284,10 @@ const Page: React.FC = () => {
                   </button>
                 </div>
               ) : (
-                <button onClick={() => handleAddToCart(product)}>
+                <button
+                  className={styles.addToCartBtn}
+                  onClick={() => handleAddToCart(product)}
+                >
                   Add To Cart
                 </button>
               )}
@@ -301,7 +295,6 @@ const Page: React.FC = () => {
           </div>
         ))}
       </div>
-
       <ToastContainer />
     </>
   );
