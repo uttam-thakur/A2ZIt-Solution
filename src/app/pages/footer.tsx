@@ -34,18 +34,18 @@ const Footer: React.FC = () => {
       >
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6} md={6} lg={3}>
-            <CircularText
+            {/* <CircularText
               // text="REACT*BITS*COMPONENTS*"
               text="A2Z*IT*SOLUTION*"
               onHover="speedUp"
               spinDuration={20}
               className="custom-class"
-            />
+            /> */}
             <Image
               src="/images/logopng.png"
               alt="logo"
-              height={100}
-              width={100}
+              height={90}
+              width={90}
               className={styles.image}
             />
 
@@ -114,7 +114,7 @@ const Footer: React.FC = () => {
                 href="tel:961947358"
                 style={{ textDecoration: "none", color: "inherit" }}
               >
-                961947358
+                +91 961947358
               </a>
               <br />
               Email:{" "}
@@ -124,7 +124,7 @@ const Footer: React.FC = () => {
                 rel="noopener noreferrer"
                 style={{ textDecoration: "none", color: "inherit" }}
               >
-                a2zit@gmail.com
+                a2zitsolution24@gmail.com
               </a>
             </Typography>
           </Grid>
@@ -159,7 +159,7 @@ const Footer: React.FC = () => {
           fontSize: "14px",
         }}
       >
-        <p>© {new Date().getFullYear()} Bhookhad Tech. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} A2Z IT SOLUTION. All rights reserved.</p>
       </div>
     </>
   );

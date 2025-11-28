@@ -58,6 +58,56 @@ const CustomersFeedback: React.FC = () => {
         "Top-notch software maintenance service! They handle all updates, bug fixes, and security patches, ensuring our business software stays optimized and secure. A great investment for long-term performance!",
       image: "https://via.placeholder.com/150",
     },
+    {
+  id: 7,
+  name: "Suman Kumar",
+  comment:
+    "I had a broken laptop hinge and damaged keyboard. They replaced everything perfectly and at a very reasonable price. The laptop feels brand new again. Great workmanship!",
+  image: "/images/5.png",
+},
+{
+  id: 8,
+  name: "Nikita Sharma",
+  comment:
+    "Their CCTV installation at our home was done very neatly. The camera quality is excellent, even at night. They also helped us set up the mobile app. Truly professional service.",
+  image: "/images/5.png",
+},
+{
+  id: 9,
+  name: "Aman Verma",
+  comment:
+    "My PC had constant blue screen issues. Their team identified the faulty RAM and fixed it quickly. The system has been stable ever since. Very honest and trustworthy service!",
+  image: "/images/5.png",
+},
+{
+  id: 10,
+  name: "Sonu Raj",
+  comment:
+    "We hired them to redesign our old website. The new one is faster, modern, and much easier for customers to use. They handled everything smoothly from design to deployment.",
+  image: "/images/5.png",
+},
+{
+  id: 11,
+  name: "Priya Singh",
+  comment:
+    "Super quick laptop SSD upgrade! They explained the difference between SSD and HDD, backed up my data, and installed the new drive in under an hour. My laptop now boots in seconds.",
+  image: "/images/5.png",
+},
+{
+  id: 12,
+  name: "Rohit Mishra",
+  comment:
+    "Installed CCTV across our office floors. The wiring was clean, cameras positioned perfectly, and the recording quality is crystal clear. Very satisfied with the overall setup!",
+  image: "/images/5.png",
+},
+{
+  id: 13,
+  name: "Arjun Keshri",
+  comment:
+    "Amazing desktop repair experience. They fixed my power supply issue and cleaned the system thoroughly. The PC is running cooler and faster now. Highly recommended!",
+  image: "/images/5.png",
+},
+
   ];
 
   const [feedbacks] = useState<Feedback[]>(fakeFeedbacks); // Set state with fake data

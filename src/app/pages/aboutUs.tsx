@@ -60,15 +60,15 @@ const AboutUs = () => {
                   textAlign: "left",
                 }}
               >
-                At A2Z IT Solution, we provide Multi-Brand Hardware Solutions
-                (Sales, Service & Rentals).
-                <br />
-                By providing tech- related solutions, we strive to meet our
-                customer’s specific individual or business needs.
-                <br />
-                We also specialized in custom building PC’s on very competitive
-                rates.
-              </Typography>
+             
+
+          At A2Z IT Solution, we provide end-to-end Multi-Brand Hardware Solutions — Sales, Service, and Rentals — all in one place.  
+  We handle your daily tech hurdles with precision, keeping your systems running as smoothly as a well-aligned circuit 🖥️✨  
+  <br /><br />
+  Our services include expert CCTV installation, laptop and desktop repairs, and modern website design that strengthens your digital presence.  
+  <br /><br />
+  We also build high-performance custom PCs at competitive prices, giving you powerful performance without stretching your budget.
+</Typography>
             </CardContent>
           </Grid>
 

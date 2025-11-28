@@ -48,7 +48,7 @@ export default function RootLayout({
         <Navbar />
         <FABWhatsApp />
         <FABLocation />
-        <FABProduct />
+        {/* <FABProduct /> */}
 
         {/* Hide Services & CustomersFeedback on specific pages */}
         {!hiddenPages.includes(pathname) && (
