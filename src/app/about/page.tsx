@@ -10,7 +10,7 @@ const About = () => {
         <div className={styles.profileSection}>
           <Image
             src="/images/5.png"
-            alt="Abeha Dey"
+            alt="Profile Image"
             width={400}
             height={400}
             className={styles.image}
@@ -34,7 +34,8 @@ const About = () => {
             </p>
             <br></br>
             <p className={styles.name}>
-              Jitendra Thakur &amp; Birendra Thakur{" "}
+              {/* Jitendra Thakur &amp; Birendra Thakur{" "} */}
+              Jitendra Thakur 
             </p>
             <p className={styles.role}>Founder &amp; CEO - A2Z IT SOLUTION</p>
           </div>
