@@ -26,12 +26,7 @@ export const data = {
   url: "https://www.a2zitsolution.com",
   image: logo,
 };
-// adding google console search
-// export const metadata = {
-//   verification: {
-//     google: "wVO_08_Boi4sUKc_2CPWDiaDi_3jmWLV3aYaSyAmK3I",
-//   },
-// };
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
@@ -42,12 +37,8 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-         {/* <head>
-        <meta
-          name="google-site-verification"
-          content="googleee8c4d93168682f8.html"
-        />
-      </head> */}
+        
+      
 
       <meta name="google-site-verification" content="5YDTO0O31JoJe2Sr5xTFQRP1FQ_cnzrtrgB64yiS65Q" />
       <body className={inter.className}>
