@@ -13,6 +13,7 @@ import CustomersFeedback from "./pages/customersFeedback";
 import Services from "./pages/services";
 import FadeInSection from "./component/FadeInSection";
 import { usePathname } from "next/navigation"; // Import usePathname
+// import { Metadata } from "next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,7 +26,12 @@ export const data = {
   url: "https://www.a2zitsolution.com",
   image: logo,
 };
-
+// adding google console search
+// export const metadata = {
+//   verification: {
+//     google: "wVO_08_Boi4sUKc_2CPWDiaDi_3jmWLV3aYaSyAmK3I",
+//   },
+// };
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
@@ -36,6 +42,12 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+         <head>
+        <meta
+          name="google-site-verification"
+          content="wVO_08_Boi4sUKc_2CPWDiaDi_3jmWLV3aYaSyAmK3I"
+        />
+      </head>
       <body className={inter.className}>
         <SEO
           title={data.title}
