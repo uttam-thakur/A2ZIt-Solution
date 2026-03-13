@@ -42,12 +42,14 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-         <head>
+         {/* <head>
         <meta
           name="google-site-verification"
           content="googleee8c4d93168682f8.html"
         />
-      </head>
+      </head> */}
+
+      <meta name="google-site-verification" content="5YDTO0O31JoJe2Sr5xTFQRP1FQ_cnzrtrgB64yiS65Q" />
       <body className={inter.className}>
         <SEO
           title={data.title}
