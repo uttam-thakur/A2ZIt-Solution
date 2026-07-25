@@ -1,4 +1,8 @@
 "use client";
+// Ignore missing type declarations for side-effect CSS import
+// TypeScript may complain about importing a .css file for side effects when
+// no module declaration exists. Suppress that error here.
+// @ts-ignore
 import "./globals.css";
 import Footer from "./pages/footer";
 import Navbar from "./component/Navbar";
@@ -14,6 +18,8 @@ import Services from "./pages/services";
 import FadeInSection from "./component/FadeInSection";
 import { usePathname } from "next/navigation"; // Import usePathname
 // import { Metadata } from "next";
+import Script from "next/script";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -75,6 +81,23 @@ export default function RootLayout({
         <MobileNavbarWrapper />
 
         <Footer />
+
+
+ {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-7R14H2B7B5"
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-7R14H2B7B5');
+          `}
+        </Script>
       </body>
     </html>
   );
