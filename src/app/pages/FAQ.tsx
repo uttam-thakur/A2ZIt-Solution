@@ -37,20 +37,20 @@ const FAQ: React.FC = () => {
       </div>
 
       <Modal open={faqOpen} onClose={() => setFaqOpen(false)}>
-        <Box
+        <div
           className={styles.faqModal}
-          sx={{
-            position: "absolute",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-            bgcolor: "background.paper",
-            boxShadow: 24,
-            p: 4,
-            borderRadius: "10px",
-            width: "90%",
-            maxWidth: "500px",
-          }}
+          // sx={{
+          //   position: "absolute",
+          //   top: "50%",
+          //   left: "50%",
+          //   transform: "translate(-50%, -50%)",
+          //   bgcolor: "background.paper",
+          //   boxShadow: 24,
+          //   p: 4,
+          //   borderRadius: "10px",
+          //   width: "90%",
+          //   maxWidth: "500px",
+          // }}
         >
           <IconButton
             onClick={() => setFaqOpen(false)}
@@ -63,7 +63,7 @@ const FAQ: React.FC = () => {
             <h1 className={styles.faqModalQuestion}>{selectedData.question}</h1>
           </div>
           <p className={styles.faqModalAnswer}>{selectedData.answer}</p>
-        </Box>
+        </div>
       </Modal>
     </div>
   );
