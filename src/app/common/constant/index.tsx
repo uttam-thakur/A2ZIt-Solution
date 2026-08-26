@@ -19,7 +19,6 @@ Best Regards,
 🔧 Your Trusted IT Partner!
 
 🙏🏻 Thank you! We look forward to serving you.`;
-
 export const whatsAppContactMsg = message;
 
 export const infoData = {
