@@ -1,0 +1,193 @@
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  padding: 10px 20px;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.logoText {
+  margin-left: 10px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: white;
+}
+
+.navMenu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.navMenu li {
+  margin: 0 15px;
+}
+
+.navLink {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+
+  /* color: #ffffff; Optional: Set the text color */
+  text-shadow: 0 0 3px #d2f7ef, 0 0 6px #00ffcc, 0 0 9px #00ffcc,
+    0 0 12px #00ffcc, 0 0 15px #00ffcc;
+  animation: glowing 1.5s infinite alternate;
+}
+
+.navLink:hover,
+.active {
+  color: #fdba74;
+}
+
+.navLink::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #fdba74;
+  transition: width 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+
+.navLink:hover::after,
+.active::after {
+  width: 100%;
+}
+
+/* Mobile Menu */
+.menuButton {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobileNavLink {
+  font-size: 1.5rem;
+  color: white;
+  margin: 15px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.mobileNavLink:hover {
+  color: #fdba74;
+}
+
+.closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Loader */
+.loaderOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.loader {
+  border: 8px solid rgba(255, 255, 255, 0.3);
+  border-top: 8px solid #fdba74;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 1s linear infinite;
+}
+
+/* Glowing cursor effect when mobile navbar is open */
+.glowingCursor {
+  position: fixed;
+  width: 15px;
+  height: 15px;
+  background-color: #fdba74;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #fdba74, 0 0 20px #fdba74;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: top 0.05s ease-out, left 0.05s ease-out;
+}
+
+@keyframes glowing {
+  from {
+    text-shadow: 0 0 3px #00ffcc, 0 0 6px #00ffcc, 0 0 9px #00ffcc,
+      0 0 12px #00ffcc, 0 0 15px #00ffcc;
+  }
+  to {
+    text-shadow: 0 0 1px #00ff99, 0 0 3px #00ff99, 0 0 6px #00ff99,
+      0 0 9px #00ff99, 0 0 12px #00ff99;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navMenu {
+    display: none;
+  }
+
+  .menuButton {
+    display: block;
+  }
+}

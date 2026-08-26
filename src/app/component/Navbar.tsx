@@ -1,123 +1,128 @@
+
+// second
+
 "use client";
-import * as React from "react";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import CssBaseline from "@mui/material/CssBaseline";
-import Divider from "@mui/material/Divider";
-import Drawer from "@mui/material/Drawer";
-import IconButton from "@mui/material/IconButton";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemText from "@mui/material/ListItemText";
-import MenuIcon from "@mui/icons-material/Menu";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
+
+import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
+import Image from "next/image";
+import styles from "./Navbar.module.css";
 
-interface Props {
-  window?: () => Window;
-}
-
-const drawerWidth = 240;
 const navItems = [
   { label: "Home", path: "/" },
   { label: "About", path: "/about" },
   { label: "Contact", path: "/contact" },
-  { label: "Product", path: "/product" },
+  { label: "Product", path: "/pro" },
 ];
 
-export default function DrawerAppBar(props: Props) {
-  const { window } = props;
-  const [mobileOpen, setMobileOpen] = React.useState(false);
+export default function Navbar() {
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleDrawerToggle = () => {
-    setMobileOpen((prevState) => !prevState);
+  const pathname = usePathname();
+  const router = useRouter();
+
+  const handleNavigation = (path: string) => {
+    if (pathname !== path) {
+      setLoading(true);
+      router.push(path);
+    }
   };
 
-  const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        Menu
-      </Typography>
-      <Divider />
-      <List>
-        {navItems.map((item) => (
-          <ListItem key={item.label} disablePadding>
-            <Link href={item.path}>
-              <ListItemButton
-                sx={{
-                  textAlign: "center",
-                  textDecoration: "none",
-                  color: "red",
-                }}
-              >
-                <ListItemText primary={item?.label} />
-              </ListItemButton>
-            </Link>
-          </ListItem>
-        ))}
-      </List>
-    </Box>
-  );
+  useEffect(() => {
+    if (loading) {
+      setLoading(false);
+    }
+  }, [pathname]);
 
-  const container =
-    window !== undefined ? () => window().document.body : undefined;
+  // Prevent scrolling when the mobile menu or loader is active
+  useEffect(() => {
+    if (mobileOpen || loading) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto"; // Reset on unmount
+    };
+  }, [mobileOpen, loading]);
 
   return (
-    <Box sx={{ display: "flex" }}>
-      <CssBaseline />
-      <AppBar component="nav" sx={{ background: "black" }}>
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
-          >
-            A2Z IT Solution
-          </Typography>
-          <Box sx={{ display: { xs: "none", sm: "block" } }}>
-            {navItems.map((item) => (
-              <Link href={item.path} key={item.label}>
-                <Button sx={{ color: "#fff" }}>{item.label}</Button>
-              </Link>
-            ))}
-          </Box>
-        </Toolbar>
-      </AppBar>
-      <nav>
-        <Drawer
-          container={container}
-          variant="temporary"
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
-          }}
-          sx={{
-            display: { xs: "block", sm: "none" },
-            "& .MuiDrawer-paper": {
-              boxSizing: "border-box",
-              width: drawerWidth,
-            },
-          }}
+    <header className={styles.navbar}>
+      {/* Full-screen Loader */}
+      {loading && (
+        <div className={styles.loaderOverlay}>
+          <div className={styles.loader}></div>
+        </div>
+      )}
+
+      <nav className={styles.navContainer}>
+        {/* Logo */}
+        <div className={styles.logoContainer}>
+          <Image src="/images/logopng.png" width={45} height={45} alt="Logo" />
+          <span className={styles.logoText}>A2Z IT SOLUTION</span>
+        </div>
+
+        {/* Desktop Menu */}
+        <ul className={styles.navMenu}>
+          {navItems.map((item) => (
+            <li key={item.label} className={styles.glow}>
+              <button
+                onClick={() => handleNavigation(item.path)}
+                className={`${styles.navLink} ${
+                  pathname === item.path ? styles.active : ""
+                }`}
+              >
+                {item.label}
+              </button>
+            </li>
+          ))}
+        </ul>
+
+        {/* Mobile Menu Button */}
+        <button
+          className={styles.menuButton}
+          onClick={() => setMobileOpen(!mobileOpen)}
         >
-          {drawer}
-        </Drawer>
+          &#9776;
+        </button>
       </nav>
-      <Box component="main" sx={{ p: 3 }}>
-        <Toolbar />
-      </Box>
-    </Box>
+
+      {/* Mobile Drawer */}
+      {mobileOpen && (
+        <div className={styles.mobileMenu}>
+          {/* Logo */}
+          <div className={styles.logoContainer}>
+            <Image
+              src="/images/logopng.png"
+              width={100}
+              height={100}
+              alt="Logo"
+              style={{ marginTop: "-150px" }}
+            />
+          </div>
+          {navItems.map((item) => (
+            <button
+              key={item.label}
+              onClick={() => {
+                handleNavigation(item.path);
+                setMobileOpen(false);
+              }}
+              className={styles.mobileNavLink}
+            >
+              {item.label}
+            </button>
+          ))}
+          <button
+            className={styles.closeButton}
+            onClick={() => setMobileOpen(false)}
+          >
+            &times;
+          </button>
+        </div>
+      )}
+    </header>
   );
 }

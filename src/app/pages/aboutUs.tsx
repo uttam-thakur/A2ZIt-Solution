@@ -1,10 +1,11 @@
 import React from "react";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
+import Image from "next/image";
 import Grid from "@mui/material/Grid";
+import Card from "@mui/material/Card";
+import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-
+import CardContent from "@mui/material/CardContent";
+import styles from "../style/aboutUs.module.css";
 const AboutUs = () => {
   return (
     <div>
@@ -12,7 +13,17 @@ const AboutUs = () => {
         <Grid container>
           {/* Description on the left */}
           <Grid item xs={12} md={6}>
-            <CardContent sx={{ padding: "50px" }}>
+            <CardContent
+              sx={{
+                padding: {
+                  xs: "10px",
+                  sm: "50px",
+                },
+                marginTop: {
+                  xs: "-60px",
+                },
+              }}
+            >
               <Typography
                 variant="h5"
                 gutterBottom
@@ -43,28 +54,32 @@ const AboutUs = () => {
               </Typography>
               <Typography
                 variant="body1"
-                style={{ fontSize: "16px", marginTop: "0px" }}
+                style={{
+                  fontSize: "18px",
+                  marginTop: "0px",
+                  textAlign: "left",
+                }}
               >
-                At A2Z IT Solution, we provide Multi-Brand Hardware Solutions
-                (Sales, Service & Rentals).
-                <br />
-                By providing tech- related solutions, we strive to meet our
-                customer’s specific individual or business needs.
-                <br />
-                We also specialized in custom building PC’s on very competitive
-                rates.
-              </Typography>
+             
+
+          At A2Z IT Solution, we provide end-to-end Multi-Brand Hardware Solutions — Sales, Service, and Rentals — all in one place.  
+  We handle your daily tech hurdles with precision, keeping your systems running as smoothly as a well-aligned circuit 🖥️✨  
+  <br /><br />
+  Our services include expert CCTV installation, laptop and desktop repairs, and modern website design that strengthens your digital presence.  
+  <br /><br />
+  We also build high-performance custom PCs at competitive prices, giving you powerful performance without stretching your budget.
+</Typography>
             </CardContent>
           </Grid>
 
           {/* Image on the right */}
           <Grid item xs={12} md={6}>
-            <CardMedia
-              component="img"
-              alt="Image Alt Text"
-              height="500"
-              image="https://img.freepik.com/free-photo/male-technician-working-broken-computer_23-2147922177.jpg?w=1380&t=st=1712133492~exp=1712134092~hmac=0bdcb9c737eb4790f8fb311c9a950a9bf9193f705910446156e7bd3069beacbf"
-              sx={{ paddingRight: "10px", opacity: "0.9" }}
+            <Image
+              alt={"Image Alt Text"}
+              height={450}
+              width={800}
+              src={"/images/technitian.jpg"}
+              className={styles.image}
             />
           </Grid>
         </Grid>

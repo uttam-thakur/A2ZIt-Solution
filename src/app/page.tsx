@@ -1,31 +1,27 @@
 "use client";
-import Navbar from "./component/Navbar";
 import Hero from "./pages/hero";
 import AboutUs from "./pages/aboutUs";
-import Services from "./pages/services";
 import ChooseUs from "./pages/chooseUs";
-import Footer from "./pages/footer";
-import Combine from "./pages/combine";
-import CustomersFeedback from "./pages/customersFeedback";
-
+import FadeInSection from "./component/FadeInSection";
+import Scene from "./component/FaceModel";
+import WhyChooseUs from "./pages/whyChooseUs";
 export default function Home() {
   return (
-    <div>
-      <Navbar />
+    <div style={{ position: "relative" }}>
       <Hero />
-      <br />
-      <AboutUs />
-      <br />
-      <Services />
-      <br />
-      <ChooseUs />
-      <br />
-      <br />
-      <CustomersFeedback />
-      <br />
-      <Combine />
-      <br />
-      <Footer />
+
+      <FadeInSection>
+        <AboutUs />
+      </FadeInSection>
+
+      <FadeInSection>
+        <ChooseUs />
+      </FadeInSection>
+      <FadeInSection>
+        <WhyChooseUs />
+      </FadeInSection>
+
+      {/* <Scene /> */}
     </div>
   );
 }

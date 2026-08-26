@@ -1,104 +1,273 @@
-/* styles/hero.module.css */
-.main_hero {
-  margin-top: -300px;
-  background-color: rgb(236, 221, 221);
+.mainHero {
+  /* margin-top: -50px; */
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #111;
+
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+.particlesContainer {
+  position: absolute;
+  width: 100%;
+  height: 100vh; /* Adjust as needed */
+  top: 90px;
+  left: 0;
+  z-index: 3;
+  /* z-index: 9999; */
+}
+
 .hero {
   position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Lower z-index for the image */
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(60%);
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+  z-index: 2;
 }
 
 .container {
   position: absolute;
-  top: 80%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  color: white;
+  z-index: 3; /* Place above the image and overlay */
+  width: 80%;
 }
 
 .heading {
-  font-size: 2em;
-  color: orangered;
+  color: rgb(212, 168, 127);
+  text-align: left;
+
+  font-size: 1.8em;
+  margin-bottom: 1rem;
+  animation: fadeInDown 1s ease-out; /* Simple fade-in animation */
 }
 
 .para {
-  font-size: 1.2em;
-  margin-bottom: 20px;
-  color: whitesmoke;
+  text-align: left;
+
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+  animation: fadeInUp 1.2s ease-out; /* Simple fade-in animation */
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
 }
 
 .button {
-  background-color: white;
-  color: black;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
   padding: 10px 20px;
-  font-size: 1em;
-  margin-right: 10px;
+  font-size: 1rem;
   cursor: pointer;
-  border: none;
-  border-radius: 20px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
 }
+
 .button:hover {
   background-color: wheat;
   color: black;
+  transform: scale(1.1);
 }
 
-.main_hero {
+.glow {
+  color: #ffffff; /* Optional: Set the text color */
+  text-shadow: 0 0 3px #00ffcc, 0 0 6px #00ffcc, 0 0 9px #00ffcc,
+    0 0 12px #00ffcc, 0 0 15px #00ffcc;
+  animation: glowing 1.5s infinite alternate;
+}
+
+@keyframes glowing {
+  from {
+    text-shadow: 0 0 3px #00ffcc, 0 0 6px #00ffcc, 0 0 9px #00ffcc,
+      0 0 12px #00ffcc, 0 0 15px #00ffcc;
+  }
+  to {
+    text-shadow: 0 0 1px #00ff99, 0 0 3px #00ff99, 0 0 6px #00ff99,
+      0 0 9px #00ff99, 0 0 12px #00ff99;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.getInTouch {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/laptop.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.getInTouch::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
-.hero {
+.gridContainer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.1fr 0.8fr;
+  gap: 16px;
+  z-index: 1;
+  padding: 36px;
+}
+
+.leftSection {
+  padding: 50px;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
-.img {
-  height: 90%;
-  width: 100%;
+.infoWindow {
+  display: flex;
+  flex-direction: column;
+  border-left: 8px solid white;
+  padding: 24px;
+  /* background: rgba(0, 0, 0, 0.4); */
+  background: rgb(200 186 186 / 40%);
 }
 
-.container {
-  width: 100%;
-  text-align: center;
-  padding: 20px;
+.title {
+  color: white;
+  font-size: 36px;
+  letter-spacing: 0.5px;
+  margin-bottom: 1.2rem;
 }
 
-.heading {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+.subTitle {
+  color: rgb(253, 186, 116);
+  font-size: 24px;
+  margin-bottom: 0.4rem;
 }
 
-.para {
-  font-size: 1rem;
-  margin-bottom: 20px;
+.description {
+  color: white;
+  font-size: 16px;
+  font-weight: 300;
 }
 
-.button {
-  font-size: 1rem;
-  margin-right: 10px;
-  margin-bottom: 10px;
+.formBox {
+  backdrop-filter: blur(10px);
+  max-width: 450px;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 32px;
+  border: 1px solid white;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width: 768px) {
-  .main_hero {
-    overflow-x: hidden;
-    overflow-y: hidden;
+.formTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: white;
+}
+
+@media (max-width: 1024px) {
+  .gridContainer {
+    grid-template-columns: 1fr;
   }
-  .img {
-    width: 250%;
-    /* //widhth should be 100% for perfect view */
-    height: 90%;
+  .infoWindow {
+    padding: 16px;
+  }
+  .title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 760px) {
+  .info {
+    /* padding: 16px; */
+  }
+
+  .subTitle {
+    font-size: 16px;
+  }
+  .title {
+    font-size: 24px;
+  }
+  .gridContainer {
+    padding: 16px;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
   }
   .heading {
-    font-size: 1rem;
-    color: yellow;
+    padding: 4px;
+    font-size: 1.2rem;
+    margin-top: 70%;
+    text-align: center;
   }
+
   .para {
-    font-size: 0.8rem;
+    padding: 10px;
+    margin-top: 20%;
+
+    font-size: 1.1rem;
   }
-  .button {
-    font-size: 0.7rem;
-  }
-  .container {
-    margin-top: 35px;
+
+  .img {
+    height: 100%;
+    width: 100%;
   }
 }

@@ -1,62 +1,62 @@
 "use client";
 import React from "react";
-import Services from "../pages/services";
-import Navbar from "../component/Navbar";
 import Reuse from "../pages/reuse";
-import CustomersFeedback from "../pages/customersFeedback";
-import Combine from "../pages/combine";
-import Footer from "../pages/footer";
-import Image from "next/image";
+import styles from "./styles.module.css";
 const page = () => {
   return (
     <>
-      <Navbar />
-      {/* <img
-        src={
-          "https://img.freepik.com/free-vector/computer-troubleshooting-concept-illustration_114360-7616.jpg?size=626&ext=jpg&ga=GA1.1.718586984.1712132500&semt=ais"
-        }
-        width="100%"
-        height="400px"
-        alt={"rent image"}
-      /> */}
       <div style={{ overflowX: "hidden" }}>
-        <Image
-          src={
-            "https://img.freepik.com/free-vector/computer-troubleshooting-concept-illustration_114360-7616.jpg?size=626&ext=jpg&ga=GA1.1.718586984.1712132500&semt=ais"
-          }
-          width={1260}
-          height={400}
-          alt={"rent image"}
-        />
-        <Reuse
-          imageSrc="https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          title="COMPUTERS"
-          description="Buying an entire set of a computer for a purpose that lasts a few days- is not a thoughtful decision. Hence, we recommend you rent a laptop, as we have computers from high-end manufacturers. Rent a laptop, use it, and return it after your work gets done; it’s that simple. We keep our PCs and Mac updated with OS and anti-virus software so that customers find it convenient to use."
-          isImageRight={true}
-        />
-        <Reuse
-          imageSrc="https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          title="LAPTOPS"
-          description="For all types of work and all types of need, we at Krishnam Computers provide our customer wide array of laptops that differ in style, size, and features. Our laptops are best for travelers or the ones who are always on the go. For your unstoppable work, we make sure to rent you a laptop that has an up-to-date operating system and anti-virus software."
-          isImageRight={false}
-        />
-        <Reuse
-          imageSrc="https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          title="PRINTERS & PROJECTORS"
-          description="A printer and a projector, both in their spaces are very useful. But not everyone on a personal level would need either of them on a daily basis. Even in offices, there can be situations that call for an urgent demand for extra printer and projector; hence, for all of your urgent requirements, we rent printer and projector, both."
-          isImageRight={true}
-        />
-        <Reuse
-          imageSrc="https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          title="CCTV CAMERA"
-          description="To install a security camera in or around a house/commercial space is a conscious decision, but for uncalled emergencies and preventive measures, one might think to opt for a CCTV camera for a short term basis. At Krishnam Computers, we understand the need for it and hence rent CCTV cameras that help you solve your purpose."
-          isImageRight={false}
-        />
-        <Services />
+        <div className={styles.mainSection}>
+          <div className={styles.introContainer}>
+            <p className={styles.introHeading}>
+              Empowering You with Expert Consulting for Smarter Technology
+              Decisions.
+            </p>
+            <p className={styles.introSubHeading}>
+              With over 10 years of industry expertise, we provide tailored
+              consulting solutions to help you choose the right technology for
+              your needs. From laptops and printers to CCTV systems and
+              projectors, our guidance ensures you make informed decisions for
+              efficiency and reliability.
+            </p>
+            <div className={styles.ctaContainer}>
+              <p>Get expert advice — consult with us today!</p>
+            </div>
+          </div>
+        </div>
+        <div style={{ marginTop: "20px" }}></div>
 
-        <CustomersFeedback />
-        <Combine />
-        <Footer />
+        <Reuse
+          imageSrc="/images/Consulting/1.avif"
+          title="COMPUTERS"
+          subtitle="Expert Computer Consulting Services
+"
+          description="At A2Z IT SOLUTION, we offer professional consulting services to help you make the right technology decisions. Whether you're setting up a new system, upgrading your existing infrastructure, or troubleshooting technical issues, our experts provide tailored solutions to meet your needs. From hardware recommendations to software optimization, we ensure you get the best performance and efficiency. Let us guide you in making informed choices for your personal or business computing requirements. Get in touch today for expert advice and seamless IT solutions!"
+          isImageRight={true}
+        />
+        <Reuse
+          imageSrc="/images/Consulting/2.jpg"
+          title="LAPTOPS"
+          subtitle="Expert Laptop Consulting Services"
+          description="Choosing the right laptop can be challenging, whether for personal use, business, or specialized tasks. At A2Z IT SOLUTION, we provide expert laptop consulting services to help you find the perfect device based on your needs, budget, and performance requirements. Whether you need advice on specifications, brand comparisons, or software compatibility, our experts ensure you make an informed decision. Get the best laptop solutions tailored to your work or lifestyle—consult with us today!"
+          isImageRight={false}
+        />
+        <Reuse
+          imageSrc="/images/Consulting/3.avif"
+          title="PRINTERS & PROJECTORS"
+          subtitle="Professional Printer & Projector Consulting Services
+"
+          description="Selecting the right printer or projector can be a challenge, especially with so many options available. At A2Z IT SOLUTION, we simplify the process by providing expert guidance tailored to your specific needs. Whether you require a high-speed printer for bulk tasks or a projector with superior clarity for presentations, we help you make the best choice. Our team ensures you get the perfect balance of performance, quality, and budget. Reach out to us for personalized recommendations and hassle-free solutions!"
+          isImageRight={true}
+        />
+        <Reuse
+          imageSrc="/images/Consulting/4.avif"
+          title="CCTV CAMERA"
+          subtitle="Expert CCTV Camera Consultation Services
+"
+          description="Choosing the right CCTV camera for your security needs requires careful consideration of features, coverage, and technology. At A2Z IT SOLUTION, we provide professional consultation services to help you select the ideal surveillance solution for your home, office, or commercial space. Whether you need indoor monitoring, outdoor surveillance, or advanced features like night vision and remote access, our experts guide you in making the best choice. Ensure maximum security with the right CCTV system—consult with us today!"
+          isImageRight={false}
+        />
       </div>
     </>
   );

@@ -1,0 +1,37 @@
+import Head from "next/head";
+const SEO = ({ title, description, keywords, image, url }: any) => {
+  return (
+    <Head>
+      <meta charSet="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      <meta name="robots" content="index, follow" />
+
+      {/* Open Graph Meta Tags */}
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content={url} />
+      <meta property="og:image" content={image} />
+      <meta property="og:image:alt" content={`${title} Image`} />
+      {/* <meta property="og:image:width" content={String(400)} />
+      <meta property="og:image:height" content={String(600)} /> */}
+      <meta property="og:image:width" content="400" />
+      <meta property="og:image:height" content="600" />
+
+      {/* Twitter Meta Tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={image} />
+
+      {/* Canonical URL */}
+      <link rel="canonical" href={url} />
+
+      {/* Title */}
+<title>{title} | A2Z IT Solution – Computer, CCTV & IT Services</title>    </Head>
+  );
+};
+
+export default SEO;
