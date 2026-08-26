@@ -22,25 +22,13 @@ const Footer: React.FC = () => {
   };
   return (
     <>
-      {/* <Box
-        sx={{
-          backgroundColor: "#232f3e",
-          color: "white",
-          padding: "20px",
-        }}
-      > */}
+  
       <div
         style={{ backgroundColor: "#232f3e", color: "white", padding: "20px" }}
       >
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6} md={6} lg={3}>
-            {/* <CircularText
-              // text="REACT*BITS*COMPONENTS*"
-              text="A2Z*IT*SOLUTION*"
-              onHover="speedUp"
-              spinDuration={20}
-              className="custom-class"
-            /> */}
+         
             <Image
               src="/images/logopng.png"
               alt="logo"
@@ -83,6 +71,16 @@ const Footer: React.FC = () => {
 
             <Link href="/maintenance" color="grey" underline="hover">
               <li className={styles.redMarker}>Maintenance & Repair</li>
+            </Link>
+                        <hr></hr>
+
+              <Link href="/website" color="grey" underline="hover">
+              <li className={styles.redMarker}>Website Development</li>
+            </Link>
+                        <hr></hr>
+
+              <Link href="/gmb" color="grey" underline="hover">
+              <li className={styles.redMarker}>Google My Business</li>
             </Link>
           </Grid>
 

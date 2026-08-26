@@ -16,20 +16,20 @@ interface Feedback {
 const CustomersFeedback: React.FC = () => {
   // Fake feedback data
   const fakeFeedbacks: Feedback[] = [
-    {
-      id: 1,
-      name: "Abhra Dey",
-      comment:
-        "Outstanding laptop service! My device was slow and lagging, but after their maintenance, it's performing like brand new. Highly recommended for quick and efficient service.",
-      image: "/images/5.png",
-    },
-    {
-      id: 2,
-      name: "Dr. Pravin Roy",
-      comment:
-        "Purchased a high-performance computer from them, and I must say, the quality is top-notch. The team guided me well and helped me choose the best system for my needs. Great pricing too!",
-      image: "/images/5.png",
-    },
+    // {
+    //   id: 1,
+    //   name: "Abhra Dey",
+    //   comment:
+    //     "Outstanding laptop service! My device was slow and lagging, but after their maintenance, it's performing like brand new. Highly recommended for quick and efficient service.",
+    //   image: "/images/5.png",
+    // },
+    // {
+    //   id: 2,
+    //   name: "Dr. Pravin Roy",
+    //   comment:
+    //     "Purchased a high-performance computer from them, and I must say, the quality is top-notch. The team guided me well and helped me choose the best system for my needs. Great pricing too!",
+    //   image: "/images/5.png",
+    // },
     {
       id: 3,
       name: "Ratan Jaiswal",

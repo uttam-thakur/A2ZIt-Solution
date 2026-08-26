@@ -29,7 +29,7 @@ export const data = {
     "Your one-stop solution for laptop, desktop, CCTV, and printer sales and services. We provide expert maintenance, repair, and support, ensuring top-quality technology solutions for home and business needs.",
   keywords:
     "laptop, desktop, repair, sales, service, cctv, camera, software, antivirus, a2z it solution, printer, mouse, keyboard, motherboard, AMC, Laptop repair shop near me, Annual Maintenance Contract, Data Recovery, IT Service, Motherboard repair, printer Service, Refilling",
-  url: "https://www.a2zitsolution.com",
+  url: "https://www.a2zitsolution.co.in",
   image: logo,
 };
 
@@ -39,7 +39,7 @@ export default function RootLayout({
   const pathname = usePathname(); // Get current route
 
   // Pages where Services & Feedback should NOT be shown
-  const hiddenPages = ["/about", "/contact", "/product", "/cartItems"];
+  const hiddenPages = ["/about", "/contact", "/product", "/cartItems","/pro"];
 
   return (
     <html lang="en">
