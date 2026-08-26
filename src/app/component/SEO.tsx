@@ -30,8 +30,7 @@ const SEO = ({ title, description, keywords, image, url }: any) => {
       <link rel="canonical" href={url} />
 
       {/* Title */}
-      <title>{title} | A2Z IT Solution</title>
-    </Head>
+<title>{title} | A2Z IT Solution – Computer, CCTV & IT Services</title>    </Head>
   );
 };
 

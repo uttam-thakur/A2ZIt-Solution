@@ -64,7 +64,7 @@ const CartItems = () => {
     message += `📦 *Total Amount:* ₹${totalPrice}%0A%0A`;
     message += `📝 *Please confirm my order!*`;
 
-    const phoneNumber = "918670288140";
+    const phoneNumber = "919619437593";
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
 
     setShowConfetti(true);

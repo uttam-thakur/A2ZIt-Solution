@@ -16,7 +16,6 @@
     width: 100%;
   }
   .image {
-    margin-top: -227px;
-    margin-left: 140px;
+    display: none;
   }
 }
