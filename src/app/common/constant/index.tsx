@@ -20,7 +20,6 @@ Best Regards,
 
 🙏🏻 Thank you! We look forward to serving you.`;
 export const whatsAppContactMsg = message;
-
 export const infoData = {
   title: "Get in Touch with Us",
   subTitle: "Quick answers and reliable support are just a message away.",
