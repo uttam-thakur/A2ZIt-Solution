@@ -1,242 +1,20 @@
-// "use client";
-// import React from "react";
-// import Link from "next/link";
-// import Box from "@mui/material/Box";
-// import Card from "@mui/material/Card";
-// import { CardActionArea } from "@mui/material";
-// import CardMedia from "@mui/material/CardMedia";
-// import Typography from "@mui/material/Typography";
-// import styles from "../style/services.module.css";
-// import CardContent from "@mui/material/CardContent";
-// import { usePathname, useRouter } from "next/navigation";
-// import CircularProgress from "@mui/material/CircularProgress";
-// import MobileNavbarWrapper from "../component/MobileNavbarWrapper";
-
-// import { SxProps, Theme } from "@mui/system";
-
-// const loadingStyles: SxProps<Theme> = {
-//   position: "fixed",
-//   top: 0,
-//   left: 0,
-//   width: "100vw",
-//   height: "100vh",
-//   backgroundColor: "rgba(0,0,0,0.5)",
-//   display: "flex",
-//   justifyContent: "center",
-//   alignItems: "center",
-//   zIndex: 9999,
-// };
-
-// const ServiceCard = ({ title, description, imageSrc, href }: any) => {
-//   const [isHovered, setIsHovered] = React.useState(false);
-//   const pathname = usePathname();
-//   const isPathMatched = pathname;
-
-//   return (
-//     <>
-//       <Link href={href} style={{ textDecoration: "none" }}>
-//         <Card
-//           sx={{
-//             maxWidth: 260,
-//             margin: "10px",
-//             border: "1px solid grey",
-//             transition: "transform 0.3s ease-in-out",
-//             transform: isHovered ? "scale(1.05)" : "scale(1)",
-//             display: href === isPathMatched ? "none" : "block",
-//           }}
-//           onMouseEnter={() => setIsHovered(true)}
-//           onMouseLeave={() => setIsHovered(false)}
-//         >
-//           <CardActionArea>
-//             <CardMedia
-//               component="img"
-//               height="250px"
-//               width="200px"
-//               image={imageSrc}
-//               alt={title}
-//               sx={{
-//                 display: "flex",
-//                 justifyContent: "center",
-//                 padding: "20px",
-//               }}
-//             />
-//             <CardContent>
-//               <div className={styles.titleContainer}>
-//                 <Typography
-//                   gutterBottom
-//                   variant="h6"
-//                   component="div"
-//                   sx={{ display: "flex", justifyContent: "center" }}
-//                 >
-//                   {title}
-//                 </Typography>
-//               </div>
-//               <br />
-//               <Typography variant="body2" color="text.secondary">
-//                 {description}
-//               </Typography>
-//             </CardContent>
-//           </CardActionArea>
-//         </Card>
-//       </Link>
-//     </>
-//   );
-// };
-
-// const Services = () => {
-//   const servicesData = [
-//     {
-//       title: "RENTALS",
-//       description:
-//         "We rent reliable Desktop Computers, Macbooks, Laptops and tech gadgets of the top brands at the best price.",
-//       imageSrc:
-//         "https://t4.ftcdn.net/jpg/02/06/84/39/360_F_206843915_5rPRsyBPBW2CSVwt3iO7NXt9Cy5M5HS0.jpg",
-//       href: "/rentals",
-//     },
-//     {
-//       title: "CONSULTING",
-//       description:
-//         "We at A2Z IT SOLUTION consult & help our customers with understanding the devices and software they have, bought.",
-//       imageSrc:
-//         "https://img.freepik.com/premium-vector/continuous-one-line-drawing-two-smart-businessmen-discussing-project-office-business-consulting-concept-single-line-draw-design-vector-graphic-illustration_638785-1374.jpg",
-//       href: "/consulting",
-//     },
-//     {
-//       title: "SOFTWARES",
-//       description:
-//         "We provide security-based, system-based and application-based software for corporate/non-corporate clients.",
-//       imageSrc:
-//         "https://www.shutterstock.com/image-vector/hand-draw-business-doodles-digital-260nw-670252099.jpg",
-//       href: "/softwares",
-//     },
-//     {
-//       title: "COMPUTER & ACCESSORIES",
-//       description:
-//         "We sell PC, Mac, Laptops and accessories like speakers, cables, battery backups, headsets, charger and many .",
-//       imageSrc:
-//         "https://www.shutterstock.com/image-vector/different-computer-gadgets-doodle-vector-260nw-645427756.jpg",
-//       href: "/comp&Acc",
-//     },
-//     {
-//       title: "MAINTENANCE & REPAIR",
-//       description:
-//         "We are dedicated to providing the best computer maintenance services and repair services when needed.",
-//       imageSrc:
-//         "https://img.freepik.com/premium-vector/continuous-line-drawing-construction-worker-vector-illustration-isolated-white-background_497857-152.jpg",
-//       href: "/maintenance",
-//     },
-//       {
-//     title: "WEBSITE DEVELOPMENT",
-//     description:
-//       "We design and develop fast, responsive and professional websites for businesses, startups and organizations with modern, mobile-friendly and SEO-ready solutions.",
-//     imageSrc: "/images/website-development.webp",
-//     href: "/website",
-//   },
-//     {
-//   title: "GOOGLE BUSINESS PROFILE",
-//   description:
-//     "We set up and optimize Google Business Profiles to improve your local online presence, help customers find your business on Google Search and Maps, and generate more enquiries.",
-//   imageSrc: "/images/services/google-business-profile.webp",
-//   href: "/gmb",
-// },
-//   ];
-
-//   const pathname = usePathname();
-//   const isPathMatched = pathname;
-//   const router = useRouter();
-//   const [loading, setLoading] = React.useState(false);
-
-//   const handleNavigation = (href: string) => {
-//     if (pathname !== href) {
-//       setLoading(true);
-//       router.push(href);
-//     }
-//   };
-
-//   React.useEffect(() => {
-//     setLoading(false);
-//   }, [pathname]);
-
-//   // 🚫 Freeze background scroll when loading
-//   React.useEffect(() => {
-//     if (loading) {
-//       document.body.style.overflow = "hidden";
-//     } else {
-//       document.body.style.overflow = "auto";
-//     }
-//     return () => {
-//       document.body.style.overflow = "auto";
-//     };
-//   }, [loading]);
-
-//   const filteredServicesData = servicesData.filter(
-//     (service) => service.href !== isPathMatched
-//   );
-
-//   return (
-//     <div className={styles.container} style={{ backgroundColor: "snow" }}>
-//       {loading && (
-//         // @ts-ignore
-//         <Box sx={loadingStyles}>
-//           <CircularProgress color="warning" size={60} />
-//         </Box>
-//       )}
-//       <p className={styles.p}>WHAT WE PROVIDE</p>
-//       <h2 className={styles.h2}>SERVICES</h2>
-//       <MobileNavbarWrapper />
-//       <p className={styles.p}>
-//         We believe in providing quality and timely service to the customers.
-//         <br /> Our team of experts is pro at executing all kinds of repair work
-//         <br /> right from data recovery to desktop screen replacement, we manage
-//         everything.
-//         <br /> We also consult our customers on the latest tech devices,
-//         software updates as per their need.
-//       </p>
-//       <div className={styles.cardContainer}>
-//         {filteredServicesData?.map((service, index) => (
-//           <div key={index} onClick={() => handleNavigation(service.href)}>
-//             <ServiceCard {...service} />
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Services;
 
 
 "use client";
 
 import React from "react";
 import Link from "next/link";
-import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import { CardActionArea } from "@mui/material";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import CardContent from "@mui/material/CardContent";
-import CircularProgress from "@mui/material/CircularProgress";
-import { SxProps, Theme } from "@mui/system";
 import { usePathname, useRouter } from "next/navigation";
 
 import styles from "../style/services.module.css";
 import MobileNavbarWrapper from "../component/MobileNavbarWrapper";
 
 
-
-const loadingStyles: SxProps<Theme> = {
-  position: "fixed",
-  top: 0,
-  left: 0,
-  width: "100vw",
-  height: "100vh",
-  backgroundColor: "rgba(0, 0, 0, 0.5)",
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  zIndex: 9999,
-};
 /* =========================
    SERVICE CARD TYPES
 ========================= */
@@ -653,12 +431,12 @@ const Services = () => {
           LOADING OVERLAY
       ========================= */}
 
-  {loading && (
-  <Box sx={loadingStyles}>
-    <CircularProgress color="warning" size={60} />
-  </Box>
-)}
 
+{loading && (
+  <div className={styles.loadingOverlay}>
+    <div className={styles.loader} />
+  </div>
+)}
       {/* =========================
           HEADING
       ========================= */}

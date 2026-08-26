@@ -118,7 +118,8 @@ const FeedbackForm: React.FC = () => {
                 margin="normal"
                 required
               />
-              <Box sx={{ display: "flex", alignItems: "center", marginY: 2 }}>
+              <div style={{ display: "flex", alignItems: "center",     margin: "16px 0"
+ }}>
                 <Button
                   variant="contained"
                   component="label"
@@ -145,20 +146,16 @@ const FeedbackForm: React.FC = () => {
                   />
                   <PhotoCamera />
                 </IconButton>
-              </Box>
+              </div>
               {imagePreview && (
-                <Box
-                  sx={{
+                <div
+                  style={{
                     display: "flex",
                     justifyContent: "center",
                     marginBottom: 2,
                   }}
                 >
-                  {/* <img
-                    src={imagePreview}
-                    alt="Selected"
-                    style={{ maxHeight: 200, borderRadius: 8 }}
-                  /> */}
+                  
                   <Image
                     src={imagePreview}
                     alt="Selected"
@@ -166,7 +163,7 @@ const FeedbackForm: React.FC = () => {
                     objectFit="contain"
                     style={{ borderRadius: "8px" }}
                   />
-                </Box>
+                </div>
               )}
               <Button
                 variant="contained"

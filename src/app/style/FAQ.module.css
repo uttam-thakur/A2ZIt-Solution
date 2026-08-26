@@ -48,32 +48,20 @@
   margin-right: 12px;
 }
 
-/* .faqModal {
-  position: fixed;
-  background: white;
-  padding: 36px;
-  width: 700px;
-  min-height: 300px;
-  height: auto;
-  display: flex;
-  border-radius: 20px;
-  flex-direction: column;
-} */
 
-.faqModal {
-  position: fixed;
 
-  display: flex;
-  padding: 36px;
-  width: 700px;
-  min-height: 300px;
-  height: auto;
-  flex-direction: column;
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  /* margin-top: 20px; */
-  justify-content: center;
+/* .faqModal { */
+  .faqModal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  box-shadow: 0 24px 38px rgba(0, 0, 0, 0.14);
+  padding: 32px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
 }
 
 .questionSection {
