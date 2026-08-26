@@ -1,6 +1,5 @@
-export const phoneNumber = 9619437593;
-
-export const whatsappNumber = 9619437593;
+export const phoneNumber = 919619437593;
+export const whatsappNumber = 919619437593;
 const message = `Thank you for reaching out to A2Z IT SOLUTION!
 
 We specialize in computer, laptop, printer, and CCTV sales & service. Kindly share your requirements, and our team will be happy to assist you.
