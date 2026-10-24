@@ -1,4 +1,4 @@
-.navbar {
+/* .navbar {
   position: fixed;
   width: 100%;
   top: 0;
@@ -49,7 +49,6 @@
   position: relative;
   transition: color 0.3s ease;
 
-  /* color: #ffffff; Optional: Set the text color */
   text-shadow: 0 0 3px #d2f7ef, 0 0 6px #00ffcc, 0 0 9px #00ffcc,
     0 0 12px #00ffcc, 0 0 15px #00ffcc;
   animation: glowing 1.5s infinite alternate;
@@ -77,7 +76,6 @@
   width: 100%;
 }
 
-/* Mobile Menu */
 .menuButton {
   display: none;
   font-size: 1.8rem;
@@ -125,7 +123,6 @@
   cursor: pointer;
 }
 
-/* Loader */
 .loaderOverlay {
   position: fixed;
   top: 0;
@@ -148,7 +145,6 @@
   animation: spin 1s linear infinite;
 }
 
-/* Glowing cursor effect when mobile navbar is open */
 .glowingCursor {
   position: fixed;
   width: 15px;
@@ -181,7 +177,6 @@
   }
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .navMenu {
     display: none;
@@ -189,5 +184,510 @@
 
   .menuButton {
     display: block;
+  }
+} */
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1200;
+  width: 100%;
+  padding: 14px 5%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(7, 18, 35, 0.65);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-sizing: border-box;
+}
+
+/* =========================================
+   NAVBAR CONTAINER
+========================================= */
+
+.navContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1440px;
+  min-height: 54px;
+  margin: 0 auto;
+  gap: 28px;
+}
+
+/* =========================================
+   BRAND / LOGO
+========================================= */
+
+.brand {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.logo {
+  display: block;
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+}
+
+.brandText {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.brandName {
+  color: #fff;
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  line-height: 1.2;
+}
+
+.brandTagline {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 1.1px;
+}
+
+/* =========================================
+   DESKTOP NAVIGATION
+========================================= */
+
+.desktopMenu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: clamp(20px, 2.5vw, 36px);
+}
+
+.navLink {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 180ms ease;
+}
+
+.navLink::after {
+  position: absolute;
+  right: 0;
+  bottom: 3px;
+  left: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: #ffab19;
+  content: "";
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 180ms ease;
+}
+
+.navLink:hover,
+.navLink.active {
+  color: #ffbd45;
+}
+
+.navLink:hover::after,
+.navLink.active::after {
+  transform: scaleX(1);
+}
+
+/* =========================================
+   HAMBURGER BUTTON
+========================================= */
+
+.menuButton {
+  position: relative;
+  z-index: 1203;
+  display: none;
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: 46px;
+  height: 46px;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 7px;
+  background: rgba(7, 18, 35, 0.9);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    background 180ms ease,
+    border-color 180ms ease;
+}
+
+.menuButton:hover {
+  border-color: #ffab19;
+  background: #15243a;
+}
+
+.menuButton span {
+  display: block;
+  width: 21px;
+  height: 2px;
+  flex-shrink: 0;
+  border-radius: 2px;
+  background: #fff;
+  transition:
+    transform 180ms ease,
+    opacity 180ms ease;
+}
+
+.menuButtonOpen span:first-child {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menuButtonOpen span:nth-child(2) {
+  opacity: 0;
+}
+
+.menuButtonOpen span:last-child {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* =========================================
+   MOBILE BACKDROP
+========================================= */
+
+.mobileBackdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1201;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+  height: 100dvh;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.72);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  animation: backdropIn 180ms ease;
+}
+
+/* =========================================
+   MOBILE DRAWER
+========================================= */
+
+.mobileDrawer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: min(360px, 88vw);
+  height: 100%;
+  height: 100dvh;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 24px 22px;
+  padding-bottom: max(24px, env(safe-area-inset-bottom));
+  box-sizing: border-box;
+  background: #0b1729;
+  border-left: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: -12px 0 40px rgba(0, 0, 0, 0.35);
+  animation: drawerIn 220ms ease-out;
+}
+
+/* =========================================
+   DRAWER HEADER
+========================================= */
+
+.drawerHeader {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.drawerTitle {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 750;
+}
+
+.drawerClose {
+  display: grid;
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 7px;
+  background: #17263b;
+  color: #fff;
+  font-size: 27px;
+  cursor: pointer;
+}
+
+.drawerClose:hover {
+  border-color: #ffab19;
+  background: #22344d;
+}
+
+/* =========================================
+   MOBILE LINKS
+========================================= */
+
+.mobileLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 24px;
+}
+
+.mobileNavLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  min-height: 54px;
+  padding: 0 15px;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  transition:
+    color 180ms ease,
+    background 180ms ease,
+    border-color 180ms ease;
+}
+
+.mobileNavLink > span:last-child {
+  color: #ffab19;
+  font-size: 20px;
+}
+
+.mobileNavLink:hover,
+.mobileActive {
+  border-color: rgba(255, 171, 25, 0.25);
+  background: rgba(255, 171, 25, 0.1);
+  color: #ffbd45;
+}
+
+/* =========================================
+   DRAWER FOOTER
+========================================= */
+
+.drawerFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 13px;
+  margin-top: auto;
+  padding-top: 32px;
+}
+
+.drawerFooter p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 13px;
+}
+
+.drawerContact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 48px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  background: #ffab19;
+  color: #111827;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 180ms ease;
+}
+
+.drawerContact:hover {
+  background: #ffc04d;
+}
+
+.drawerFooter > span {
+  padding-top: 8px;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+}
+
+/* =========================================
+   KEYBOARD ACCESSIBILITY
+========================================= */
+
+.navLink:focus-visible,
+.brand:focus-visible,
+.menuButton:focus-visible,
+.mobileNavLink:focus-visible,
+.drawerClose:focus-visible,
+.drawerContact:focus-visible {
+  outline: 2px solid #ffbd45;
+  outline-offset: 4px;
+}
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes backdropIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes drawerIn {
+  from {
+    transform: translateX(24px);
+    opacity: 0.7;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1050px) {
+  .navbar {
+    padding-right: 4%;
+    padding-left: 4%;
+  }
+
+  .navContainer {
+    gap: 18px;
+  }
+
+  .desktopMenu {
+    gap: 20px;
+  }
+
+  .brandName {
+    font-size: 15px;
+  }
+
+  .brandTagline {
+    font-size: 9px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 800px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .navContainer {
+    min-height: 48px;
+    gap: 12px;
+  }
+
+  .logo {
+    width: 42px;
+    height: 42px;
+  }
+
+  .desktopMenu {
+    display: none;
+  }
+
+  .menuButton {
+    display: flex;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+  .navbar {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+  .brand {
+    gap: 8px;
+  }
+
+  .logo {
+    width: 36px;
+    height: 36px;
+  }
+
+  .brandName {
+    font-size: 13px;
+    letter-spacing: 0.4px;
+  }
+
+  .brandTagline {
+    font-size: 8px;
+    letter-spacing: 0.5px;
+  }
+
+  .menuButton {
+    width: 42px;
+    height: 42px;
+  }
+
+  .mobileDrawer {
+    width: 90vw;
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .navLink,
+  .navLink::after,
+  .menuButton,
+  .menuButton span,
+  .mobileNavLink,
+  .drawerContact {
+    transition: none;
+  }
+
+  .mobileBackdrop,
+  .mobileDrawer {
+    animation: none;
   }
 }
