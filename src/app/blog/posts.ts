@@ -25,11 +25,7 @@ export const posts: BlogPost[] = [
     category: "Laptop & Computer",
     date: "2026-10-21",
     readTime: "5 min read",
-<<<<<<< HEAD
-    image: "/images/imageslider/laptop-repair.webp",
-=======
     image: "/images/imageslider/laptop repair.jpg",
->>>>>>> cef7596624ce830dc5ea8ac0f070140598cbb1ca
     imageAlt: "Laptop repair and technical support in Asansol",
     keywords: [
       "laptop repair in Asansol",
@@ -83,11 +79,7 @@ export const posts: BlogPost[] = [
     category: "CCTV & Security",
     date: "2026-10-21",
     readTime: "5 min read",
-<<<<<<< HEAD
-    image: "/images/imageslider/cctv-installtion.webp",
-=======
     image: "/images/imageslider/cctv installtion.jpg",
->>>>>>> cef7596624ce830dc5ea8ac0f070140598cbb1ca
     imageAlt: "CCTV surveillance installation for homes and businesses",
     keywords: [
       "CCTV installation in Asansol",
@@ -134,11 +126,7 @@ export const posts: BlogPost[] = [
     category: "Website Development",
     date: "2026-10-21",
     readTime: "5 min read",
-<<<<<<< HEAD
-    image: "/images/imageslider/desktop-repair.webp",
-=======
     image: "/images/imageslider/desktop repair.jpg",
->>>>>>> cef7596624ce830dc5ea8ac0f070140598cbb1ca
     imageAlt: "Technology equipment for business website development",
     keywords: [
       "website development in Asansol",
@@ -184,11 +172,7 @@ export const posts: BlogPost[] = [
     category: "Local SEO",
     date: "2026-10-21",
     readTime: "5 min read",
-<<<<<<< HEAD
-    image: "/images/imageslider/antivirus.webp",
-=======
     image: "/images/imageslider/antivirus.jpg",
->>>>>>> cef7596624ce830dc5ea8ac0f070140598cbb1ca
     imageAlt: "Digital technology supporting local business visibility",
     keywords: [
       "Google Business Profile optimization in Asansol",
@@ -234,11 +218,7 @@ export const posts: BlogPost[] = [
     category: "IT Support",
     date: "2026-10-21",
     readTime: "4 min read",
-<<<<<<< HEAD
-    image: "/images/imageslider/desktop-repair.webp",
-=======
     image: "/images/imageslider/desktop repair.jpg",
->>>>>>> cef7596624ce830dc5ea8ac0f070140598cbb1ca
     imageAlt: "Desktop computer hardware and maintenance",
     keywords: [
       "computer maintenance services in Asansol",

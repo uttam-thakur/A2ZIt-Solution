@@ -24,11 +24,7 @@ export const metadata: Metadata = {
   ],
 
   alternates: {
-<<<<<<< HEAD
-    canonical: "https://www.a2zitsolution.co.in/softwares",
-=======
     canonical: "https://www.a2zitsolution.co.in/software",
->>>>>>> cef7596624ce830dc5ea8ac0f070140598cbb1ca
   },
 
   openGraph: {
@@ -36,11 +32,7 @@ export const metadata: Metadata = {
       "Business, Accounting & ERP Software Solutions | A2Z IT SOLUTION",
     description:
       "Explore ERP, accounting, business operations and computer security software solutions for businesses in Asansol.",
-<<<<<<< HEAD
-    url: "https://www.a2zitsolution.co.in/softwares",
-=======
     url: "https://www.a2zitsolution.co.in/software",
->>>>>>> cef7596624ce830dc5ea8ac0f070140598cbb1ca
     siteName: "A2Z IT SOLUTION",
     locale: "en_IN",
     type: "website",
