@@ -40,11 +40,7 @@ const RentalsClient = () => {
       />
 
       <Reuse
-<<<<<<< HEAD
-        imageSrc="/images/Rental/4.webp"
-=======
         imageSrc="/images/Rental/4.jpg"
->>>>>>> cef7596624ce830dc5ea8ac0f070140598cbb1ca
         altText="Laptop rental services in Asansol"
         subtitle="Wide Range of Laptops for Every Need"
         title="LAPTOPS"
@@ -62,11 +58,7 @@ const RentalsClient = () => {
       />
 
       <Reuse
-<<<<<<< HEAD
-        imageSrc="/images/Rental/6.webp"
-=======
         imageSrc="/images/Rental/6.jpg"
->>>>>>> cef7596624ce830dc5ea8ac0f070140598cbb1ca
         altText="CCTV camera rental services for temporary security"
         subtitle="Short-Term CCTV Camera Rentals for Security & Emergencies"
         title="CCTV CAMERA"
