@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import type { Metadata } from "next";
-=======
 // // pages/about.tsx
 // import Image from "next/image";
 // import styles from "./About.module.css";
@@ -93,29 +90,10 @@ import type { Metadata } from "next";
 
 
 import Head from "next/head";
->>>>>>> cef7596624ce830dc5ea8ac0f070140598cbb1ca
 import Image from "next/image";
 import styles from "./About.module.css";
 import Album from "../component/Album";
 
-<<<<<<< HEAD
-export const metadata: Metadata = {
-  title: "About A2Z IT SOLUTION | IT Support in Asansol",
-  description: "Learn about A2Z IT SOLUTION in Asansol, West Bengal, providing computer and laptop repair, printer services, CCTV installation, networking, website development and IT maintenance.",
-  alternates: { canonical: "/about" },
-  openGraph: {
-    title: "About A2Z IT SOLUTION | IT Support in Asansol",
-    description: "Meet A2Z IT SOLUTION and learn about our professional IT support and technology services in Asansol, West Bengal.",
-    url: "/about",
-    images: [{ url: "/images/5.png", alt: "A2Z IT SOLUTION company profile" }],
-  },
-  twitter: { card: "summary_large_image", title: "About A2Z IT SOLUTION | IT Support in Asansol", description: "Learn about our IT support and technology services in Asansol.", images: ["/images/5.png"] },
-};
-
-export default function About() {
-  return (
-    <>
-=======
 const About = () => {
   const siteUrl = "https://www.a2zitsolution.co.in";
   
@@ -192,18 +170,13 @@ const About = () => {
         />
       </Head>
 
->>>>>>> cef7596624ce830dc5ea8ac0f070140598cbb1ca
       <main className={styles.container}>
         <section
           className={styles.profileSection}
           aria-labelledby="about-heading"
         >
           <Image
-<<<<<<< HEAD
-            src="/images/about-profile.webp"
-=======
             src="/images/5.png"
->>>>>>> cef7596624ce830dc5ea8ac0f070140598cbb1ca
             alt="A2Z IT SOLUTION company profile"
             width={400}
             height={400}
@@ -343,11 +316,7 @@ const About = () => {
       </section>
     </>
   );
-<<<<<<< HEAD
-}
-=======
 };
 
 export default About;
 
->>>>>>> cef7596624ce830dc5ea8ac0f070140598cbb1ca

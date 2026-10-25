@@ -6,11 +6,7 @@ import { posts } from "./posts";
 import styles from "./blog.module.css";
 
 const siteUrl =
-<<<<<<< HEAD
-  process.env.NEXT_PUBLIC_SITE_URL || "https://www.a2zitsolution.co.in";
-=======
   process.env.NEXT_PUBLIC_SITE_URL || "https://www.a2zitsolution.com";
->>>>>>> cef7596624ce830dc5ea8ac0f070140598cbb1ca
 
 export const metadata: Metadata = {
   title: "IT Tips, Computer Repair & Local SEO Blog | A2Z IT SOLUTION",
