@@ -11,18 +11,20 @@ const page = () => {
         <div className={styles.mainSection}>
           <div className={styles.introContainer}>
             <p className={styles.introHeading}>
-              Grow your business online with powerful Google Business Profile
-              solutions.
+              Google Business Profile Management & Local SEO
+  Services in Asansol
             </p>
 
-            <p className={styles.introSubHeading}>
-              With our Google My Business (GMB) services, we help businesses
-              improve their online visibility, attract more local customers,
-              and build a strong presence on Google Search and Google Maps.
-              Our professional solutions are designed to increase customer
-              engagement, generate leads, and improve your local search
-              ranking.
-            </p>
+            
+<p className={styles.introSubHeading}>
+  A2Z IT SOLUTION provides Google Business Profile setup,
+  profile optimization, Google Maps listing support, and
+  local SEO services in Asansol, West Bengal. We help
+  businesses improve their online presence, share accurate
+  business information, connect with local customers, and
+  build trust through professional profile management.
+</p>
+
 
             <div className={styles.ctaContainer}>
               <p>

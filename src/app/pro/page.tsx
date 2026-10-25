@@ -408,7 +408,7 @@ Thank you,
 
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <div>
+          <div style={{     marginTop: "20px" }}>
             <span className={styles.smallTitle}>
               A2Z IT SOLUTION
             </span>
