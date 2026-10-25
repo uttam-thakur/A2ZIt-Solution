@@ -80,14 +80,22 @@ const page = () => {
         />
 
         <Reuse
+<<<<<<< HEAD
           imageSrc="/images/GMB/GMB3.webp"
+=======
+          imageSrc="/images/GMB/GMB3.jpg"
+>>>>>>> cef7596624ce830dc5ea8ac0f070140598cbb1ca
           title="GOOGLE MAPS & LOCAL SEO"
           description="Get your business discovered by customers searching for products and services in your area. We optimize your Google Business Profile to strengthen your local presence and improve visibility across Google Search and Google Maps, helping potential customers find your business more easily."
           isImageRight={false}
         />
 
         <Reuse
+<<<<<<< HEAD
           imageSrc="/images/GMB/gmb.webp"
+=======
+          imageSrc="/images/GMB/GMB.webp"
+>>>>>>> cef7596624ce830dc5ea8ac0f070140598cbb1ca
           title="GOOGLE REVIEWS & REPUTATION MANAGEMENT"
           description="Customer reviews play an important role in building trust and attracting new customers. We help businesses manage their Google reviews, respond professionally to customer feedback, and develop effective strategies to encourage genuine customer reviews and build a stronger online reputation."
           isImageRight={true}

@@ -35,7 +35,11 @@ const WebsiteClient = () => {
       <div style={{ marginTop: "20px" }} />
 
       <Reuse
+<<<<<<< HEAD
         imageSrc="/images/WEB/website1.webp"
+=======
+        imageSrc="/images/WEB/Website1.webp"
+>>>>>>> cef7596624ce830dc5ea8ac0f070140598cbb1ca
         altText="Professional website development services for businesses"
         title="PROFESSIONAL WEBSITE DEVELOPMENT SERVICES"
         description={
@@ -68,7 +72,11 @@ const WebsiteClient = () => {
       />
 
       <Reuse
+<<<<<<< HEAD
         imageSrc="/images/WEB/website6.webp"
+=======
+        imageSrc="/images/WEB/Website6.jpg"
+>>>>>>> cef7596624ce830dc5ea8ac0f070140598cbb1ca
         altText="Responsive website design for mobile, tablet, and desktop"
         title="RESPONSIVE WEBSITE DESIGN"
         description="We develop responsive websites that adapt to different screen sizes, including mobile phones, tablets, laptops, and desktop computers. Our clean and user-friendly designs provide visitors with a smooth browsing experience."
@@ -76,7 +84,11 @@ const WebsiteClient = () => {
       />
 
       <Reuse
+<<<<<<< HEAD
         imageSrc="/images/WEB/website3.avif"
+=======
+        imageSrc="/images/WEB/Website3.avif"
+>>>>>>> cef7596624ce830dc5ea8ac0f070140598cbb1ca
         altText="Custom website development tailored to business requirements"
         title="CUSTOM WEBSITE DEVELOPMENT"
         description="Every business is different, and your website should reflect your requirements. We create customized websites with modern layouts, professional designs, contact forms, service pages, product sections, and other features to represent your business effectively online."
@@ -84,7 +96,11 @@ const WebsiteClient = () => {
       />
 
       <Reuse
+<<<<<<< HEAD
         imageSrc="/images/WEB/website4.webp"
+=======
+        imageSrc="/images/WEB/Website4.webp"
+>>>>>>> cef7596624ce830dc5ea8ac0f070140598cbb1ca
         altText="E-commerce website development and online store design"
         title="E-COMMERCE WEBSITE DEVELOPMENT"
         description="Start selling products online with a professional e-commerce website. Depending on your requirements, we can develop online stores with product listings, categories, shopping carts, payment integration, order management, and responsive designs."
@@ -92,7 +108,11 @@ const WebsiteClient = () => {
       />
 
       <Reuse
+<<<<<<< HEAD
         imageSrc="/images/WEB/website5.webp"
+=======
+        imageSrc="/images/WEB/Website5.webp"
+>>>>>>> cef7596624ce830dc5ea8ac0f070140598cbb1ca
         altText="Website maintenance, security updates, and technical support"
         title="WEBSITE MAINTENANCE & SUPPORT"
         description="Keep your website updated and reliable with website maintenance services. Support can include content updates, security improvements, performance optimization, bug fixing, backup assistance, and technical support."

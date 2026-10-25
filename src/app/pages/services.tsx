@@ -228,7 +228,11 @@ const Services = () => {
       title: "WEBSITE DEVELOPMENT",
       description:
         "We design and develop fast, responsive and professional websites for businesses, startups and organizations with modern, mobile-friendly and SEO-ready solutions.",
+<<<<<<< HEAD
       imageSrc: "/images/WEB/websiteBN.webp",
+=======
+      imageSrc: "/images/WEB/websiteBN.png",
+>>>>>>> cef7596624ce830dc5ea8ac0f070140598cbb1ca
       href: "/website",
     },
 
@@ -236,7 +240,11 @@ const Services = () => {
       title: "GOOGLE BUSINESS PROFILE",
       description:
         "We set up and optimize Google Business Profiles to improve your local online presence, help customers find your business on Google Search and Maps, and generate more enquiries.",
+<<<<<<< HEAD
       imageSrc: "/images/GMB/GMBBN.webp",
+=======
+      imageSrc: "/images/GMB/GMBBN.png",
+>>>>>>> cef7596624ce830dc5ea8ac0f070140598cbb1ca
       href: "/gmb",
     },
   ];

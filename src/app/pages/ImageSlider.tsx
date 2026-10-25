@@ -6,31 +6,51 @@
 // import styles from "../style/ImageSlider.module.css";
 // const images = [
 //   {
+<<<<<<< HEAD
 //     src: "/images/imageslider/antivirus.webp",
+=======
+//     src: "/images/imageslider/antivirus.jpg",
+>>>>>>> cef7596624ce830dc5ea8ac0f070140598cbb1ca
 //     title: "Comprehensive Antivirus & Cybersecurity Solutions",
 //     description:
 //       "Protect your digital assets with our advanced antivirus solutions that offer real-time scanning, proactive threat detection, firewall protection, and scheduled updates to ensure your systems are always secure from evolving cyber threats and malware attacks.",
 //   },
 //   {
+<<<<<<< HEAD
 //     src: "/images/imageslider/cctv-installtion.webp",
+=======
+//     src: "/images/imageslider/cctv installtion.jpg",
+>>>>>>> cef7596624ce830dc5ea8ac0f070140598cbb1ca
 //     title: "Intelligent CCTV Installation & Surveillance Systems",
 //     description:
 //       "Secure your home or workplace with our smart CCTV installation services. We offer customized surveillance setups with high-definition cameras, night vision, remote access via mobile apps, and 24/7 recording to give you complete peace of mind and situational awareness.",
 //   },
 //   {
+<<<<<<< HEAD
 //     src: "/images/imageslider/desktop-repair.webp",
+=======
+//     src: "/images/imageslider/desktop repair.jpg",
+>>>>>>> cef7596624ce830dc5ea8ac0f070140598cbb1ca
 //     title: "Reliable Desktop Repair & Hardware Maintenance Services",
 //     description:
 //       "Our certified technicians provide expert desktop repair services, including diagnostics, motherboard and RAM upgrades, hard disk replacement, software troubleshooting, and complete system cleanups to restore speed, reliability, and performance to your desktop computers.",
 //   },
 //   {
+<<<<<<< HEAD
 //     src: "/images/imageslider/laptop-repair.webp",
+=======
+//     src: "/images/imageslider/laptop repair.jpg",
+>>>>>>> cef7596624ce830dc5ea8ac0f070140598cbb1ca
 //     title: "Expert Laptop Repair with On-Demand Service Options",
 //     description:
 //       "From cracked screens and keyboard issues to battery replacement and system overheating, our laptop repair services are fast, affordable, and backed by technical expertise. We also offer pickup and drop-off options to make your experience as convenient as possible.",
 //   },
 //   {
+<<<<<<< HEAD
 //     src: "/images/imageslider/printer1.webp",
+=======
+//     src: "/images/imageslider/printer1.jpg",
+>>>>>>> cef7596624ce830dc5ea8ac0f070140598cbb1ca
 //     title: "End-to-End Printer Setup, Repair & Support Solutions",
 //     description:
 //       "We provide comprehensive printer support — whether you're dealing with paper jams, ink cartridge problems, wireless configuration, or driver issues. Our team ensures your printing devices are running smoothly, reducing downtime and improving productivity for your home or office.",
@@ -95,35 +115,55 @@ import styles from "../style/ImageSlider.module.css";
 
 const slides = [
   {
+<<<<<<< HEAD
     src: "/images/imageslider/antivirus.webp",
+=======
+    src: "/images/imageslider/antivirus.jpg",
+>>>>>>> cef7596624ce830dc5ea8ac0f070140598cbb1ca
     title: "Antivirus & Cybersecurity Solutions",
     description:
       "Protect your computers and business with reliable antivirus, malware protection, firewall security, and proactive threat detection.",
     label: "SMARTER DIGITAL SECURITY",
   },
   {
+<<<<<<< HEAD
     src: "/images/imageslider/cctv-installtion.webp",
+=======
+    src: "/images/imageslider/cctv installtion.jpg",
+>>>>>>> cef7596624ce830dc5ea8ac0f070140598cbb1ca
     title: "CCTV Installation & Surveillance",
     description:
       "Protect your home and workplace with professional CCTV installation, HD cameras, night vision, and remote monitoring.",
     label: "SECURITY YOU CAN TRUST",
   },
   {
+<<<<<<< HEAD
     src: "/images/imageslider/desktop-repair.webp",
+=======
+    src: "/images/imageslider/desktop repair.jpg",
+>>>>>>> cef7596624ce830dc5ea8ac0f070140598cbb1ca
     title: "Professional Desktop Repair",
     description:
       "Get dependable computer diagnostics, hardware upgrades, troubleshooting, and maintenance from experienced technicians.",
     label: "RELIABLE TECHNICAL SUPPORT",
   },
   {
+<<<<<<< HEAD
     src: "/images/imageslider/laptop-repair.webp",
+=======
+    src: "/images/imageslider/laptop repair.jpg",
+>>>>>>> cef7596624ce830dc5ea8ac0f070140598cbb1ca
     title: "Laptop Repair & Maintenance",
     description:
       "From screen replacement to performance issues, we help keep your laptop running smoothly with expert repair services.",
     label: "EXPERT LAPTOP SOLUTIONS",
   },
   {
+<<<<<<< HEAD
     src: "/images/imageslider/printer1.webp",
+=======
+    src: "/images/imageslider/printer1.jpg",
+>>>>>>> cef7596624ce830dc5ea8ac0f070140598cbb1ca
     title: "Printer Repair & Office Solutions",
     description:
       "Keep your office productive with printer installation, repair, wireless configuration, and dependable technical support.",
@@ -175,8 +215,11 @@ export default function ImageSlider() {
             <img
               src={slide.src}
               alt={slide.title}
+<<<<<<< HEAD
               width={1920}
               height={1280}
+=======
+>>>>>>> cef7596624ce830dc5ea8ac0f070140598cbb1ca
               className={styles.image}
               loading={index === 0 ? "eager" : "lazy"}
               fetchPriority={index === 0 ? "high" : "auto"}

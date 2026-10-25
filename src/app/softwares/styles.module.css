@@ -1,6 +1,10 @@
 /* General Section Styling */
 .mainSection {
+<<<<<<< HEAD
   background-image: url("/images/Software/background4.webp");
+=======
+  background-image: url("/images/Software/background4.jpg");
+>>>>>>> cef7596624ce830dc5ea8ac0f070140598cbb1ca
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

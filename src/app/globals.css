@@ -49,6 +49,7 @@ div {
     display: none;
   }
 }
+<<<<<<< HEAD
 
 
 /* A2Z performance and layout safeguards */
@@ -56,3 +57,5 @@ html { scroll-behavior: smooth; }
 body { margin: 0; min-width: 320px; }
 img, video, canvas, svg { max-width: 100%; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; } }
+=======
+>>>>>>> cef7596624ce830dc5ea8ac0f070140598cbb1ca
