@@ -1,0 +1,7 @@
+@media (max-width: 768px) {
+  .image {
+    width: 400px;
+    height: 400px;
+    margin-left: 7px;
+  }
+}
