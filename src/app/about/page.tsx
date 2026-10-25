@@ -203,7 +203,7 @@ const About = () => {
 
             <p>
               Our mission is to deliver practical technology solutions
-              tailored to each customer's requirements. Through technical
+              tailored to each customer&apos;s requirements. Through technical
               support, preventive maintenance, troubleshooting, and
               customer-focused service, we aim to help reduce downtime,
               improve productivity, and keep essential IT systems running
@@ -212,7 +212,7 @@ const About = () => {
 
             <p>
               We believe that reliable IT support begins with understanding
-              the customer's needs, recommending suitable solutions, and
+              the customer&apos;s needs, recommending suitable solutions, and
               providing clear communication throughout the service process.
               We strive to build lasting relationships with individuals,
               offices, and businesses through professional service and
@@ -293,7 +293,7 @@ const About = () => {
             each requirement, explaining suitable options, and providing
             practical technical support. We aim to build long-term customer
             relationships through dependable service, transparent
-            communication, and solutions that fit each customer's needs.
+            communication, and solutions that fit each customer&apos;s needs.
           </p>
 
           <h2>
