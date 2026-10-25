@@ -96,6 +96,7 @@ import Album from "../component/Album";
 
 const About = () => {
   const siteUrl = "https://www.a2zitsolution.co.in";
+  
 
   return (
     <>
