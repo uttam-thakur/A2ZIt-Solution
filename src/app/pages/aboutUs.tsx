@@ -78,11 +78,7 @@ const AboutUs = () => {
               alt={"Image Alt Text"}
               height={450}
               width={800}
-<<<<<<< HEAD
-              src={"/images/technitian.webp"}
-=======
               src={"/images/technitian.jpg"}
->>>>>>> cef7596624ce830dc5ea8ac0f070140598cbb1ca
               className={styles.image}
             />
           </Grid>

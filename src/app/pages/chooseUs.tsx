@@ -232,21 +232,13 @@ const items = [
   {
     id: "cctv",
     title: "CCTV & SECURITY",
-<<<<<<< HEAD
-    image: "/images/CCTV/cctv.webp",
-=======
     image: "/images/CCTV/cctv.jpg",
->>>>>>> cef7596624ce830dc5ea8ac0f070140598cbb1ca
     text: "We provide professional CCTV installation, configuration and maintenance services for homes, offices, shops and commercial properties.",
   },
   {
     id: "website-design",
     title: "WEBSITE DEVELOPMENT",
-<<<<<<< HEAD
-    image: "/images/WEB/web.webp",
-=======
     image: "/images/WEB/web.jpg",
->>>>>>> cef7596624ce830dc5ea8ac0f070140598cbb1ca
     text: "We design and develop fast, responsive and professional websites for businesses, startups and organizations with modern technology and mobile-friendly layouts.",
   },
   {
