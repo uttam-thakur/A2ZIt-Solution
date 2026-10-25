@@ -44,7 +44,11 @@ import FadeInSection from "./component/FadeInSection";
 import WhyChooseUs from "./pages/whyChooseUs";
 
 export const metadata: Metadata = {
+<<<<<<< HEAD
+  title: { absolute: "A2Z IT SOLUTION | Laptop Repair, CCTV & Website Design in Asansol" },
+=======
   title: "A2Z IT SOLUTION | Laptop Repair, CCTV & Website Design in Asansol",
+>>>>>>> cef7596624ce830dc5ea8ac0f070140598cbb1ca
   description:
     "A2Z IT SOLUTION provides laptop and desktop repair, CCTV installation, printer services, computer sales, networking, data recovery, AMC and professional website design in Asansol, West Bengal.",
   keywords: [

@@ -38,7 +38,11 @@
 //         />
 //         <Reuse
 //           // imageSrc="/images/Rental/2.webp"
+<<<<<<< HEAD
+//           imageSrc="/images/Rental/4.webp"
+=======
 //           imageSrc="/images/Rental/4.jpg"
+>>>>>>> cef7596624ce830dc5ea8ac0f070140598cbb1ca
 //           altText="On-Site Expertise"
 //           subtitle="Wide Range of Laptops for Every Need
 // "
@@ -58,7 +62,11 @@
 //         />
 //         <Reuse
 //           // imageSrc="/images/Rental/cctv.jfif"
+<<<<<<< HEAD
+//           imageSrc="/images/Rental/6.webp"
+=======
 //           imageSrc="/images/Rental/6.jpg"
+>>>>>>> cef7596624ce830dc5ea8ac0f070140598cbb1ca
 //           altText="On-Site Expertise"
 //           subtitle="Short-Term CCTV Camera Rentals for Security & Emergencies
 // "

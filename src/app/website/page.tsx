@@ -40,7 +40,11 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
+<<<<<<< HEAD
+        url: "/images/WEB/website1.webp",
+=======
         url: "/images/WEB/Website1.webp",
+>>>>>>> cef7596624ce830dc5ea8ac0f070140598cbb1ca
         alt: "Website development services by A2Z IT SOLUTION",
       },
     ],
@@ -51,7 +55,11 @@ export const metadata: Metadata = {
     title: "Website Development in Asansol | A2Z IT SOLUTION",
     description:
       "Professional business website design, custom development and e-commerce websites.",
+<<<<<<< HEAD
+    images: ["/images/WEB/website1.webp"],
+=======
     images: ["/images/WEB/Website1.webp"],
+>>>>>>> cef7596624ce830dc5ea8ac0f070140598cbb1ca
   },
 
   robots: {
